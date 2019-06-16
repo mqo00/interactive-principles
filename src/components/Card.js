@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 class Card extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            flipped: true,
-            flipAnimation: ''
-        };
     }
 
     renderCard() {
         return (
-            this.state.flipped ?
+            (this.props.flipped) ?
                 <div className={'card__face card__face--front'}>
                     <div className={'card__face--front__header'}>
                         <div className={'principle-number'}>
@@ -56,23 +52,18 @@ class Card extends React.Component {
                 </div>
         );
     }
-
-    flipCard() {
-        this.setState({flipped: !this.state.flipped});
-
-        this.setState(
-            this.state.flipped ? {flipAnimation: 'animated flipInY'} : {flipAnimation: ''}
-        );
-
-        setTimeout(function(){
-            this.setState({flipAnimation: ''});
-        }, 500);
-
-    }
+    //
+    // flipCard() {
+    //     this.setState({flipped: !this.state.flipped});
+    //
+    //     this.setState(
+    //         this.state.flipped ? {flipAnimation: 'animated flipInY'} : {flipAnimation: ''}
+    //     );
+    // }
 
     render() {
         return (
-            <div className={'card card--' + this.props.category.toString() + ' ' + this.state.flipAnimation} onClick={() => this.flipCard()}>
+            <div className={'card card--' + this.props.category.toString()}>
                 { this.renderCard() }
             </div>
         );
@@ -80,6 +71,7 @@ class Card extends React.Component {
 }
 
 Card.propTypes = {
+    flipped: PropTypes.any,
     id: PropTypes.any,
     category: PropTypes.any,
     categoryName: PropTypes.any,
