@@ -1,0 +1,30 @@
+@import "vars";
+
+$height: 336px;
+$width: 240px;
+$card-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
+$card-corner: 13px;
+
+.card {
+  height: $height;
+  min-height: $height;
+  width: $width;
+  min-width: $width;
+  background: $card-bg;
+  box-shadow: $card-shadow;
+  border-radius: $card-corner;
+  margin-bottom: $space-between-cards;
+
+  &__face {
+    &--front {
+      display: block;
+      min-height: $height;
+      min-width: $width;
+
+      @include themed() {
+        background: t('dark');
+      }
+    }
+  }
+
+}
