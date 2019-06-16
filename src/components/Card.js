@@ -16,7 +16,21 @@ class Card extends React.Component {
                 </div>
                 :
                 <div className={'card__face card__face--back'}>
-                    {this.props.title}
+                    <div className={'card__face--back__content'}>
+                        <div className={'principle-number'}>
+                            {this.props.id}
+                        </div>
+                        <div className={'principle-image'}>
+
+                        </div>
+                        <div className={'principle-title'}>
+                            {this.props.title}
+                        </div>
+                    </div>
+                    <div className={'card__face--back__category'}>
+                        {this.props.categoryName}
+                    </div>
+
                 </div>
         );
     }
@@ -37,6 +51,7 @@ class Card extends React.Component {
 Card.propTypes = {
     id: PropTypes.any,
     category: PropTypes.any,
+    categoryName: PropTypes.any,
     title: PropTypes.any
 };
 

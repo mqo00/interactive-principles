@@ -3,13 +3,19 @@
 //themes
 $themes: (
         1: (
-                dark: $cat1--dark
+                dark: $cat1--dark,
+                mid: $cat1--mid,
+                light: $cat1--light
         ),
         2: (
-                dark: $cat2--dark
+                dark: $cat2--dark,
+                mid: $cat2--mid,
+                light: $cat2--light
         ),
         3: (
-                dark: $cat3--dark
+                dark: $cat3--dark,
+                mid: $cat3--mid,
+                light: $cat3--light
         )
 );
 

@@ -16,7 +16,7 @@ export default class App extends Component {
 
                     {principles.map( card => (
                         <div key={card.id} className={'col-xs-12 col-sm-4 col-md-3 col-xl-2'}>
-                            <Card id={card.id} category={card.categoryId} title={card.principle}/>
+                            <Card id={card.id} category={card.categoryId} categoryName={card.category} title={card.principle}/>
                         </div>
                     ))}
 

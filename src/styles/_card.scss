@@ -16,15 +16,81 @@ $card-corner: 13px;
   margin-bottom: $space-between-cards;
 
   &__face {
-    &--front {
+    border-radius: $card-corner;
+
+    &--back {
       display: block;
       min-height: $height;
       min-width: $width;
+      color: $text--white;
 
       @include themed() {
         background: t('dark');
       }
+
+      &__content {
+        margin-top: 50px;
+
+        .principle-image {
+          position: relative;
+          z-index: 0;
+          $size: #{$width * .65};
+          height: $size;
+          width: $size;
+          margin: -15px auto 0;
+        }
+
+        .principle-number {
+          position: relative;
+          z-index: 10;
+        }
+
+        .principle-title {
+          margin-top: 3px;
+        }
+      }
+
+      &__category {
+        text-align: center;
+        position: absolute;
+        bottom: 6px;
+        width: 100%;
+        font-size: 14px;
+
+        @include themed() {
+          color: t('mid');
+        }
+      }
     }
   }
 
+}
+
+.principle-title {
+  color: $text--white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.principle-image {
+  @include themed() {
+    background: t('mid');
+  }
+}
+
+.principle-number {
+  margin: 0 auto;
+  background-color: $text--white;
+  height: 28px;
+  width: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: $card-shadow;
+
+  @include themed() {
+    color: t('dark');
+  }
 }
