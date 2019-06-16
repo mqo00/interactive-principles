@@ -18,6 +18,20 @@ $card-corner: 13px;
   &__face {
     border-radius: $card-corner;
 
+    &--front {
+      &__header {
+        border-radius: $card-corner $card-corner 0 0;
+        height: 45px;
+        @include themed() {
+          background: t('dark');
+        }
+
+        .principle-number {
+          position: absolute;
+        }
+      }
+    }
+
     &--back {
       display: block;
       min-height: $height;
