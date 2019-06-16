@@ -4,6 +4,7 @@ $font-stack: 'Roboto',"Segoe UI","Helvetica Neue",-apple-system,BlinkMacSystemFo
 //color
 $card-bg: #fff;
 $text--white: #fff;
+$text--card: #585858;
 
 $cat1--dark: #DF6D4D;
 $cat1--mid: #F0BBAC;
@@ -17,3 +18,9 @@ $cat3--light: #DEF4F3;
 
 //spacing
 $space-between-cards: 30px;
+
+%text-overflow-ellipsis {
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -26,6 +26,13 @@ class Card extends React.Component {
                         <div className={'card__face--front__category__text'}>{this.props.categoryName}</div>
                     </div>
                     <div className={'card__face--front__body'}>
+                        <div className={'card__face--front__body__comparison'}>
+                            {this.props.comparison}
+                        </div>
+                        <div className={'card__face--front__body__image'}></div>
+                        <div className={'card__face--front__body__example'}>
+                            {this.props.example}
+                        </div>
 
                     </div>
                 </div>
@@ -76,7 +83,9 @@ Card.propTypes = {
     id: PropTypes.any,
     category: PropTypes.any,
     categoryName: PropTypes.any,
-    title: PropTypes.any
+    title: PropTypes.any,
+    comparison: PropTypes.any,
+    example: PropTypes.any,
 };
 
 export default Card;
