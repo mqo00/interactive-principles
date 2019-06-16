@@ -1,5 +1,10 @@
 @import "vars";
 
+body {
+    background: #191C28;
+    font-family: $font-stack;
+}
+
 .cards {
     padding: $space-between-cards;
 }

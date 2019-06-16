@@ -36,3 +36,42 @@ $themes: (
 @function t($key) {
   @return map-get($theme-map, $key);
 }
+
+@mixin bg-dark() {
+  @include themed() {
+    background: t('dark');
+    background-color: t('dark');
+  }
+}
+
+@mixin bg-mid() {
+  @include themed() {
+    background: t('mid');
+    background-color: t('mid');
+  }
+}
+
+@mixin bg-light() {
+  @include themed() {
+    background: t('light');
+    background-color: t('light');
+  }
+}
+
+@mixin text-dark() {
+  @include themed() {
+    color: t('dark');
+  }
+}
+
+@mixin text-mid() {
+  @include themed() {
+    color: t('mid');
+  }
+}
+
+@mixin text-light() {
+  @include themed() {
+    color: t('light');
+  }
+}

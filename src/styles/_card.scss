@@ -1,46 +1,120 @@
 @import "vars";
 
-$height: 336px;
-$width: 240px;
+$card-height: 336px;
+$card-width: 240px;
 $card-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
 $card-corner: 13px;
+$number-width: 28px;
+$cat-width: 45px;
+$header-height: 50px;
+
+.principle-title {
+  color: $text--white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.principle-image {
+  @include themed() {
+    background: t('mid');
+  }
+}
+
+.principle-number {
+  margin: 0 auto;
+  background-color: $text--white;
+  height: $number-width;
+  width: $number-width;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: $card-shadow;
+
+  @include themed() {
+    color: t('dark');
+  }
+}
 
 .card {
-  height: $height;
-  min-height: $height;
-  width: $width;
-  min-width: $width;
+  height: $card-height;
+  min-height: $card-height;
+  width: $card-width;
+  min-width: $card-width;
   background: $card-bg;
   box-shadow: $card-shadow;
   border-radius: $card-corner;
   margin-bottom: $space-between-cards;
+  border: none;
 
   &__face {
     border-radius: $card-corner;
 
     &--front {
       &__header {
+        $space-between-num-and-title: 8px;
         border-radius: $card-corner $card-corner 0 0;
-        height: 45px;
-        @include themed() {
-          background: t('dark');
+        padding: 10px 0 10px 10px;
+        height: $header-height;
+        max-height: $header-height;
+        white-space: nowrap;
+
+        @include bg-dark();
+
+        .principle-title {
+          display: inline-block;
+          width: calc(100% - #{$number-width} - #{$space-between-num-and-title});
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: left;
+          max-height: 30px;
+          margin-left: ($number-width + $space-between-num-and-title);
         }
 
         .principle-number {
+          display: inline-block;
           position: absolute;
         }
+      }
+
+      &__category {
+        width: $cat-width;
+        height: ($card-height - $header-height);
+        border-radius: 0 0 0 $card-corner;
+        z-index: 0;
+        @include bg-mid();
+        @include text-dark();
+
+        &__text {
+          position: absolute;
+          width: ($card-height - $header-height);
+          left: (-1 * ($card-height - $header-height - 35px));
+          top: 40px;
+          text-align: right;
+          font-weight: 500;
+          -moz-transform: rotate(270deg);  /* FF3.5+ */
+          -o-transform: rotate(270deg);  /* Opera 10.5 */
+          -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+          -moz-transform-origin: 100% 100%;
+          -o-transform-origin: 100% 100%;
+          -webkit-transform-origin: 100% 100%;
+          z-index: 10;
+          font-size: 18px;
+        }
+      }
+
+      &__body {
+        width: calc(100% - #{$cat-width});
       }
     }
 
     &--back {
       display: block;
-      min-height: $height;
-      min-width: $width;
+      min-height: $card-height;
+      min-width: $card-width;
       color: $text--white;
 
-      @include themed() {
-        background: t('dark');
-      }
+      @include bg-dark();
 
       &__content {
         margin-top: 50px;
@@ -48,7 +122,7 @@ $card-corner: 13px;
         .principle-image {
           position: relative;
           z-index: 0;
-          $size: #{$width * .65};
+          $size: #{$card-width * .65};
           height: $size;
           width: $size;
           margin: -15px auto 0;
@@ -61,6 +135,7 @@ $card-corner: 13px;
 
         .principle-title {
           margin-top: 3px;
+          text-align: center;
         }
       }
 
@@ -78,33 +153,4 @@ $card-corner: 13px;
     }
   }
 
-}
-
-.principle-title {
-  color: $text--white;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 500;
-}
-
-.principle-image {
-  @include themed() {
-    background: t('mid');
-  }
-}
-
-.principle-number {
-  margin: 0 auto;
-  background-color: $text--white;
-  height: 28px;
-  width: 28px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: $card-shadow;
-
-  @include themed() {
-    color: t('dark');
-  }
 }

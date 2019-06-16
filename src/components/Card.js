@@ -5,7 +5,7 @@ class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            flipped: false,
+            flipped: true,
             flipAnimation: ''
         };
     }
@@ -21,6 +21,12 @@ class Card extends React.Component {
                         <div className={'principle-title'}>
                             {this.props.title}
                         </div>
+                    </div>
+                    <div className={'card__face--front__category'}>
+                        <div className={'card__face--front__category__text'}>{this.props.categoryName}</div>
+                    </div>
+                    <div className={'card__face--front__body'}>
+
                     </div>
                 </div>
                 :
