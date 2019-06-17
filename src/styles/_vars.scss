@@ -2,9 +2,13 @@
 $font-stack: 'Roboto',"Segoe UI","Helvetica Neue",-apple-system,BlinkMacSystemFont,Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
 //color
+$navy: #191C28;
 $card-bg: #fff;
 $text--white: #fff;
 $text--card: #585858;
+$text--default: #4A4A4A;
+$text--button: $navy;
+$well-bg: #E7E6E6;
 
 $cat1--dark: #DF6D4D;
 $cat1--mid: #F0BBAC;
@@ -24,3 +28,5 @@ $space-between-cards: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+$rounded-corner: 13px;

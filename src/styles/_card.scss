@@ -3,10 +3,10 @@
 $card-height: 336px;
 $card-width: 240px;
 $card-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
-$card-corner: 13px;
+$card-corner: $rounded-corner;
 $number-width: 28px;
-$cat-width: 45px;
-$header-height: 50px;
+$header-height: 45px;
+$cat-width: $header-height;
 $body-height: $card-height - $header-height;
 $compare-section-height: $body-height * .25;
 $img-section-height: $body-height * .35;
@@ -59,7 +59,7 @@ $example-section-height: $body-height * .3;
       &__header {
         $space-between-num-and-title: 8px;
         border-radius: $card-corner $card-corner 0 0;
-        padding: 10px 0 10px 10px;
+        padding: 7px 0 7px 10px;
         height: $header-height;
         max-height: $header-height;
         white-space: nowrap;
@@ -95,7 +95,7 @@ $example-section-height: $body-height * .3;
           position: absolute;
           width: ($card-height - $header-height);
           left: (-1 * ($card-height - $header-height - 35px));
-          top: 40px;
+          top: 30px;
           text-align: right;
           font-weight: 500;
           -moz-transform: rotate(270deg);  /* FF3.5+ */

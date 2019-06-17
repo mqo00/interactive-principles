@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
+import Button from './Button.js';
 
 export default class App extends Component {
 
     constructor() {
         super();
         this.state = {
-            cards: principles
+            cards: [],
+            allFlipped: false
         };
 
         this.flipAll = this.flipAll.bind(this);
         this.flipCard = this.flipCard.bind(this);
+        this.resetCards = this.resetCards.bind(this);
+        this.shuffleCards = this.shuffleCards.bind(this);
+    }
+
+    componentDidMount() {
+        this.setState({cards: principles});
     }
 
     flipAll() {
         let items = this.state.cards;
         for (let card of items) {
-            card.flipped = !card.flipped;
+            card.flipped = !this.state.allFlipped;
         }
         this.setState({cards: items});
+        this.setState({allFlipped: !this.state.allFlipped});
 
         console.log(this.state);
+    }
+
+    resetCards() {
+        let items = principles;
+        items.sort(function(a, b){return a.id - b.id});
+        for (let card of items) {
+            card.flipped = false;
+        }
+        this.setState({cards: items});
     }
 
     flipCard(cardid) {
@@ -37,6 +55,30 @@ export default class App extends Component {
         console.log(this.state);
     }
 
+    shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    shuffleCards() {
+        let shuffled = this.shuffle(principles);
+        this.setState({cards: shuffled});
+    }
+
     render() {
         return (
             <div className='cards'>
@@ -44,9 +86,9 @@ export default class App extends Component {
                 <div className={'row'}>
                     <div className={'col-12'}>
                         <div className={'toolbar'}>
-                            <button onClick={this.flipAll}>
-                                Flip All
-                            </button>
+                            <Button onClick={this.resetCards} text={'Reset'} icon={'undo-alt'}></Button>
+                            <Button onClick={this.flipAll} text={'Flip All'} icon={'exchange-alt'}></Button>
+                            <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
                         </div>
                     </div>
                 </div>
