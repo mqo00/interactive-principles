@@ -9,7 +9,7 @@ export default class App extends Component {
         super();
         this.state = {
             cards: [],
-            allFlipped: false
+            allFlipped: true
         };
 
         this.flipAll = this.flipAll.bind(this);
@@ -35,7 +35,7 @@ export default class App extends Component {
 
     resetCards() {
         let items = principles;
-        items.sort(function(a, b){return a.id - b.id});
+        items.sort(function(a, b){return (a.id - b.id);});
         for (let card of items) {
             card.flipped = false;
         }
