@@ -8,7 +8,7 @@ function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
 }
 
-export default class DraggableCards extends Component {
+export default class App extends Component {
 
     constructor() {
         super();
@@ -71,7 +71,7 @@ export default class DraggableCards extends Component {
         let items = principles;
         items.sort(function(a, b) {
             return compareStrings(a.principle, b.principle);
-        })
+        });
         this.setState({cards: items});
     }
 
