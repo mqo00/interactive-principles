@@ -2,11 +2,41 @@ import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
-// import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
 }
+
+// a little function to help us with reordering the result
+const reorder = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+
+    return result;
+};
+
+const grid = 8;
+
+const getItemStyle = (isDragging, draggableStyle) => ({
+    // some basic styles to make the items look a bit nicer
+    userSelect: 'none',
+    padding: grid * 2,
+    margin: `0 0 ${grid}px 0`,
+
+    // change background colour if dragging
+    background: isDragging ? 'lightgreen' : 'grey',
+
+    // styles we need to apply on draggables
+    draggableStyle
+});
+
+const getListStyle = isDraggingOver => ({
+    background: isDraggingOver ? 'lightblue' : 'lightgrey',
+    padding: grid,
+    width: 250
+});
 
 export default class DraggableCards extends Component {
 
@@ -23,6 +53,7 @@ export default class DraggableCards extends Component {
         this.sortNumerical = this.sortNumerical.bind(this);
         this.resetCards = this.resetCards.bind(this);
         this.shuffleCards = this.shuffleCards.bind(this);
+        this.onDragEnd = this.onDragEnd.bind(this);
     }
 
     componentDidMount() {
@@ -71,7 +102,7 @@ export default class DraggableCards extends Component {
         let items = principles;
         items.sort(function(a, b) {
             return compareStrings(a.principle, b.principle);
-        })
+        });
         this.setState({cards: items});
     }
 
@@ -102,9 +133,57 @@ export default class DraggableCards extends Component {
         this.setState({cards: shuffled});
     }
 
+    onDragEnd(result) {
+        // dropped outside the list
+        if (!result.destination) {
+            return;
+        }
+
+        const items = reorder(
+            this.state.items,
+            result.source.index,
+            result.destination.index
+        );
+
+        this.setState({
+            items
+        });
+    }
+
     render() {
         return (
             <div className='cards'>
+
+                <DragDropContext onDragEnd={this.onDragEnd}>
+                    <Droppable droppableId="droppable">
+                        {(provided, snapshot) => (
+                            <div
+                                {...provided.droppableProps}
+                                ref={provided.innerRef}
+                                style={getListStyle(snapshot.isDraggingOver)}
+                            >
+                                {this.state.cards.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided, snapshot) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                style={getItemStyle(
+                                                    snapshot.isDragging,
+                                                    provided.draggableProps.style
+                                                )}
+                                            >
+                                                {item.content}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+                </DragDropContext>
 
                 <div className={'row'}>
                     <div className={'col-12'}>
