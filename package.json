@@ -16,11 +16,13 @@
     "lint": "eslint .; exit 0",
     "lint:fix": "eslint . --fix; exit 0",
     "start": "npm run serve:dev",
-    "test": "echo \"No tests available\"; exit 0"
+    "test": "echo \"No tests available\"; exit 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drminnaar/react-starter.git"
+    "url": "git+https://github.com/kaitlinmctigue/interactive-principles.git"
   },
   "license": "MIT",
   "babel": {
@@ -58,6 +60,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.0",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.4",
