@@ -11,15 +11,16 @@ $text--button: $navy;
 $bg: #E7E6E6;
 $well-bg: darken($bg, 7%);
 
-$cat1--dark: #DF6D4D;
-$cat1--mid: #F0BBAC;
-$cat1--light: #F4E6E2;
-$cat2--dark: #5EA67D;
-$cat2--mid: #B2DBB8;
-$cat2--light: #DBF5DF;
-$cat3--dark: #379A99;
-$cat3--mid: #AFDFDE;
-$cat3--light: #DEF4F3;
+$cat1: #DF6D4D;
+$cat2: #5EA67D;
+$cat3: #379A99;
+
+$cat1--mid: lighten($cat1, 20%);
+$cat1--light: lighten($cat1--mid, 13%);
+$cat2--mid: lighten($cat2, 23%);
+$cat2--light: lighten($cat2--mid, 13%);
+$cat3--mid: lighten($cat3, 30%);
+$cat3--light: lighten($cat3--mid, 16%);
 
 //spacing
 $space-between-cards: 30px;

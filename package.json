@@ -17,8 +17,8 @@
     "lint:fix": "eslint . --fix; exit 0",
     "start": "npm run serve:dev",
     "test": "echo \"No tests available\"; exit 0",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
