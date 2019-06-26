@@ -128,8 +128,15 @@ export default class App extends Component {
                                 category={card.categoryId}
                                 categoryName={card.category}
                                 title={card.principle}
+                                questions={card.questions}
+                                descr={card.description}
                                 comparison={card.subtitle}
                                 example={card.examples}
+                                gameEx={card.exampleGame}
+                                gameExURL={card.exampleGameUrl}
+                                gameExDesc={card.exampleGameDesc}
+                                related={card.related}
+                                citation={card.cited}
                             />
                         </div>
                     ))}
