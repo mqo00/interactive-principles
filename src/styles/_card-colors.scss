@@ -21,7 +21,7 @@ $themes: (
 
 @mixin themed() {
   @each $theme, $map in $themes {
-    .card--#{$theme} & {
+    .category--#{$theme} & {
       $theme-map: () !global;
       @each $key, $submap in $map {
         $value: map-get(map-get($themes, $theme), '#{$key}');
@@ -39,21 +39,18 @@ $themes: (
 
 @mixin bg-dark() {
   @include themed() {
-    background: t('dark');
     background-color: t('dark');
   }
 }
 
 @mixin bg-mid() {
   @include themed() {
-    background: t('mid');
     background-color: t('mid');
   }
 }
 
 @mixin bg-light() {
   @include themed() {
-    background: t('light');
     background-color: t('light');
   }
 }

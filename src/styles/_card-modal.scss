@@ -1,0 +1,38 @@
+.card-modal {
+  max-width: 1000px;
+
+  .modal-content {
+    border-radius: $rounded-corner;
+  }
+
+  &__header {
+    @include bg-dark;
+    $num-width: 40px;
+    padding: 10px 20px 5px;
+    border-radius: $rounded-corner $rounded-corner 0 0;
+
+    &__id {
+      position: absolute;
+      left: 15px;
+      font-size: 28px;
+      width: $num-width;
+      height: $num-width;
+    }
+
+    &__title {
+      color: $text--white;
+      margin-left: $num-width + 10px;
+    }
+  }
+
+  h3 {
+    @include text-dark;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+}
