@@ -13,7 +13,7 @@ $img-section-height: $body-height * .35;
 $example-section-height: $body-height * .3;
 
 %img-styles {
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -192,6 +192,8 @@ $example-section-height: $body-height * .3;
           @extend %display-props;
           @extend %img-styles;
           @include bg-light();
+          background-size: 65%;
+          padding: 0;
         }
 
         &__example {
