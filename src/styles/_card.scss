@@ -40,6 +40,11 @@ $example-section-height: $body-height * .3;
   }
 }
 
+.card-container {
+  max-width: ($space-between-cards + $card-width);
+  //margin: 0 auto; //center cards?
+}
+
 .card {
   font-family: $font-stack;
   height: $card-height;

@@ -121,7 +121,7 @@ export default class App extends Component {
                 <div className={'row'}>
 
                     {this.state.cards.map( card => (
-                        <div key={card.id} className={'col-xs-12 col-sm-4 col-md-3 col-xl-2'} onClick={() => this.flipCard(card.id)}>
+                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'} onClick={() => this.flipCard(card.id)}>
                             <Card
                                 flipped={card.flipped}
                                 id={card.id}
