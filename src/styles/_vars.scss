@@ -8,7 +8,8 @@ $text--white: #fff;
 $text--card: #585858;
 $text--default: #4A4A4A;
 $text--button: $navy;
-$bg: #E7E6E6;
+$beige: #E7E6E6;
+$bg: darken($beige, 7%);
 $well-bg: darken($bg, 7%);
 
 $cat1: #DF6D4D;
