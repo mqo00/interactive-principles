@@ -12,6 +12,12 @@ $compare-section-height: $body-height * .25;
 $img-section-height: $body-height * .35;
 $example-section-height: $body-height * .3;
 
+%img-styles {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .principle-title {
   color: $text--white;
   font-size: 18px;
@@ -20,8 +26,9 @@ $example-section-height: $body-height * .3;
 
 .principle-image {
   @include themed() {
-    background: t('mid');
+    background-color: t('mid');
   }
+  @extend %img-styles;
 }
 
 .principle-number {
@@ -40,9 +47,14 @@ $example-section-height: $body-height * .3;
   }
 }
 
+.cards {
+  padding: $space-between-cards;
+  max-width: ($card-width * 5) + ($space-between-cards * 6);
+  margin: 0 auto;
+}
+
 .card-container {
   max-width: ($space-between-cards + $card-width);
-  //margin: 0 auto; //center cards?
 }
 
 .card {
@@ -149,6 +161,7 @@ $example-section-height: $body-height * .3;
           height: $img-section-height;
           margin: -10px 0!important;
           @extend %display-props;
+          @extend %img-styles;
           @include bg-light();
         }
 
@@ -180,6 +193,8 @@ $example-section-height: $body-height * .3;
           height: $size;
           width: $size;
           margin: -15px auto 0;
+
+          @extend %img-styles;
         }
 
         .principle-number {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
-// import { DragDropContext } from 'react-beautiful-dnd';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
@@ -125,6 +124,7 @@ export default class App extends Component {
                             <Card
                                 flipped={card.flipped}
                                 id={card.id}
+                                image={card.id}
                                 category={card.categoryId}
                                 categoryName={card.category}
                                 title={card.principle}

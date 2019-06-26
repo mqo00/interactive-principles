@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 class Card extends React.Component {
     constructor(props) {
         super(props);
+
+        // this.image = require('../images/1.svg');
+        this.image = require('../images/' + (this.props.id) + '.svg');
     }
 
     renderCard() {
@@ -25,7 +28,7 @@ class Card extends React.Component {
                         <div className={'card__face--front__body__comparison'}>
                             {this.props.comparison}
                         </div>
-                        <div className={'card__face--front__body__image'}></div>
+                        <div style={{backgroundImage: 'url(' + this.image + ')'}} className={'card__face--front__body__image'}></div>
                         <div className={'card__face--front__body__example'}>
                             {this.props.example}
                         </div>
@@ -38,9 +41,7 @@ class Card extends React.Component {
                         <div className={'principle-number'}>
                             {this.props.id}
                         </div>
-                        <div className={'principle-image'}>
-
-                        </div>
+                        <div className={'principle-image'} style={{backgroundImage: 'url(' + this.image + ')'}}></div>
                         <div className={'principle-title'}>
                             {this.props.title}
                         </div>
@@ -52,14 +53,6 @@ class Card extends React.Component {
                 </div>
         );
     }
-    //
-    // flipCard() {
-    //     this.setState({flipped: !this.state.flipped});
-    //
-    //     this.setState(
-    //         this.state.flipped ? {flipAnimation: 'animated flipInY'} : {flipAnimation: ''}
-    //     );
-    // }
 
     render() {
         return (

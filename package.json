@@ -63,7 +63,7 @@
     "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.0",
     "react": "^16.8.6",
-    "react-beautiful-dnd": "^11.0.4",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-dragula": "^1.1.17"
   }
 }
