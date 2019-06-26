@@ -28,7 +28,7 @@ class Card extends React.Component {
         return (
             (this.props.flipped) ?
                 <div className={'card__face card__face--front'}>
-                    <div className={'card__face--front__header'} onClick={this.handleShow}>
+                    <div className={'card__face--front__header'} onClick={this.props.onOpen}>
                         <button className={'btn btn-link card__face--front__header__open-link'}>
                             <i className="fas fa-external-link-alt"></i>
                         </button>
@@ -127,6 +127,8 @@ Card.propTypes = {
     gameExDesc: PropTypes.any,
     related: PropTypes.any,
     citation: PropTypes.any,
+    onOpen: PropTypes.any,
+    onFlip: PropTypes.any
 };
 
 export default Card;

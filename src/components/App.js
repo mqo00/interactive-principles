@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
+import { Modal } from 'react-bootstrap';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
@@ -13,15 +14,30 @@ export default class App extends Component {
         super();
         this.state = {
             cards: [],
-            allFlipped: false
+            allFlipped: false,
+            showModal: false,
+            cardInModal: principles[0]
         };
 
         this.flipAll = this.flipAll.bind(this);
-        this.flipCard = this.flipCard.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.sortAZ = this.sortAZ.bind(this);
         this.sortNumerical = this.sortNumerical.bind(this);
         this.resetCards = this.resetCards.bind(this);
         this.shuffleCards = this.shuffleCards.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.renderModal = this.renderModal.bind(this);
+        this.flipCard = this.flipCard.bind(this);
+    }
+
+    handleClose() {
+        this.setState({ showModal: false });
+        this.flipCard(this.state.cardInModal);
+    }
+
+    handleShow() {
+        this.setState({ showModal: true });
     }
 
     componentDidMount() {
@@ -83,22 +99,30 @@ export default class App extends Component {
         this.setState({cards: items});
     }
 
-    flipCard(cardid) {
-        console.log('flip');
+    handleClick(clickedCard) {
+        this.setState({cardInModal: clickedCard});
+        if(!this.state.showModal) {
+            this.flipCard(clickedCard);
+        }
+    }
+
+    flipCard(flipcard) {
         let items = this.state.cards;
         for (let card of items) {
-            if (card.id === cardid) {
+            if (card.id === flipcard.id) {
                 card.flipped = !card.flipped;
             }
         }
         this.setState({cards: items});
-
-        console.log(this.state);
     }
 
     shuffleCards() {
         let shuffled = this.shuffle(principles);
         this.setState({cards: shuffled});
+    }
+
+    renderModal() {
+        this.setState({showModal: true});
     }
 
     render() {
@@ -120,7 +144,7 @@ export default class App extends Component {
                 <div className={'row'}>
 
                     {this.state.cards.map( card => (
-                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'} onClick={() => this.flipCard(card.id)}>
+                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'} onClick={() => this.handleClick(card)}>
                             <Card
                                 flipped={card.flipped}
                                 id={card.id}
@@ -137,11 +161,16 @@ export default class App extends Component {
                                 gameExDesc={card.exampleGameDesc}
                                 related={card.related}
                                 citation={card.cited}
+                                onOpen={this.renderModal}
                             />
                         </div>
                     ))}
 
                 </div>
+
+                <Modal show={this.state.showModal} onHide={this.handleClose}>
+                    {this.state.cardInModal.id}
+                </Modal>
 
             </div>
         );
