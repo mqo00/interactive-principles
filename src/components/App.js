@@ -29,6 +29,7 @@ export default class App extends Component {
         this.handleClose = this.handleClose.bind(this);
         this.renderModal = this.renderModal.bind(this);
         this.flipCard = this.flipCard.bind(this);
+        this.modalNavToNext = this.modalNavToNext.bind(this);
     }
 
     handleClose() {
@@ -125,6 +126,14 @@ export default class App extends Component {
         this.setState({showModal: true});
     }
 
+    modalNavToNext() {
+        let currentCardIndex = this.state.cards.indexOf(this.state.cards.find(card => card.id === (this.state.cardInModal.id)));
+        let nextCardIndex = ((currentCardIndex + 1) < this.state.cards.length) ? (currentCardIndex + 1) : 0;
+        let nextCard = this.state.cards[nextCardIndex];
+
+        this.setState({cardInModal: (nextCard)});
+    }
+
     render() {
         return (
             <div className='cards'>
@@ -168,8 +177,38 @@ export default class App extends Component {
 
                 </div>
 
-                <Modal show={this.state.showModal} onHide={this.handleClose}>
-                    {this.state.cardInModal.id}
+                <Modal show={this.state.showModal} onHide={this.handleClose} centered dialogClassName={'card-modal category--' + this.state.cardInModal.categoryId.toString()}>
+                    <Modal.Header className={'card-modal__header'}>
+                        <div className={'card-modal__header__id principle-number'}>{this.state.cardInModal.id}</div>
+                        <h2 className={'card-modal__header__title'}>{this.state.cardInModal.principle}</h2>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div>
+                            <h3>Questions</h3>
+                            <p>{this.state.cardInModal.questions}</p>
+                        </div>
+                        <div>
+                            <h3>Summary</h3>
+                            <p>{this.state.cardInModal.descr}</p>
+                        </div>
+                        <div>
+                            <h3>Game Example</h3>
+                            <h4>{this.state.cardInModal.gameEx}</h4>
+                            <p>{this.state.cardInModal.gameExURL}</p>
+                            <p>{this.state.cardInModal.gameExDesc}</p>
+                        </div>
+                        <div>
+                            <h3>Related</h3>
+                            <p>{this.state.cardInModal.related}</p>
+                        </div>
+                        <div>
+                            <h3>Cited</h3>
+                            <p>{this.state.cardInModal.citation}</p>
+                        </div>
+
+                        <button onClick={this.modalNavToNext} className='previous-next-button fas fa-arrow-circle-right'></button>
+
+                    </Modal.Body>
                 </Modal>
 
             </div>
