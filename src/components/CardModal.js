@@ -3,11 +3,38 @@ import { Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 class CardModal extends React.Component {
-    // constructor(props) {}
+    constructor(props) {
+        super(props);
+
+        this.handleKeyPress = this.handleKeyPress.bind(this);
+    }
+
+    handleKeyPress(event) {
+        if(event.key === 'ArrowLeft'){
+            console.log('left press here! ');
+            this.props.onPrev();
+        }
+        if(event.key === 'ArrowRight'){
+            console.log('right press here! ');
+            this.props.onNext();
+        }
+    }
+
+    componentDidMount(){
+        document.addEventListener('keydown', this.handleKeyPress, false);
+    }
+    componentWillUnmount(){
+        document.removeEventListener('keydown', this.handleKeyPress, false);
+    }
 
     render() {
         return(
-            <Modal show={this.props.show} onHide={this.props.onClose} centered dialogClassName={'card-modal category--' + this.props.categoryId.toString()}>
+            <Modal
+                show={this.props.show}
+                onHide={this.props.onClose}
+                centered
+                dialogClassName={'card-modal category--' + this.props.categoryId.toString()}
+            >
                 <Modal.Header className={'card-modal__header'}>
                     <div className={'card-modal__header__id principle-number'}>{this.props.id}</div>
                     <h2 className={'card-modal__header__title'}>{this.props.principle}</h2>
@@ -36,7 +63,8 @@ class CardModal extends React.Component {
                         <p>{this.props.citation}</p>
                     </div>
 
-                    <button onClick={this.props.onNext} className='previous-next-button fas fa-arrow-circle-right'></button>
+                    <button onClick={this.props.onNext} className='previous-next-button previous-next-button--next fas fa-arrow-circle-right'></button>
+                    <button onClick={this.props.onPrev} className='previous-next-button previous-next-button--prev fas fa-arrow-circle-left'></button>
 
                 </Modal.Body>
             </Modal>

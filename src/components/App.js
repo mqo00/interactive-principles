@@ -30,6 +30,7 @@ export default class App extends Component {
         this.renderModal = this.renderModal.bind(this);
         this.flipCard = this.flipCard.bind(this);
         this.modalNavToNext = this.modalNavToNext.bind(this);
+        this.modalNavToPrev = this.modalNavToPrev.bind(this);
     }
 
     handleClose() {
@@ -128,10 +129,20 @@ export default class App extends Component {
 
     modalNavToNext() {
         let currentCardIndex = this.state.cards.indexOf(this.state.cards.find(card => card.id === (this.state.cardInModal.id)));
+        //if you are on the last card, go to the first one. If not, go to the next one.
         let nextCardIndex = ((currentCardIndex + 1) < this.state.cards.length) ? (currentCardIndex + 1) : 0;
         let nextCard = this.state.cards[nextCardIndex];
 
         this.setState({cardInModal: (nextCard)});
+    }
+
+    modalNavToPrev() {
+        let currentCardIndex = this.state.cards.indexOf(this.state.cards.find(card => card.id === (this.state.cardInModal.id)));
+        //If you are already on the first card, do nothing
+        let prevCardIndex = (currentCardIndex == 0) ? currentCardIndex : (currentCardIndex - 1);
+        let prevCard = this.state.cards[prevCardIndex];
+
+        this.setState({cardInModal: (prevCard)});
     }
 
     render() {
@@ -181,6 +192,7 @@ export default class App extends Component {
                     show={this.state.showModal}
                     onClose={this.handleClose}
                     onNext={this.modalNavToNext}
+                    onPrev={this.modalNavToPrev}
                     id={this.state.cardInModal.id}
                     categoryId={this.state.cardInModal.categoryId}
                     categoryName={this.state.cardInModal.categoryName}
