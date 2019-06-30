@@ -1,8 +1,17 @@
+.modal-backdrop.show {
+  opacity: .7;
+}
+
 .card-modal {
   max-width: 1000px;
 
   .modal-content {
-    border-radius: $rounded-corner;
+    border-radius: $rounded-corner + 2;
+
+    button.close {
+      padding: 18px 16px;
+      font-size: 32px;
+    }
   }
 
   &__header {

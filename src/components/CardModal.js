@@ -35,7 +35,7 @@ class CardModal extends React.Component {
                 centered
                 dialogClassName={'card-modal category--' + this.props.categoryId.toString()}
             >
-                <Modal.Header className={'card-modal__header'}>
+                <Modal.Header className={'card-modal__header'} closeButton>
                     <div className={'card-modal__header__id principle-number'}>{this.props.id}</div>
                     <h2 className={'card-modal__header__title'}>{this.props.principle}</h2>
                 </Modal.Header>

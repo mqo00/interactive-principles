@@ -53,12 +53,33 @@ $space-between-buttons: 10px;
   border-radius: 50%;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 
+  &:after {
+    font-family: $font-stack;
+    color: $text--white;
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: ($size + 5px);
+    width: $size;
+    text-align: center;
+  }
+
   &--next {
     right: -1 * ($size + $spacing);
+
+    &:after {
+      content: 'Next';
+    }
   }
 
   &--prev {
     left: -1 * ($size + $spacing);
+
+    &:after {
+      content: 'Previous';
+    }
   }
 
   &:hover {
