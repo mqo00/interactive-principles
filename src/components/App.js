@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
-import { Modal } from 'react-bootstrap';
+import CardModal from './CardModal';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
@@ -177,39 +177,24 @@ export default class App extends Component {
 
                 </div>
 
-                <Modal show={this.state.showModal} onHide={this.handleClose} centered dialogClassName={'card-modal category--' + this.state.cardInModal.categoryId.toString()}>
-                    <Modal.Header className={'card-modal__header'}>
-                        <div className={'card-modal__header__id principle-number'}>{this.state.cardInModal.id}</div>
-                        <h2 className={'card-modal__header__title'}>{this.state.cardInModal.principle}</h2>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div>
-                            <h3>Questions</h3>
-                            <p>{this.state.cardInModal.questions}</p>
-                        </div>
-                        <div>
-                            <h3>Summary</h3>
-                            <p>{this.state.cardInModal.descr}</p>
-                        </div>
-                        <div>
-                            <h3>Game Example</h3>
-                            <h4>{this.state.cardInModal.gameEx}</h4>
-                            <p>{this.state.cardInModal.gameExURL}</p>
-                            <p>{this.state.cardInModal.gameExDesc}</p>
-                        </div>
-                        <div>
-                            <h3>Related</h3>
-                            <p>{this.state.cardInModal.related}</p>
-                        </div>
-                        <div>
-                            <h3>Cited</h3>
-                            <p>{this.state.cardInModal.citation}</p>
-                        </div>
-
-                        <button onClick={this.modalNavToNext} className='previous-next-button fas fa-arrow-circle-right'></button>
-
-                    </Modal.Body>
-                </Modal>
+                <CardModal
+                    show={this.state.showModal}
+                    onClose={this.handleClose}
+                    onNext={this.modalNavToNext}
+                    id={this.state.cardInModal.id}
+                    categoryId={this.state.cardInModal.categoryId}
+                    categoryName={this.state.cardInModal.categoryName}
+                    principle={this.state.cardInModal.principle}
+                    questions={this.state.cardInModal.questions}
+                    descr={this.state.cardInModal.descr}
+                    comparison={this.state.cardInModal.descr}
+                    example={this.state.cardInModal.descr}
+                    gameEx={this.state.cardInModal.gameEx}
+                    gameExURL={this.state.cardInModal.gameExURL}
+                    gameExDesc={this.state.cardInModal.gameExDesc}
+                    related={this.state.cardInModal.related}
+                    citation={this.state.cardInModal.citation}
+                />
 
             </div>
         );
