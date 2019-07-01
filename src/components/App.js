@@ -198,8 +198,8 @@ export default class App extends Component {
                     categoryName={this.state.cardInModal.category}
                     principle={this.state.cardInModal.principle}
                     questions={this.state.cardInModal.questions}
-                    descr={this.state.cardInModal.descr}
-                    comparison={this.state.cardInModal.descr}
+                    description={this.state.cardInModal.description}
+                    comparison={this.state.cardInModal.description}
                     example={this.state.cardInModal.examples}
                     gameEx={this.state.cardInModal.exampleGame}
                     gameExURL={this.state.cardInModal.exampleGameUrl}

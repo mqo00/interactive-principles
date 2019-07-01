@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Img from './Img';
+import Comparison from './Comparison';
 
 class CardModal extends React.Component {
     constructor(props) {
@@ -46,28 +47,31 @@ class CardModal extends React.Component {
                             <h3>Category</h3>
                             {this.props.categoryName}
                         </div>
+                        <div className={'card-modal__body__side-panel__comparison'}>
+                            <Comparison comparison={this.props.example}/>
+                        </div>
 
                     </div>
                     <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-9'}>
-                        <div>
+                        <div className={'card-modal__body__details__section'}>
+                            <h3>Summary</h3>
+                            <p>{this.props.description}</p>
+                        </div>
+                        <div className={'card-modal__body__details__section'}>
                             <h3>Questions</h3>
                             <p>{this.props.questions}</p>
                         </div>
-                        <div>
-                            <h3>Summary</h3>
-                            <p>{this.props.descr}</p>
-                        </div>
-                        <div>
+                        <div className={'card-modal__body__details__section'}>
                             <h3>Game Example</h3>
                             <h4>{this.props.gameEx}</h4>
                             <p>{this.props.gameExURL}</p>
                             <p>{this.props.gameExDesc}</p>
                         </div>
-                        <div>
+                        <div className={'card-modal__body__details__section'}>
                             <h3>Related</h3>
                             <p>{this.props.related}</p>
                         </div>
-                        <div>
+                        <div className={'card-modal__body__details__section'}>
                             <h3>Cited</h3>
                             <p>{this.props.citation}</p>
                         </div>
@@ -92,8 +96,7 @@ CardModal.propTypes = {
     categoryName: PropTypes.any,
     principle: PropTypes.any,
     questions: PropTypes.any,
-    descr: PropTypes.any,
-    comparison: PropTypes.any,
+    description: PropTypes.any,
     example: PropTypes.any,
     gameEx: PropTypes.any,
     gameExURL: PropTypes.any,
