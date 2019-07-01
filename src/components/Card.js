@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from './Img';
 
 class Card extends React.Component {
     constructor(props) {
         super(props);
-
-        this.image = require('../images/' + (this.props.id) + '.svg');
 
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -45,7 +44,7 @@ class Card extends React.Component {
                         <div className={'card__face--front__body__comparison'}>
                             {this.props.comparison}
                         </div>
-                        <div style={{backgroundImage: 'url(' + this.image + ')'}} className={'card__face--front__body__image'}></div>
+                        <Img id={this.props.id} classes={'card__face--front__body__image'}/>
                         <div className={'card__face--front__body__example'}>
                             {this.props.example}
                         </div>
@@ -58,7 +57,7 @@ class Card extends React.Component {
                         <div className={'principle-number'}>
                             {this.props.id}
                         </div>
-                        <div className={'principle-image'} style={{backgroundImage: 'url(' + this.image + ')'}}></div>
+                        <Img id={this.props.id}/>
                         <div className={'principle-title'}>
                             {this.props.title}
                         </div>

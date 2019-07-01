@@ -195,15 +195,15 @@ export default class App extends Component {
                     onPrev={this.modalNavToPrev}
                     id={this.state.cardInModal.id}
                     categoryId={this.state.cardInModal.categoryId}
-                    categoryName={this.state.cardInModal.categoryName}
+                    categoryName={this.state.cardInModal.category}
                     principle={this.state.cardInModal.principle}
                     questions={this.state.cardInModal.questions}
                     descr={this.state.cardInModal.descr}
                     comparison={this.state.cardInModal.descr}
-                    example={this.state.cardInModal.descr}
-                    gameEx={this.state.cardInModal.gameEx}
-                    gameExURL={this.state.cardInModal.gameExURL}
-                    gameExDesc={this.state.cardInModal.gameExDesc}
+                    example={this.state.cardInModal.examples}
+                    gameEx={this.state.cardInModal.exampleGame}
+                    gameExURL={this.state.cardInModal.exampleGameUrl}
+                    gameExDesc={this.state.cardInModal.exampleGameDesc}
                     related={this.state.cardInModal.related}
                     citation={this.state.cardInModal.citation}
                 />

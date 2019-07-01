@@ -143,7 +143,7 @@ $example-section-height: $body-height * .3;
           left: (-1 * ($card-height - $header-height - 35px));
           top: 30px;
           text-align: right;
-          font-weight: 500;
+          font-weight: $font-weight--cat;
           -moz-transform: rotate(270deg);  /* FF3.5+ */
           -o-transform: rotate(270deg);  /* Opera 10.5 */
           -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
@@ -151,7 +151,7 @@ $example-section-height: $body-height * .3;
           -o-transform-origin: 100% 100%;
           -webkit-transform-origin: 100% 100%;
           z-index: 10;
-          font-size: 18px;
+          font-size: $font-size--cat;
         }
       }
 
