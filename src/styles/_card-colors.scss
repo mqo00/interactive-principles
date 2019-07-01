@@ -3,16 +3,19 @@
 //themes
 $themes: (
         1: (
+                text: $cat1--text,
                 dark: $cat1,
                 mid: $cat1--mid,
                 light: $cat1--light
         ),
         2: (
+                text: $cat2--text,
                 dark: $cat2,
                 mid: $cat2--mid,
                 light: $cat2--light
         ),
         3: (
+                text: $cat3--text,
                 dark: $cat3,
                 mid: $cat3--mid,
                 light: $cat3--light
@@ -57,7 +60,7 @@ $themes: (
 
 @mixin text-dark() {
   @include themed() {
-    color: t('dark');
+    color: t('text');
   }
 }
 

@@ -47,6 +47,18 @@ $example-section-height: $body-height * .3;
   }
 }
 
+.comparison {
+  &__greater {
+    font-weight: 500;
+  }
+  &__less {
+    font-weight: 300;
+  }
+  &__icon {
+    @include text-dark;
+  }
+}
+
 .cards {
   padding: $space-between-cards;
   max-width: ($card-width * 5) + ($space-between-cards * 6);
@@ -98,7 +110,7 @@ $example-section-height: $body-height * .3;
 
         .principle-title {
           display: inline-block;
-          width: calc(100% - #{$number-width} - #{$space-between-num-and-title});
+          width: calc(100% - #{$number-width} - #{$space-between-num-and-title} - 23);
           @extend %text-overflow-ellipsis;
           text-align: left;
           max-height: 30px;
@@ -192,7 +204,7 @@ $example-section-height: $body-height * .3;
           @extend %display-props;
           @extend %img-styles;
           @include bg-light();
-          background-size: 65%;
+          background-size: 75%;
           padding: 0;
         }
 

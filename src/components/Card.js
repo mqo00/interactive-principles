@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from './Img';
+import Comparison from './Comparison';
 
 class Card extends React.Component {
     constructor(props) {
@@ -42,11 +43,11 @@ class Card extends React.Component {
                     </div>
                     <div className={'card__face--front__body'}>
                         <div className={'card__face--front__body__comparison'}>
-                            {this.props.comparison}
+                            <Comparison comparison={this.props.comparison}/>
                         </div>
                         <Img id={this.props.id} classes={'card__face--front__body__image'}/>
                         <div className={'card__face--front__body__example'}>
-                            {this.props.example}
+                            <Comparison comparison={this.props.example}/>
                         </div>
 
                     </div>
