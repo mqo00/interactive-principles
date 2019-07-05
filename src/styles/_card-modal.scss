@@ -32,15 +32,12 @@
     &__category {
       @include bg-mid;
       @include text-dark;
-      // background-color: $cat1--mid;
       border-radius: 20px;
-      // width: $cat-container-width;
       height: $cat-container-height;
       line-height: $cat-container-height;
       margin-left: 15px;
       position: relative;
       font-size: 20px;
-      // color: $cat1;
       text-align: center;
       padding-left: 20px;
       padding-right: 20px;
@@ -51,8 +48,6 @@
   &__summary {
     @include bg-light;
     width: $summary-width;
-    // background-color: $cat1--light;
-    // padding-top: 100px;
     margin-top: -16px;
     margin-left: -1px;
     margin-bottom: -16px;
