@@ -1,4 +1,5 @@
 .card-modal {
+  $summary-width: 37%;
   max-width: 1000px;
 
   .modal-content {
@@ -8,8 +9,12 @@
   &__header {
     @include bg-dark;
     $num-width: 40px;
-    padding: 10px 20px 5px;
+    $cat-container-width: 250px;
+    $cat-container-height: 40px;
+    
+    padding: 10px 20px 5px; // top right bottom left
     border-radius: $rounded-corner $rounded-corner 0 0;
+    vertical-align: center;
 
     &__id {
       position: absolute;
@@ -23,6 +28,43 @@
       color: $text--white;
       margin-left: $num-width + 10px;
     }
+
+    &__category {
+      @include bg-mid;
+      @include text-dark;
+      // background-color: $cat1--mid;
+      border-radius: 20px;
+      // width: $cat-container-width;
+      height: $cat-container-height;
+      line-height: $cat-container-height;
+      margin-left: 15px;
+      position: relative;
+      font-size: 20px;
+      // color: $cat1;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    }
+  }
+
+  &__summary {
+    @include bg-light;
+    width: $summary-width;
+    // background-color: $cat1--light;
+    // padding-top: 100px;
+    margin-top: -16px;
+    margin-left: -1px;
+    margin-bottom: -16px;
+    border-bottom-left-radius: $rounded-corner
+  }
+
+  &__details {
+    width: 100%-$summary-width;
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow: scroll;
   }
 
   h3 {

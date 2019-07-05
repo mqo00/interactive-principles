@@ -78,32 +78,43 @@ class Card extends React.Component {
                 { this.renderCard() }
 
                 <Modal show={this.state.show} onHide={this.handleClose} centered dialogClassName={'card-modal category--' + this.props.category.toString()}>
-                    <Modal.Header className={'card-modal__header'}>
+                    <Modal.Header className={'card-modal__header'} closeButton>
                         <div className={'card-modal__header__id principle-number'}>{this.props.id}</div>
                         <h2 className={'card-modal__header__title'}>{this.props.title}</h2>
+                        <h2 className={'card-modal__header__category'}>{this.props.categoryName}</h2>
                     </Modal.Header>
-                    <Modal.Body>
-                        <div>
-                            <h3>Questions</h3>
-                            <p>{this.props.questions}</p>
-                        </div>
-                        <div>
-                            <h3>Summary</h3>
-                            <p>{this.props.descr}</p>
-                        </div>
-                        <div>
-                            <h3>Game Example</h3>
-                            <h4>{this.props.gameEx}</h4>
-                            <p>{this.props.gameExURL}</p>
-                            <p>{this.props.gameExDesc}</p>
-                        </div>
-                        <div>
-                            <h3>Related</h3>
-                            <p>{this.props.related}</p>
-                        </div>
-                        <div>
-                            <h3>Cited</h3>
-                            <p>{this.props.citation}</p>
+                    <Modal.Body className='card-modal__body-container'>
+                        <div className="row">
+                            <div className={'card-modal__summary'}>
+                                <h2>Summary view</h2>
+                            </div>
+                            <div className={'card-modal__details'}>
+                                <div>
+                                    <h3>this is the extra info</h3>
+                                </div>
+                                <div>
+                                    <h3>Questions</h3>
+                                    <p>{this.props.questions}</p>
+                                </div>
+                                <div>
+                                    <h3>Summary</h3>
+                                    <p>{this.props.descr}</p>
+                                </div>
+                                <div>
+                                    <h3>Game Example</h3>
+                                    <h4>{this.props.gameEx}</h4>
+                                    <p>{this.props.gameExURL}</p>
+                                    <p>{this.props.gameExDesc}</p>
+                                </div>
+                                <div>
+                                    <h3>Related</h3>
+                                    <p>{this.props.related}</p>
+                                </div>
+                                <div>
+                                    <h3>Cited</h3>
+                                    <p>{this.props.citation}</p>
+                                </div>
+                            </div>
                         </div>
                     </Modal.Body>
                 </Modal>
