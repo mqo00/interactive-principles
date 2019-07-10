@@ -9,10 +9,10 @@ $card-bg: #fff;
 $text--white: #fff;
 $text--card: #585858;
 $text--default: #4A4A4A;
-$text--button: #dadada;
-$beige: #E7E6E6;
-$bg: $navy;
-$well-bg: darken($bg, 7%);
+$text--button: $navy;
+$beige: #e5e8ef;
+$bg: $beige;
+$well-bg: darken($bg, 4%);
 
 $cat1: #DF6D4D;
 $cat2: #5EA67D;

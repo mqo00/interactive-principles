@@ -34,7 +34,7 @@ $space-between-buttons: 10px;
 
   &:hover, &:focus {
     text-decoration: none;
-    background-color: darken($bg, 10%);
+    background-color: darken($bg, 7%);
     color: lighten($text, 10%);
   }
 }
