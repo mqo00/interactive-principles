@@ -71,14 +71,16 @@ class CardModal extends React.Component {
                             <MultipleComparisons comparisons={this.props.example}/>
                         </div>
                         <div className={'card-modal__body__details__section'}>
-                            <h3>Questions</h3>
-                            <p>{this.props.questions}</p>
-                        </div>
-                        <div className={'card-modal__body__details__section'}>
                             <h3>Game Example</h3>
                             <h4>{this.props.gameEx}</h4>
                             <p>{this.props.gameExURL}</p>
                             <p>{this.props.gameExDesc}</p>
+                        </div>
+                        <div className={'card-modal__body__details__section'}>
+                            <div className={'card-modal__body__details__section__questions'}>
+                                <h3>Ask Yourself</h3>
+                                <p>{this.props.questions}</p>
+                            </div>
                         </div>
                         <div className={'card-modal__body__details__section'}>
                             <h3>Cited</h3>

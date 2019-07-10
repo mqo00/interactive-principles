@@ -11,10 +11,10 @@
 }
 
 .card-modal {
-  max-width: 1000px;
+  max-width: 1200px;
 
   .modal-content {
-    border-radius: $rounded-corner + 2;
+    border-radius: $slightlyrounded-corner + 2;
 
     button.close {
       padding: 18px 16px;
@@ -26,7 +26,7 @@
     @include bg-dark;
     $num-width: 40px;
     padding: 10px 20px 5px;
-    border-radius: $rounded-corner $rounded-corner 0 0;
+    border-radius: $slightlyrounded-corner $slightlyrounded-corner 0 0;
 
     &__id {
       position: absolute;
@@ -67,7 +67,7 @@
 
     &__side-panel {
       @include bg-light;
-      border-radius: 0 0 0 $rounded-corner;
+      border-radius: 0 0 0 $slightlyrounded-corner;
       padding: 0;
 
       &__img {
@@ -106,6 +106,17 @@
 
       &__section {
         padding: $section-padding;
+
+        &__questions {
+          h3 {
+            @include text-light;
+            text-align: center;
+          }
+          @include bg-dark;
+          padding: $section-padding;
+          border-radius: $slightlyrounded-corner;
+          color: $text--white;
+        }
       }
     }
   }
