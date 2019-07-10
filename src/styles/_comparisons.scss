@@ -1,0 +1,22 @@
+.multiple-comparisons {
+  .comparison {
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    @include bg-light;
+  }
+}
+
+.comparison {
+  &__greater {
+    font-weight: 500;
+  }
+  &__less {
+    font-weight: 300;
+  }
+  &__icon {
+    @include text-dark;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+}

@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Img from './Img';
 import Comparison from './Comparison';
+import MultipleComparisons from './MultipleComparisons';
 
 class CardModal extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ class CardModal extends React.Component {
                         </div>
                         <div className={'card-modal__body__details__section'}>
                             <h3>What does it look like?</h3>
-                            {this.props.example}
+                            <MultipleComparisons comparisons={this.props.example}/>
                         </div>
                         <div className={'card-modal__body__details__section'}>
                             <h3>Questions</h3>

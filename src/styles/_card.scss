@@ -47,18 +47,6 @@ $example-section-height: $body-height * .3;
   }
 }
 
-.comparison {
-  &__greater {
-    font-weight: 500;
-  }
-  &__less {
-    font-weight: 300;
-  }
-  &__icon {
-    @include text-dark;
-  }
-}
-
 .cards {
   padding: $space-between-cards;
   max-width: ($card-width * 5) + ($space-between-cards * 6);
