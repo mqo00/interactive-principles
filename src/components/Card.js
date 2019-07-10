@@ -26,7 +26,7 @@ class Card extends React.Component {
     renderCard() {
         return (
             (this.props.flipped) ?
-                <div className={'card__face card__face--front animated flipInY'}>
+                <div className={'card__face card__face--front animated'}>
                     <div className={'card__face--front__header'} onClick={this.props.onOpen}>
                         <button className={'btn btn-link card__face--front__header__open-link'}>
                             <i className="fas fa-external-link-alt"></i>
