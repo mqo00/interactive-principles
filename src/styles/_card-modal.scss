@@ -40,6 +40,16 @@
       color: $text--white;
       margin-left: $num-width + 10px;
     }
+
+    &__cat {
+      @include bg-mid;
+      @include text-dark;
+      font-size: 22px;
+      font-weight: $font-weight--cat;
+      border-radius: 25px;
+      padding: 2px 15px;
+      margin-left: 18px;
+    }
   }
 
   h4 {
@@ -68,20 +78,23 @@
         height: 200px;
       }
 
-      &__cat {
+      &__title {
         @include bg-mid;
         @include text-dark;
         padding: $section-padding;
-        font-size: 22px;
-        font-weight: $font-weight--cat;
+        margin-top: 8px;
 
         h3 {
-          margin-bottom: -2px;
-          margin-top: 2px;
+          margin-bottom: 0;
         }
       }
 
       &__comparison {
+        padding: $section-padding;
+        font-size: 22px;
+      }
+
+      &__related {
         padding: $section-padding;
       }
     }

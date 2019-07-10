@@ -38,24 +38,36 @@ class CardModal extends React.Component {
                 <Modal.Header className={'card-modal__header'} closeButton>
                     <div className={'card-modal__header__id principle-number'}>{this.props.id}</div>
                     <h2 className={'card-modal__header__title'}>{this.props.principle}</h2>
+                    <div className={'card-modal__header__cat'}>
+                        {this.props.categoryName}
+                    </div>
                 </Modal.Header>
                 <Modal.Body className={'card-modal__body row'}>
                     <div className={'card-modal__body__side-panel col-xs-12 col-sm-4 col-md-3'}>
 
                         <Img id={this.props.id} classes={'card-modal__body__side-panel__img'}/>
-                        <div className={'card-modal__body__side-panel__cat'}>
-                            <h3>Category</h3>
-                            {this.props.categoryName}
+                        <div className={'card-modal__body__side-panel__title'}>
+                            <h3>Definition</h3>
                         </div>
                         <div className={'card-modal__body__side-panel__comparison'}>
-                            <Comparison comparison={this.props.example}/>
+                            <Comparison comparison={this.props.comparison}/>
+                        </div>
+                        <div className={'card-modal__body__side-panel__title'}>
+                            <h3>Related Principles</h3>
+                        </div>
+                        <div className={'card-modal__body__side-panel__related'}>
+                            <p>{this.props.related}</p>
                         </div>
 
                     </div>
                     <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-9'}>
                         <div className={'card-modal__body__details__section'}>
-                            <h3>Summary</h3>
+                            <h3>How can you use it?</h3>
                             <p>{this.props.description}</p>
+                        </div>
+                        <div className={'card-modal__body__details__section'}>
+                            <h3>What does it look like?</h3>
+                            {this.props.example}
                         </div>
                         <div className={'card-modal__body__details__section'}>
                             <h3>Questions</h3>
@@ -66,10 +78,6 @@ class CardModal extends React.Component {
                             <h4>{this.props.gameEx}</h4>
                             <p>{this.props.gameExURL}</p>
                             <p>{this.props.gameExDesc}</p>
-                        </div>
-                        <div className={'card-modal__body__details__section'}>
-                            <h3>Related</h3>
-                            <p>{this.props.related}</p>
                         </div>
                         <div className={'card-modal__body__details__section'}>
                             <h3>Cited</h3>
@@ -95,6 +103,7 @@ CardModal.propTypes = {
     categoryId: PropTypes.any,
     categoryName: PropTypes.any,
     principle: PropTypes.any,
+    comparison: PropTypes.any,
     questions: PropTypes.any,
     description: PropTypes.any,
     example: PropTypes.any,

@@ -199,7 +199,7 @@ export default class App extends Component {
                     principle={this.state.cardInModal.principle}
                     questions={this.state.cardInModal.questions}
                     description={this.state.cardInModal.description}
-                    comparison={this.state.cardInModal.description}
+                    comparison={this.state.cardInModal.subtitle}
                     example={this.state.cardInModal.examples}
                     gameEx={this.state.cardInModal.exampleGame}
                     gameExURL={this.state.cardInModal.exampleGameUrl}
