@@ -70,19 +70,20 @@ $example-section-height: $body-height * .3;
 }
 
 .card {
+  background: transparent;
   font-family: $font-stack;
   height: $card-height;
   min-height: $card-height;
   width: $card-width;
   min-width: $card-width;
-  background: $card-bg;
-  box-shadow: $card-shadow;
   border-radius: $card-corner;
   margin-bottom: $space-between-cards;
   border: none;
 
   &__face {
     border-radius: $card-corner;
+    background: $card-bg;
+    box-shadow: $card-shadow;
 
     &--front {
       &__header {

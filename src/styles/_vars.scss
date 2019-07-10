@@ -4,14 +4,14 @@ $font-weight--cat: 500;
 $font-size--cat: 18px;
 
 //color
-$navy: #191C28;
+$navy: #2a2e3e;
 $card-bg: #fff;
 $text--white: #fff;
 $text--card: #585858;
 $text--default: #4A4A4A;
-$text--button: $navy;
+$text--button: #dadada;
 $beige: #E7E6E6;
-$bg: darken($beige, 7%);
+$bg: $navy;
 $well-bg: darken($bg, 7%);
 
 $cat1: #DF6D4D;
