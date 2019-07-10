@@ -2,7 +2,6 @@
 
 $card-height: 336px;
 $card-width: 240px;
-$card-shadow: 3px 4px 0px -1px rgba(70, 74, 80, 0.15);
 $card-corner: $slightlyrounded-corner;
 $number-width: 28px;
 $header-height: 45px;
@@ -33,6 +32,7 @@ $example-section-height: $body-height * .3;
 
 .principle-number {
   margin: 0 auto;
+  line-height: 1.5em;
   background-color: $text--white;
   height: $number-width;
   width: $number-width;
@@ -40,7 +40,7 @@ $example-section-height: $body-height * .3;
   font-weight: bold;
   border-radius: 50%;
   text-align: center;
-  box-shadow: $card-shadow;
+  box-shadow: $default-shadow;
 
   @include themed() {
     color: t('dark');

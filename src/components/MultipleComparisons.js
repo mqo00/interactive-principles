@@ -11,8 +11,6 @@ function MultipleComparisons(props) {
         examples.push(props.comparisons);
     }
 
-    console.log(examples);
-
     return(
         <div className={'multiple-comparisons'}>
             {examples.map(example => (

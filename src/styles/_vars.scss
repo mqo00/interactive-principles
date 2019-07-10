@@ -28,6 +28,10 @@ $cat3--text: darken($cat3, 10%);
 $cat3--mid: lighten($cat3, 35%);
 $cat3--light: lighten($cat3--mid, 16%);
 
+//shadows
+$card-shadow: 3px 4px 0px -1px rgba(70, 74, 80, 0.15);
+$default-shadow: 1px 1px 0px 2px rgba(70, 74, 80, 0.15);
+
 //spacing
 $space-between-cards: 30px;
 
@@ -39,3 +43,4 @@ $space-between-cards: 30px;
 
 $rounded-corner: 13px;
 $slightlyrounded-corner: 8px;
+$barelyrounded-corner: 3px;

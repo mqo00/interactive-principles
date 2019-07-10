@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Img from './Img';
 import Comparison from './Comparison';
 import MultipleComparisons from './MultipleComparisons';
+import GameExImg from './GameExImage';
 
 class CardModal extends React.Component {
     constructor(props) {
@@ -26,6 +27,28 @@ class CardModal extends React.Component {
     }
     componentWillUnmount(){
         document.removeEventListener('keydown', this.handleKeyPress, false);
+    }
+
+    renderGameExample() {
+        if(this.props.gameEx && this.props.gameExDesc) {
+            return (
+                <div className={'card-modal__body__details__section game-example'}>
+                    <h3>What does it look like in a game?</h3>
+                    <div className={'row'}>
+                        <div className={'col-xs-12 col-sm-3'}>
+                            <GameExImg id={this.props.id} classes={'game-example__image'}/>
+                        </div>
+                        <div className={'col-xs-12 col-sm-9'}>
+                            <a className={'game-example__title'} href={this.props.gameExURL} target={'_blank'}>
+                                {this.props.gameEx}
+                                <i className={'fas fa-external-link-square-alt'}/>
+                            </a>
+                            <p>{this.props.gameExDesc}</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
     }
 
     render() {
@@ -70,12 +93,7 @@ class CardModal extends React.Component {
                             <h3>What does it look like?</h3>
                             <MultipleComparisons comparisons={this.props.example}/>
                         </div>
-                        <div className={'card-modal__body__details__section'}>
-                            <h3>What does it look like in a game?</h3>
-                            <h4>{this.props.gameEx}</h4>
-                            <p>{this.props.gameExURL}</p>
-                            <p>{this.props.gameExDesc}</p>
-                        </div>
+                        {this.renderGameExample()}
                         <div className={'card-modal__body__details__section'}>
                             <div className={'card-modal__body__details__section__questions'}>
                                 <h3>Ask Yourself</h3>

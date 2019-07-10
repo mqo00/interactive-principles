@@ -12,6 +12,7 @@
 
 .card-modal {
   max-width: 1200px;
+  font-family: $font-stack;
 
   .modal-content {
     border-radius: $slightlyrounded-corner + 2;
@@ -106,6 +107,11 @@
 
       &__section {
         padding: $section-padding;
+        margin-bottom: 8px;
+
+        p {
+          margin-bottom: 0;
+        }
 
         &__questions {
           h3 {

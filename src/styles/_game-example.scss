@@ -1,0 +1,24 @@
+.game-example {
+
+  &__title {
+    @include text-dark;
+    font-family: $font-stack;
+    font-weight: $font-weight--cat;
+
+    i {
+      margin-left: 3px;
+    }
+  }
+
+  p {
+    font-size: .8em;
+  }
+
+  &__image {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: $default-shadow;
+    border-radius: $barelyrounded-corner;
+  }
+}
