@@ -51,6 +51,41 @@ class CardModal extends React.Component {
         }
     }
 
+    renderExamples() {
+        if (this.props.example) {
+            return (
+                <div className={'card-modal__body__details__section'}>
+                    <h3>What does it look like?</h3>
+                    <MultipleComparisons comparisons={this.props.example}/>
+                </div>
+            );
+        }
+    }
+
+    renderQuestions() {
+        if (this.props.questions) {
+            return(
+                <div className={'card-modal__body__details__section'}>
+                    <div className={'card-modal__body__details__section__questions'}>
+                        <h3>Ask Yourself</h3>
+                        <p>{this.props.questions}</p>
+                    </div>
+                </div>
+            );
+        }
+    }
+
+    renderCitation() {
+        if (this.props.citation) {
+            return(
+                <div className={'card-modal__body__details__section'}>
+                    <h3>Cited</h3>
+                    <p>{this.props.citation}</p>
+                </div>
+            );
+        }
+    }
+
     render() {
         return(
             <Modal
@@ -89,21 +124,10 @@ class CardModal extends React.Component {
                             <h3>How can you use it?</h3>
                             <p>{this.props.description}</p>
                         </div>
-                        <div className={'card-modal__body__details__section'}>
-                            <h3>What does it look like?</h3>
-                            <MultipleComparisons comparisons={this.props.example}/>
-                        </div>
+                        {this.renderExamples()}
                         {this.renderGameExample()}
-                        <div className={'card-modal__body__details__section'}>
-                            <div className={'card-modal__body__details__section__questions'}>
-                                <h3>Ask Yourself</h3>
-                                <p>{this.props.questions}</p>
-                            </div>
-                        </div>
-                        <div className={'card-modal__body__details__section'}>
-                            <h3>Cited</h3>
-                            <p>{this.props.citation}</p>
-                        </div>
+                        {this.renderQuestions()}
+                        {this.renderCitation()}
                     </div>
 
                     <button onClick={this.props.onNext} className='previous-next-button previous-next-button--next fas fa-arrow-circle-right'></button>

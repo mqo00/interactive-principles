@@ -23,6 +23,15 @@ class Card extends React.Component {
         this.setState({ show: true });
     }
 
+    renderComparison(comparison) {
+        if (comparison) {
+            return(
+                <Comparison comparison={comparison}/>
+            );
+        }
+
+    }
+
     renderCard() {
         return (
             (this.props.flipped) ?
@@ -43,11 +52,11 @@ class Card extends React.Component {
                     </div>
                     <div className={'card__face--front__body'}>
                         <div className={'card__face--front__body__comparison'}>
-                            <Comparison comparison={this.props.comparison}/>
+                            {this.renderComparison(this.props.comparison)}
                         </div>
                         <Img id={this.props.id} classes={'card__face--front__body__image'}/>
                         <div className={'card__face--front__body__example'}>
-                            <Comparison comparison={this.props.example}/>
+                            {this.renderComparison(this.props.example)}
                         </div>
 
                     </div>

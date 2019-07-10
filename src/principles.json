@@ -22,9 +22,9 @@
     "questions": "What are all the skills in your game?\nWhat order does the player encounter them in?\nCould the sequence be adjusted to introduce more complex skills later?\nHow can the different levels of skills be presented to the players?\nHow can bigger practices be broken down into smaller pieces?",
     "description": "Structure content modularly; build upon prior concepts when introducing new concepts, and build towards a higher goal.",
     "examples": "Teach a player to do a double-jump backflip in level 1 < teach jump in level 1,  doublejump in level 2, backflip in level 3, and double-jump backflip in level 4\nLearn to draw contours and break objects down into shapes > draw a human figure in high fidelity",
-    "exampleGame": "Water Bears",
-    "exampleGameUrl": "http://waterbearsgame.com/",
-    "exampleGameDesc": "Water Bears is a pipeline building puzzle game. Players pick different puzzle pieces to extend the current pipeline system to bring water to the water bears. The earlier levels focus on teaching players basic mechanics, such as choosing and extending water pipes, and later levels start to train players to solve problems strategically with more complicated building scenarios. "
+    "exampleGame": "Human Resource Machine",
+    "exampleGameUrl": "https://tomorrowcorporation.com/humanresourcemachine",
+    "exampleGameDesc": "Human Resource Machine is a puzzle game that teaches programming. The player controls tiny office workers with simple programming to perform tasks dictated by a cruel manager. Each level builds upon the one before it and incorporates previously learned commands, until at the end of the game the player has mastered the full language of commands."
   },
   {
     "id": 3,
@@ -36,9 +36,9 @@
     "questions": "What does the player need to know to succeed in your game?\nDoes the player feel that those KCs are necessary?\nCan you make them feel more necessary?\nHow can players’ understanding be measured through the test?",
     "description": "Make it clear how key concepts being learned will be put to use later.",
     "examples": "Tell your 6th grade class that there will be a quiz on this reading > tell them to do the reading because it will better them as a student\nWhen teaching a player to perform a function, provide some examples of future tasks that this skill is needed to complete (“double jump: used for collecting butterflies”) > teach the function in a vacuum",
-    "exampleGame": "Baicizhan",
-    "exampleGameUrl": "https://www.baicizhan.com/download.html",
-    "exampleGameDesc": "Baicizhan is a gamified English vocabulary learning app. Players learn new vocabulary by remembering relevant images. There will be different kinds of testing at the end of the learning session, including matching, reading, etc. Players need to successfully get all the questions right in order to learn new words."
+    "exampleGame": "FreeCodeCamp",
+    "exampleGameUrl": "https://www.freecodecamp.org/",
+    "exampleGameDesc": "FreeCodeCamp is a free website that teaches users web development skills through a gamified curriculum of short “learn by doing” exercises. Each lesson begins with a few paragraphs of explanatory text and visuals, followed immediately by a coding problem. The user cannot complete the lesson without solving the problem. The consistent use of this pattern perpetuates the expectation that the information being learned in the introductory text is important, and will be put to use (tested on)."
   },
   {
     "id": 4,
@@ -50,9 +50,9 @@
     "questions": "Where do players exercise the skills they are learning in your game?\nDo they have to exercise those skills repeatedly?\nWhat are the core skills that must be tested before proceeding?",
     "description": "Re-expose players to core concepts by forcing them to recall material. Or pre-expose them to material they haven’t learned yet by asking them to make hypotheses about it.",
     "examples": "Give a test summarizing the material > spend additional time studying the same material\nGive a “pre-quiz” to expose students to upcoming math concepts and gauge progress > jump straight in",
-    "exampleGame": "Grasshopper",
-    "exampleGameUrl": "https://grasshopper.codes/",
-    "exampleGameDesc": "Grasshopper is a code learning game for beginners. It starts with few lessons in computer science the broader topic and then goes into Javascript learning. The player is tested with a multiple-choice question about the current material in ever few coding tasks",
+    "exampleGame": "Duolingo",
+    "exampleGameUrl": "https://www.duolingo.com/",
+    "exampleGameDesc": "Duolingo is a mobile app for learning languages. Duolingo challenges players to recall previously learned concepts by mixing questions from previous material into new lesson plans as the player progresses.",
     "cited": "Pashler"
   },
   {
@@ -79,9 +79,9 @@
     "questions": "What are all the channels the game is using to communicate status to the player?\nHow many of these relate to their application of target concepts?\nHow does a player know how they are doing?\nWhat are some actions players can take after receiving a feedback?\nHow often should the feedback be provided?",
     "description": "Provide feedback to the player on their performance as they are learning.\nTiming of feedback may differ depending on the task being performed. Immediate feedback during play can be valuable to encourage or discourage behavior.",
     "examples": "A child does a calculation incorrectly, but the teacher lets it go because it is a difficult problem < the teacher points out the mistake as it happens",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
+    "exampleGame": "JobPro: Get Dressed!",
+    "exampleGameUrl": "https://www.simcoachgames.com/jobpro/",
+    "exampleGameDesc": "JobPro: Get Dressed! Is a mobile game created by Simcoach Games that trains players in how to dress for a job interview. Players choose an outfit based on the role they are interviewing for, the atmosphere of the company, and various other factors. After the player makes their selection they receive detailed feedback about the outfit they chose and its compatibility with the position.",
     "cited": "Graesser"
   },
   {
@@ -90,14 +90,14 @@
     "subtitle": "Practice key prior skills before lesson > jump in",
     "categoryId": 2,
     "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "related": "Activate Preconceptions",
+    "questions": "What prior skills are required for this specific lesson?\nHow can these prior skills be practiced effectively before the lesson? Multiple short practices or one long practice?\nHow well should the players be trained in those prior skills?",
+    "description": "Provide some exposure to key concepts before the actual lesson.",
+    "examples": "Assign some readings before the lecture > jump straight in\nStart choir with a warm-up that is in the same style as the song they group will learn that day \nMake players practice writing one sentence at a time before making them write a paragraph",
+    "exampleGame": "Coding for Carrots",
+    "exampleGameUrl": "https://www.google.com/doodles/celebrating-50-years-of-kids-coding",
+    "exampleGameDesc": "Coding for Carrots is a drag-and-drop coding game that tells a story of a rabbit searches for carrots by completing the block building activity. There is a trial round before every official game. It offers pretraining of the skills that the game wants to test, and it also helps to set an expectation of the difficulty level for the players.",
+    "cited": "Pashler"
   },
   {
     "id": 8,
@@ -105,14 +105,10 @@
     "subtitle": "Worked examples + problem-solving practice > practice alone",
     "categoryId": 2,
     "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "questions": "How many or what type of worked examples can be provided for this lesson?\nHow can we make sure that players aren’t simply cloning the worked examples instead of solving the practices?",
+    "description": "Combine problem-solving practice with reviewing examples of solved problems that illustrate the steps taken to reach a solution.\nHaving students alternate between reviewing worked examples and solving similar problems on their own has been shown to be effective when teaching math, science, and technology.",
+    "examples": "A computer science student reviews code from a few similar projects while determining what approach she will take to do her homework assignment > she looks at the assignment and thinks about it really hard\nAn algebra textbook provides a worked example for each type of practice problem, using different variables and values > descriptive text and practice problems only",
+    "cited": "Pashler"
   },
   {
     "id": 9,
@@ -120,14 +116,14 @@
     "subtitle": "Concrete to abstract representations > starting with abstract",
     "categoryId": 2,
     "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "related": "Worked Example, Anchored Learning",
+    "questions": "What are some concrete/abstract representations of the concept?\nWhat is the target audience and how will this affect the choice of concrete representations?\nHow are some ways of bridging the concrete and abstract representations?",
+    "description": "When explaining key concepts, use both abstract and concrete representations. Draw connections between the abstract and concrete examples, and highlight how they represent the same critical takeaways.\nConcrete representations can be effective for inciting initial understanding of a concept, but may not support transferring that knowledge to other concepts. Abstract representations may be more difficult to grasp initially, but have shown to foster the ability to put the same knowledge to use in very different domains. Therefore some experts recommend concreteness fading: introduce a concept with concrete examples, and over time replace key components of that example with more abstract representations.\n",
+    "examples": "“Shelly needs 3 dozen eggs. X = the number of eggs she needs.” > “X = 3(12). “\nReview a diagram of the circle of 5ths < Play through it on piano while following along on the diagram\nChocolate bar split into 4 equal pieces > ¼ ",
+    "exampleGame": "Ratio Rumble",
+    "exampleGameUrl": "https://mathsnacks.com/ratio-rumble.html",
+    "exampleGameDesc": "Ratio Rumble is a math game that helps players get familiar with ratios. Players connect “ingredient” tiles in quantities that match a given ratio. In this way players are exposed to a concrete representation of the ratio (for example 6 blue tiles and 4 green tiles) and must make the connection with the more abstract representation of the ratio (3:2) to succeed.",
+    "cited": "Pashler"
   },
   {
     "id": 10,
@@ -135,14 +131,13 @@
     "subtitle": "Words include cues about organization > no organization cues",
     "categoryId": 2,
     "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "related": "Multimedia, Spatial contiguity",
+    "questions": "What are some segments of the lesson or practice that could be ambiguous to players?\nWhat are some ways of explicitly stating the requirements?\nHow do we provide explicit instructions while keeping the players engaged? How can we give cues that won’t make the practices too easy or boring?",
+    "description": "Provide explicit instructions as needed to help the player anticipate where they should focus their attention.\n Verbal cues may accompany visuals to describe unfamiliar objects, or explain unobvious processes. Each text description should be near the visual element it describes.",
+    "examples": "A game with a tutorial and instructions > no text\nA diagram illustrating the branches of government, with terms the player has never heard before < descriptive text throughout the graphic explains how they connect",
+    "exampleGame": "Creature Capture",
+    "exampleGameUrl": "http://play.centerforgamescience.org/creaturecapture/",
+    "exampleGameDesc": "Creature Capture is a strategy game published by the University of Washington Center for Game Science. It teaches young children to compare their game fraction values with those of the computer-controlled virals. \nTo win the game, the player needs to pick a number that meets the requirement of the presented game cue. "
   },
   {
     "id": 11,
@@ -150,298 +145,139 @@
     "subtitle": "Integrate instructional components > no integration",
     "categoryId": 2,
     "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "related": "Scaffolding, Segmenting"
   },
   {
     "id": 12,
     "principle": "Goldilocks",
     "subtitle": "Instruct at intermediate difficulty level > too hard or too easy",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 13,
     "principle": "Activate preconceptions",
     "subtitle": "Cue student's prior knowledge > no prior knowledge cues",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 14,
     "principle": "Immediate Feedback timing",
     "subtitle": "Immediate feedback on errors > delayed feedback",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 15,
     "principle": "Interleaving",
     "subtitle": "Intermix practice on different skills > block practice all at once",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 16,
     "principle": "Application",
     "subtitle": "Practice applying new knowledge > no application",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 17,
     "principle": "Variability",
     "subtitle": "Practice with varied instances > similar instances",
     "categoryId": 2,
-    "category": "Induction/Refinement",
-    "related": "Lorem Ipsum",
-    "questions": "Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Induction/Refinement"
   },
   {
     "id": 18,
     "principle": "Comparison",
     "subtitle": "Compare multiple instances > only one instance",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 19,
     "principle": "Multimedia",
     "subtitle": "Graphics + verbal descriptions > verbal descriptions alone",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 20,
     "principle": "Modality principle",
     "subtitle": "Verbal descriptions presented in audio > in written form",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 21,
     "principle": "Redundancy",
     "subtitle": "Verbal descriptions in audio > both audio & written",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 22,
     "principle": "Spatial contiguity",
     "subtitle": "Present description next to image element described > separated",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 23,
     "principle": "Temporal contiguity",
     "subtitle": "Present audio & image element at the same time > separated",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 24,
     "principle": "Coherence",
     "subtitle": "Extraneous words, pictures, sounds excluded > included",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 25,
     "principle": "Anchored learning",
     "subtitle": "Real-world problems > abstract problems",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 26,
     "principle": "Metacognition",
     "subtitle": "Metacognition supported > no support for metacognition",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 27,
     "principle": "Explanation",
     "subtitle": "Prompt for self-explanation > give explanation > no prompt",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 28,
     "principle": "Questioning",
     "subtitle": "Time for reflection & questioning > instruction alone",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 29,
     "principle": "Cognitive dissonance",
     "subtitle": "Present incorrect or alternative perspective > only correct",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   },
   {
     "id": 30,
     "principle": "Interest",
     "subtitle": "Instruction relevant to student interests > not relevant",
     "categoryId": 3,
-    "category": "Sense-making/Understanding",
-    "related": "Lorem Ipsum",
-    "questions": "\"Vestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\nNunc dignissim nec ligula quis sagittis?\nVestibulum sit amet diam sed mauris sodales semper?\nMorbi ut cursus massa, ac suscipit magna?\"",
-    "description": "Nam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.\tNam id venenatis nunc. Mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc. Nulla facilisi. Aenean vel tortor eu nunc convallis interdum vel ac arcu.",
-    "examples": "Nam id venenatis nunc mauris lacus massa, interdum quis sagittis dictum, rhoncus imperdiet nunc > Aenean vel tortor eu nunc convallis interdum vel ac arcu",
-    "exampleGame": "Lorem Ipsum",
-    "exampleGameUrl": "www.lipsum.com/feed/html",
-    "exampleGameDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nibh vitae lacus dapibus dignissim ut quis arcu. Donec facilisis diam ante, non malesuada lectus molestie id. Sed consequat neque quis velit consectetur fringilla. Nulla auctor id dui sit amet tincidunt. Ut sit amet pulvinar erat. Donec ut nibh eros. Pellentesque gravida tempus semper.",
-    "cited": "Lipsum"
+    "category": "Sense-making/Understanding"
   }
 ]

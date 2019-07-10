@@ -7,6 +7,7 @@ function Comparison(props) {
     var item1;
     var item2;
     var reverse = false;
+    var nocomparison = false;
 
     example1 = (props.comparison.match(/\n/)) ? (props.comparison.split(/\n/)[0]) : props.comparison;
 
@@ -19,19 +20,33 @@ function Comparison(props) {
         item1 = parts[1];
         item2 = parts[0];
         reverse = true;
+    } else {
+        nocomparison = true;
     }
 
-    return reverse ?
-        <div className={'comparison'}>
-            <span className={'comparison__less'}>{item2} </span>
-            <span className={'comparison__icon fas fa-less-than'}></span>
-            <span className={'comparison__greater'}> {item1}</span>
-        </div> :
-        <div className={'comparison'}>
-            <span className={'comparison__greater'}>{item1} </span>
-            <span className={'comparison__icon fas fa-greater-than'}></span>
-            <span className={'comparison__less'}> {item2}</span>
-        </div>;
+    if (reverse) {
+        return(
+            <div className={'comparison'}>
+                <span className={'comparison__less'}>{item2} </span>
+                <span className={'comparison__icon fas fa-less-than'}></span>
+                <span className={'comparison__greater'}> {item1}</span>
+            </div>
+        );
+    } else if (nocomparison) {
+        return (
+            <div className={'comparison'}>
+                <span className={'comparison__greater'}>{example1} </span>
+            </div>
+        );
+    } else {
+        return(
+            <div className={'comparison'}>
+                <span className={'comparison__greater'}>{item1} </span>
+                <span className={'comparison__icon fas fa-greater-than'}></span>
+                <span className={'comparison__less'}> {item2}</span>
+            </div>
+        );
+    }
 }
 
 Comparison.propTypes = {
