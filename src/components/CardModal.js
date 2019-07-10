@@ -30,7 +30,7 @@ class CardModal extends React.Component {
     }
 
     renderGameExample() {
-        if(this.props.gameEx && this.props.gameExDesc) {
+        if(this.props.exampleGame && this.props.exampleGameDesc) {
             return (
                 <div className={'card-modal__body__details__section game-example'}>
                     <h3>What does it look like in a game?</h3>
@@ -39,11 +39,11 @@ class CardModal extends React.Component {
                             <GameExImg id={this.props.id} classes={'game-example__image'}/>
                         </div>
                         <div className={'col-xs-12 col-sm-9'}>
-                            <a className={'game-example__title'} href={this.props.gameExURL} target={'_blank'}>
-                                {this.props.gameEx}
+                            <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'}>
+                                {this.props.exampleGame}
                                 <i className={'fas fa-external-link-square-alt'}/>
                             </a>
-                            <p>{this.props.gameExDesc}</p>
+                            <p>{this.props.exampleGameDesc}</p>
                         </div>
                     </div>
                 </div>
@@ -52,11 +52,11 @@ class CardModal extends React.Component {
     }
 
     renderExamples() {
-        if (this.props.example) {
+        if (this.props.examples) {
             return (
                 <div className={'card-modal__body__details__section'}>
                     <h3>What does it look like?</h3>
-                    <MultipleComparisons comparisons={this.props.example}/>
+                    <MultipleComparisons comparisons={this.props.examples}/>
                 </div>
             );
         }
@@ -76,11 +76,11 @@ class CardModal extends React.Component {
     }
 
     renderCitation() {
-        if (this.props.citation) {
+        if (this.props.cited) {
             return(
                 <div className={'card-modal__body__details__section'}>
                     <h3>Cited</h3>
-                    <p>{this.props.citation}</p>
+                    <p>{this.props.cited}</p>
                 </div>
             );
         }
@@ -109,7 +109,7 @@ class CardModal extends React.Component {
                             <h3>Definition</h3>
                         </div>
                         <div className={'card-modal__body__side-panel__comparison'}>
-                            <Comparison comparison={this.props.comparison}/>
+                            <Comparison comparison={this.props.subtitle}/>
                         </div>
                         <div className={'card-modal__body__side-panel__title'}>
                             <h3>Related Principles</h3>
@@ -148,15 +148,15 @@ CardModal.propTypes = {
     categoryId: PropTypes.any,
     categoryName: PropTypes.any,
     principle: PropTypes.any,
-    comparison: PropTypes.any,
+    subtitle: PropTypes.any,
     questions: PropTypes.any,
     description: PropTypes.any,
-    example: PropTypes.any,
-    gameEx: PropTypes.any,
-    gameExURL: PropTypes.any,
-    gameExDesc: PropTypes.any,
+    examples: PropTypes.any,
+    exampleGame: PropTypes.any,
+    exampleGameUrl: PropTypes.any,
+    exampleGameDesc: PropTypes.any,
     related: PropTypes.any,
-    citation: PropTypes.any
+    cited: PropTypes.any
 };
 
 export default CardModal;

@@ -4,7 +4,7 @@
     "principle": "Spacing",
     "subtitle": "Space practice across time > mass practice all at once Sequence",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "questions": "When do players get opportunities to practice skills in your game?\nHow often do you want your player to practice key skills?\nHow many times will they be exposed to each key skill?\nHow much time is between the initial learning and the final “test” or implementation of knowledge?\nHow much time will it require for players to complete practicing?\nWhat is the minimum required time for one set of practice?",
     "description": "Leave some time in between practice/study/play sessions. \nDelayed reexposure/review can be very effective in learning new material. It is more damaging not to have a review at all than it is to have too much space between the initial exposure and the review.",
     "examples": "Studying for 1 hour a day for 12 days > Cramming for a test for 12 hours the day before\nPlaying Duolingo for 7 hours on the plane on the way to Japan < Playing for 20 minutes every day for 2 weeks\nGive students a review of course material the day after it is first presented < Review several weeks later",
@@ -18,7 +18,7 @@
     "principle": "Scaffolding",
     "subtitle": "Sequence instruction toward higher goals > no sequencing",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "questions": "What are all the skills in your game?\nWhat order does the player encounter them in?\nCould the sequence be adjusted to introduce more complex skills later?\nHow can the different levels of skills be presented to the players?\nHow can bigger practices be broken down into smaller pieces?",
     "description": "Structure content modularly; build upon prior concepts when introducing new concepts, and build towards a higher goal.",
     "examples": "Teach a player to do a double-jump backflip in level 1 < teach jump in level 1,  doublejump in level 2, backflip in level 3, and double-jump backflip in level 4\nLearn to draw contours and break objects down into shapes > draw a human figure in high fidelity",
@@ -31,7 +31,7 @@
     "principle": "Exam expectations",
     "subtitle": "Students expect to be tested > no testing expected",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "related": "Testing",
     "questions": "What does the player need to know to succeed in your game?\nDoes the player feel that those KCs are necessary?\nCan you make them feel more necessary?\nHow can players’ understanding be measured through the test?",
     "description": "Make it clear how key concepts being learned will be put to use later.",
@@ -42,10 +42,10 @@
   },
   {
     "id": 4,
-    "principle": "Testing",
+    "principle": "Quizzing",
     "subtitle": "Quiz for retrieval practice > study same material",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "related": "Exam expectations",
     "questions": "Where do players exercise the skills they are learning in your game?\nDo they have to exercise those skills repeatedly?\nWhat are the core skills that must be tested before proceeding?",
     "description": "Re-expose players to core concepts by forcing them to recall material. Or pre-expose them to material they haven’t learned yet by asking them to make hypotheses about it.",
@@ -60,7 +60,7 @@
     "principle": "Segmenting",
     "subtitle": "Present lesson in learner-paced segments > as a continuous unit",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "related": "spacing, scaffolding",
     "questions": "What are all of the skills that a player needs to succeed in your game?\nWhat are additional skills that a player needs to successfully apply those skills?\nWhat are additional skills that a player needs to successfully apply THOSE skills?\nHow will the game adjust to players with different learning paces?",
     "description": "Break material down into units that complement the pace of the player/learner, or even give them control over their own pace. \nMath is not a skill, it is actually a collection of related skills that people can have different mastery of.",
@@ -74,7 +74,7 @@
     "principle": "Feedback",
     "subtitle": "Provide feedback during learning > no feedback provided",
     "categoryId": 1,
-    "category": "Memory/Fluency",
+    "categoryName": "Memory/Fluency",
     "related": "Immediate Feedback",
     "questions": "What are all the channels the game is using to communicate status to the player?\nHow many of these relate to their application of target concepts?\nHow does a player know how they are doing?\nWhat are some actions players can take after receiving a feedback?\nHow often should the feedback be provided?",
     "description": "Provide feedback to the player on their performance as they are learning.\nTiming of feedback may differ depending on the task being performed. Immediate feedback during play can be valuable to encourage or discourage behavior.",
@@ -89,7 +89,7 @@
     "principle": "Pretraining",
     "subtitle": "Practice key prior skills before lesson > jump in",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Activate Preconceptions",
     "questions": "What prior skills are required for this specific lesson?\nHow can these prior skills be practiced effectively before the lesson? Multiple short practices or one long practice?\nHow well should the players be trained in those prior skills?",
     "description": "Provide some exposure to key concepts before the actual lesson.",
@@ -104,7 +104,7 @@
     "principle": "Worked example",
     "subtitle": "Worked examples + problem-solving practice > practice alone",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "questions": "How many or what type of worked examples can be provided for this lesson?\nHow can we make sure that players aren’t simply cloning the worked examples instead of solving the practices?",
     "description": "Combine problem-solving practice with reviewing examples of solved problems that illustrate the steps taken to reach a solution.\nHaving students alternate between reviewing worked examples and solving similar problems on their own has been shown to be effective when teaching math, science, and technology.",
     "examples": "A computer science student reviews code from a few similar projects while determining what approach she will take to do her homework assignment > she looks at the assignment and thinks about it really hard\nAn algebra textbook provides a worked example for each type of practice problem, using different variables and values > descriptive text and practice problems only",
@@ -115,7 +115,7 @@
     "principle": "Concreteness fading",
     "subtitle": "Concrete to abstract representations > starting with abstract",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Worked Example, Anchored Learning",
     "questions": "What are some concrete/abstract representations of the concept?\nWhat is the target audience and how will this affect the choice of concrete representations?\nHow are some ways of bridging the concrete and abstract representations?",
     "description": "When explaining key concepts, use both abstract and concrete representations. Draw connections between the abstract and concrete examples, and highlight how they represent the same critical takeaways.\nConcrete representations can be effective for inciting initial understanding of a concept, but may not support transferring that knowledge to other concepts. Abstract representations may be more difficult to grasp initially, but have shown to foster the ability to put the same knowledge to use in very different domains. Therefore some experts recommend concreteness fading: introduce a concept with concrete examples, and over time replace key components of that example with more abstract representations.\n",
@@ -130,7 +130,7 @@
     "principle": "Guided attention",
     "subtitle": "Words include cues about organization > no organization cues",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Multimedia, Spatial contiguity",
     "questions": "What are some segments of the lesson or practice that could be ambiguous to players?\nWhat are some ways of explicitly stating the requirements?\nHow do we provide explicit instructions while keeping the players engaged? How can we give cues that won’t make the practices too easy or boring?",
     "description": "Provide explicit instructions as needed to help the player anticipate where they should focus their attention.\n Verbal cues may accompany visuals to describe unfamiliar objects, or explain unobvious processes. Each text description should be near the visual element it describes.",
@@ -144,7 +144,7 @@
     "principle": "Linking",
     "subtitle": "Integrate instructional components > no integration",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Scaffolding, Segmenting",
     "description": "Highlight connections between instructional units. Explicitly call out connections, similarities, and differences between previously learned and new material.",
     "examples": "Teach philosophy by giving an overview of each major philosopher < make connections between philosophers and how their beliefs about key topics compare and contrast"
@@ -154,7 +154,7 @@
     "principle": "Goldilocks",
     "subtitle": "Instruct at intermediate difficulty level > too hard or too easy",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "questions": "Who is your target player? \nHow much prior exposure do they have to this material?\nHow could you make the material harder? Easier?\nWhat is the goal of the game?",
     "description": "Account for the player’s prior knowledge and skill level when considering how challenging to make your game.",
     "examples": "Students find a chemistry game completely unapproachable because it involves math far above their grade level < grade-level appropriate\nCMU students taking a Java class already have a lot of Python experience that translates, and find the class too easy",
@@ -165,7 +165,7 @@
     "principle": "Activate preconceptions",
     "subtitle": "Cue student's prior knowledge > no prior knowledge cues",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "concreteness-fading , goldilocks, segmenting, scaffolding, linking",
     "questions": "What kinds of prior knowledge are required for this practice?\nWhat are some links between the prior knowledge and the new concepts?",
     "description": "Prompt players to examine what they already know (or think they know) to help contextualize new material.\nBuilding upon what your player already knows and/or is interested in can make the game accessible and engaging. ",
@@ -176,7 +176,7 @@
     "principle": "Immediate Feedback timing",
     "subtitle": "Immediate feedback on errors > delayed feedback",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "feedback",
     "questions": "When players make mistakes, how do they know they’ve done so? When do you tell them? How long can a player go before realizing they need to turn back?\nHow can the feedback be provided? Visual? Auditory?\nHow can the players respond to the feedback? Are the errors immediately fixable? Or does it take more time to fix the error?",
     "description": "Provide immediate feedback on errors. ",
@@ -187,7 +187,7 @@
     "principle": "Interleaving",
     "subtitle": "Intermix practice on different skills > block practice all at once",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "questions": "What are different types of skills to be practiced?\nHow can the game easily transition from one topic to another?\nHow can some practices be combined to create an interdisciplinary practice?",
     "description": "Practice different skills at the same time, or in alternation.",
     "examples": "A math homework assignment that requires 3 hours of long division < an assignment that includes a variety of types of practice problems\nA dance teacher choreographs a piece combining different techniques that the class has learned this month for them to practice > Additional practice of the same techniques\nCindy decides to write a poem for her French assignment to practice writing poetry and also French\nA yoga class mixes both yin and yang practices > long holds only\n When studying for a standardized test - good to alternate between different sections (Reading, Writing, and Math) in varying orders; bad to focus on fully studying one section, moving on to fully study the next section, and so on.",
@@ -200,7 +200,7 @@
     "principle": "Application",
     "subtitle": "Practice applying new knowledge > no application",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Exam expectations",
     "questions": "How much practice will it take for your player to understand the material?\nWhat are the components that are most important to remember?\nDoes your game offer enough practice of key skills?\n",
     "description": "Challenge the player to put their newly acquired knowledge to use solving problems.",
@@ -212,7 +212,7 @@
     "principle": "Variability",
     "subtitle": "Practice with varied instances > similar instances",
     "categoryId": 2,
-    "category": "Induction/Refinement",
+    "categoryName": "Induction/Refinement",
     "related": "Interleaving, comparison",
     "questions": "Are you encouraging thinking about this concept from different perspectives?\nWill your player be able to transfer the knowledge they acquire to other domains?",
     "description": "No two situations are ever exactly the same, so you should prepare your players to apply their knowledge in all the varied situations of life. Use multiple and varied examples to teach and practice the use of abstract concepts.",
@@ -224,90 +224,90 @@
     "principle": "Comparison",
     "subtitle": "Compare multiple instances > only one instance",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 19,
     "principle": "Multimedia",
     "subtitle": "Graphics + verbal descriptions > verbal descriptions alone",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 20,
     "principle": "Modality principle",
     "subtitle": "Verbal descriptions presented in audio > in written form",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 21,
     "principle": "Redundancy",
     "subtitle": "Verbal descriptions in audio > both audio & written",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 22,
     "principle": "Spatial contiguity",
     "subtitle": "Present description next to image element described > separated",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 23,
     "principle": "Temporal contiguity",
     "subtitle": "Present audio & image element at the same time > separated",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 24,
     "principle": "Coherence",
     "subtitle": "Extraneous words, pictures, sounds excluded > included",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 25,
     "principle": "Anchored learning",
     "subtitle": "Real-world problems > abstract problems",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 26,
     "principle": "Metacognition",
     "subtitle": "Metacognition supported > no support for metacognition",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 27,
     "principle": "Explanation",
     "subtitle": "Prompt for self-explanation > give explanation > no prompt",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 28,
     "principle": "Questioning",
     "subtitle": "Time for reflection & questioning > instruction alone",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 29,
     "principle": "Cognitive dissonance",
     "subtitle": "Present incorrect or alternative perspective > only correct",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   },
   {
     "id": 30,
     "principle": "Interest",
     "subtitle": "Instruction relevant to student interests > not relevant",
     "categoryId": 3,
-    "category": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding"
   }
 ]

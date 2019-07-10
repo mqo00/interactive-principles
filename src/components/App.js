@@ -169,18 +169,17 @@ export default class App extends Component {
                                 flipped={card.flipped}
                                 id={card.id}
                                 image={card.id}
-                                category={card.categoryId}
-                                categoryName={card.category}
-                                title={card.principle}
+                                categoryId={card.categoryId}
+                                categoryName={card.categoryName}
+                                principle={card.principle}
                                 questions={card.questions}
-                                descr={card.description}
-                                comparison={card.subtitle}
-                                example={card.examples}
+                                description={card.description}
+                                subtitle={card.subtitle}
+                                examples={card.examples}
                                 gameEx={card.exampleGame}
                                 gameExURL={card.exampleGameUrl}
                                 gameExDesc={card.exampleGameDesc}
                                 related={card.related}
-                                citation={card.cited}
                                 onOpen={this.renderModal}
                             />
                         </div>
@@ -195,17 +194,17 @@ export default class App extends Component {
                     onPrev={this.modalNavToPrev}
                     id={this.state.cardInModal.id}
                     categoryId={this.state.cardInModal.categoryId}
-                    categoryName={this.state.cardInModal.category}
+                    categoryName={this.state.cardInModal.categoryName}
                     principle={this.state.cardInModal.principle}
                     questions={this.state.cardInModal.questions}
                     description={this.state.cardInModal.description}
-                    comparison={this.state.cardInModal.subtitle}
-                    example={this.state.cardInModal.examples}
-                    gameEx={this.state.cardInModal.exampleGame}
-                    gameExURL={this.state.cardInModal.exampleGameUrl}
-                    gameExDesc={this.state.cardInModal.exampleGameDesc}
+                    subtitle={this.state.cardInModal.subtitle}
+                    examples={this.state.cardInModal.examples}
+                    exampleGame={this.state.cardInModal.exampleGame}
+                    exampleGameUrl={this.state.cardInModal.exampleGameUrl}
+                    exampleGameDesc={this.state.cardInModal.exampleGameDesc}
                     related={this.state.cardInModal.related}
-                    citation={this.state.cardInModal.citation}
+                    cited={this.state.cardInModal.cited}
                 />
 
             </div>

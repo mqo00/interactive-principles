@@ -44,7 +44,7 @@ class Card extends React.Component {
                             {this.props.id}
                         </div>
                         <div className={'principle-title'}>
-                            {this.props.title}
+                            {this.props.principle}
                         </div>
                     </div>
                     <div className={'card__face--front__category'}>
@@ -52,11 +52,11 @@ class Card extends React.Component {
                     </div>
                     <div className={'card__face--front__body'}>
                         <div className={'card__face--front__body__comparison'}>
-                            {this.renderComparison(this.props.comparison)}
+                            {this.renderComparison(this.props.subtitle)}
                         </div>
                         <Img id={this.props.id} classes={'card__face--front__body__image'}/>
                         <div className={'card__face--front__body__example'}>
-                            {this.renderComparison(this.props.example)}
+                            {this.renderComparison(this.props.examples)}
                         </div>
 
                     </div>
@@ -69,7 +69,7 @@ class Card extends React.Component {
                         </div>
                         <Img id={this.props.id}/>
                         <div className={'principle-title'}>
-                            {this.props.title}
+                            {this.props.principle}
                         </div>
                     </div>
                     <div className={'card__face--back__category'}>
@@ -82,7 +82,7 @@ class Card extends React.Component {
 
     render() {
         return (
-            <div className={'card category--' + this.props.category.toString()}>
+            <div className={'card category--' + this.props.categoryId.toString()}>
                 { this.renderCard() }
             </div>
         );
@@ -92,18 +92,17 @@ class Card extends React.Component {
 Card.propTypes = {
     flipped: PropTypes.any,
     id: PropTypes.any,
-    category: PropTypes.any,
+    categoryId: PropTypes.any,
     categoryName: PropTypes.any,
-    title: PropTypes.any,
+    principle: PropTypes.any,
     questions: PropTypes.any,
-    descr: PropTypes.any,
-    comparison: PropTypes.any,
-    example: PropTypes.any,
-    gameEx: PropTypes.any,
+    description: PropTypes.any,
+    subtitle: PropTypes.any,
+    examples: PropTypes.any,
+    exampleGame: PropTypes.any,
     gameExURL: PropTypes.any,
     gameExDesc: PropTypes.any,
     related: PropTypes.any,
-    citation: PropTypes.any,
     onOpen: PropTypes.any,
     onFlip: PropTypes.any
 };
