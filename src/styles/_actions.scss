@@ -3,12 +3,45 @@ $bg: $bg;
 $text: $text--button;
 $space-between-buttons: 10px;
 
+.category-filters {
+  margin-bottom: 5px;
+
+  &__button {
+    display: inline-block;
+    font-size: 1.6em;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: $slightlyrounded-corner;
+    font-weight: 400;
+    cursor: pointer;
+
+    &--cat1 {
+      color: $cat1--text;
+    }
+    &--cat2 {
+      color: $cat2--text;
+    }
+    &--cat3 {
+      color: $cat3--text;
+    }
+
+    &--active {
+      background: $well-bg;
+      font-weight: $font-weight--cat;
+    }
+
+    &:hover, &:focus {
+      background-color: darken($bg, 7%);
+    }
+  }
+}
+
 .toolbar {
   background-color: $well-bg;
   margin-bottom: $space-between-cards;
   min-height: 50px;
   border-radius: $slightlyrounded-corner;
-  padding: 10px;
+  padding: 5px 10px;
 
   .btn {
     margin-right: $space-between-buttons;

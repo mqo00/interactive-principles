@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
@@ -7,6 +8,30 @@ import CardModal from './CardModal';
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
 }
+
+function CategoryFilter(props) {
+    let active = true;
+    let title;
+
+    if (props.cat === 1) {
+        title = 'Memory/Fluency';
+    } else if (props.cat === 2) {
+        title = 'Induction/Refinement';
+    } else {
+        title = 'Sense-making/Understanding';
+    }
+
+    return(
+        <h2 className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (active ? 'category-filters__button--active' : '')}>
+            {title}
+        </h2>
+    );
+}
+
+CategoryFilter.propTypes= {
+    cat: PropTypes.any,
+    onPress: PropTypes.any
+};
 
 export default class App extends Component {
 
@@ -66,6 +91,10 @@ export default class App extends Component {
     }
 
     //card actions
+    toggleCategory() {
+
+    }
+
     flipAll() {
         let items = this.state.cards;
         for (let card of items) {
@@ -177,6 +206,16 @@ export default class App extends Component {
     render() {
         return (
             <div className='cards'>
+
+                <div className={'row'}>
+                    <div className={'col-12'}>
+                        <div className={'category-filters'}>
+                            <CategoryFilter cat={1}/>
+                            <CategoryFilter cat={2}/>
+                            <CategoryFilter cat={3}/>
+                        </div>
+                    </div>
+                </div>
 
                 <div className={'row'}>
                     <div className={'col-12'}>
