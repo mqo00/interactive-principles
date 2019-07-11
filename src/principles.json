@@ -192,7 +192,7 @@
     "description": "Practice different skills at the same time, or in alternation.",
     "examples": "A math homework assignment that requires 3 hours of long division < an assignment that includes a variety of types of practice problems\nA dance teacher choreographs a piece combining different techniques that the class has learned this month for them to practice > Additional practice of the same techniques\nCindy decides to write a poem for her French assignment to practice writing poetry and also French\nA yoga class mixes both yin and yang practices > long holds only\n When studying for a standardized test - good to alternate between different sections (Reading, Writing, and Math) in varying orders; bad to focus on fully studying one section, moving on to fully study the next section, and so on.",
     "exampleGame": "Ninja Kitchen",
-    "exampleGameUrl": "http://ninjakitchengame.org/",
+    "exampleGameUrl": "https://ninjakitchengame.org/",
     "exampleGameDesc": "Ninja Kitchen is a restaurant serving game focusing on food safety. The player role plays a ninja server, and he/she learns to operate the restaurant through a mixture of smaller games targeting different perspectives, including dish washing, food preparing, serving, etc. The harder the game goes, the busier the restaurant runs. The players will practice all kinds of skills in later levels."
   },
   {
@@ -224,90 +224,154 @@
     "principle": "Comparison",
     "subtitle": "Compare multiple instances > only one instance",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "variability",
+    "questions": "What are some commonalities across all variables of instances?\nHow can the game encourage players to find similarities/differences?",
+    "description": "Use multiple examples to explain a new concept, and highlight similarities and differences between the examples.",
+    "examples": "Use only examples of classical music to illustrate a music theory concept < highlight the same pattern in classical, pop, and jazz music"
   },
   {
     "id": 19,
     "principle": "Multimedia",
     "subtitle": "Graphics + verbal descriptions > verbal descriptions alone",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "modality, redundancy, spatial contiguity, temporal contiguity",
+    "questions": "How can this particular description presented in a different way using graphics?\nWhat are some graphics that can improve player experience?\nWhat are some graphics that can help organize the content presented?",
+    "description": "Use visual aids to enhance verbal descriptions.",
+    "examples": "A labeled map accompanying a description of Egyptian trade routes > description alone\nA picture of a cute dog above a passage about removing ticks from animals < an illustration demonstrating proper tick removal technique\nA visualization of median income by state > A list alone",
+    "cited": "Pashler"
   },
   {
     "id": 20,
     "principle": "Modality principle",
     "subtitle": "Verbal descriptions presented in audio > in written form",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "multimedia, redundancy, spatial contiguity, temporal contiguity",
+    "questions": "What descriptions can or cannot be fully presented in audio?\nHow quickly should the descriptions presented in audio?",
+    "description": "Present verbal descriptions in audio rather than text when possible.\nPlayers may find their attention divided when presented with written text and competing visuals simultaneously.",
+    "examples": "A safety training course with spoken narration > written instructions\nWatching a documentary on mute with subtitles < sound",
+    "cited": "Pashler"
   },
   {
     "id": 21,
     "principle": "Redundancy",
     "subtitle": "Verbal descriptions in audio > both audio & written",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "multimedia, modality, spatial contiguity, temporal contiguity",
+    "questions": "What descriptions can or cannot be fully presented in audio?\nShould the verbal descriptions be completely or partially removed?",
+    "description": "If you are able to provide verbal descriptions in audio, refrain from also including those same instructions in written form.",
+    "examples": "Watching a documentary with sound and subtitles < sound\nApple Keynotes slides are famously simple, with a single image or a logo, and without any written descriptions. Meanwhile, the presenter delivers everything verbally. "
   },
   {
     "id": 22,
     "principle": "Spatial contiguity",
     "subtitle": "Present description next to image element described > separated",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "guided attention",
+    "questions": "What are some presented images that require verbal descriptions?\nHow can we format/place the description relative the image?\nWhat is the purpose of the description for the image? Is it purely informational or does it have other purposes?",
+    "description": "Position descriptive text as closely as possible to the part of the visualization it describes.",
+    "examples": "A reader has to flip forward several pages to find diagram 1.7 < diagram is located inline with the text it supports\nTooltips are used to provide more information on elements of a data visualization",
+    "cited": "Pashler"
   },
   {
     "id": 23,
     "principle": "Temporal contiguity",
     "subtitle": "Present audio & image element at the same time > separated",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "questions": "What are the audio & image elements required for this practice?\nWhich audio elements are related to which image elements?",
+    "description": "Present complementary audio and visual elements at the same time to encourage the player to form a connection between the two stimuli.",
+    "examples": "Show photographs from the great depression while lecturing > photographs reviewed later\nA music teacher shows photos of instruments while describing them < view photographs of instruments while listening to the sounds each one makes\nTed Talks - speaker speaks as related graphics are displayed on the big screen behind them.",
+    "cited": "Mayer"
   },
   {
     "id": 24,
     "principle": "Coherence",
     "subtitle": "Extraneous words, pictures, sounds excluded > included",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "questions": "What are their purposes?\nHow do those purposes support your learning goal?\nWhat are some words, pictures, or sounds that are essential for the practice?\nHow can we combine or summarize some information to convey the same information in a simpler way?\nWhen do the players feel like there’s “too much” information?",
+    "description": "Refrain from including extraneous words, pictures, and sounds that do not serve the purpose of your game.",
+    "examples": "A powerpoint includes lots of decorative illustrations that students pay more attention to than the actual lesson < purposeful words and images only\nA game features a lot of distracting sound effects < sounds used selectively to provide immediate feedback on actions and enhance the experience"
   },
   {
     "id": 25,
     "principle": "Anchored learning",
     "subtitle": "Real-world problems > abstract problems",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "Concreteness fading/ concrete grounding, worked example",
+    "questions": "What is the real-world connection?\nHow does the player’s in-game progress impact their real-world life?\nHow is what the player does in your game like what they would do in real life? How is it different?\nWhat are some real life applications of the skills being practiced?\nHow can players relate the new skills learned in their own lives?",
+    "description": "Engage the player in realistic rather than theoretical problem-solving, and emphasize the connections between the game and the real world.",
+    "examples": "Instruct middle schoolers in an economics course to build a hypothetical portfolio of stocks and watch those stocks over the course of the semester > study fictional problems of market fluctuation\nA student project of building a double transducer < building an assistive device for a real person",
+    "exampleGame": "Lift Coach: Plan Your Lift",
+    "exampleGameUrl": "https://www.amazon.com/Lift-Coach-Plan-Your/dp/B076FFL8CJ",
+    "exampleGameDesc": "Lift Coach is a game that educates people to use safe postures to lift and move objects. Players can correct how on-screen character lifts objects, and the goal is to avoid unsafe actions might lead to injuries. Lifting is such a common daily activity, but not many have paid attention to it. By referring back to real life cases, people will have an easier time to understand the mechanism behind and how to protect themselves in real hard-lifting scenarios.",
+    "cited": "Merrill, Culyba"
   },
   {
     "id": 26,
     "principle": "Metacognition",
     "subtitle": "Metacognition supported > no support for metacognition",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "Immediate feedback, feedback, testing",
+    "questions": "How should players be different after playing your game?\nHow will your player measure your game’s impact?\nWhat are your player’s strengths and weaknesses?  How can they see them?\nWhat parts of the game are particularly effective or relevant to your player personally?",
+    "description": "Engage the player in their own learning experience. Empower them to self-reflect and self-correct.",
+    "examples": "An elearning course gives the same test at the beginning and end to show the student their progress\nA time-management app encourages the user to set custom goals and reflect upon their progress on a weekly basis\nA programming tutorial gives near-immediate feedback on errors in the beginning, and gradually transitions into more delayed feedback to allow the student to recognize and troubleshoot their own mistakes\nMath problem - good to have students write down each step of the solution and reasoning behind it; bad to have students just write down the final answer.",
+    "cited": "Culyba"
   },
   {
     "id": 27,
     "principle": "Explanation",
     "subtitle": "Prompt for self-explanation > give explanation > no prompt",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "metacognition",
+    "questions": "What are the causal relationships between the concepts being explored?\nWhen are players making decisions regarding their learning that require independent thinking?\nWhen are players given chances to self-explain?\nWhat type of feedback can be provided after they have self-explained?",
+    "description": "Prompt the player to reason through the underlying explanatory principles relating to the subject matter being explored.\nEncourage the player to reflect upon their own problem-solving process and challenge, explain, and defend their choices.",
+    "examples": "Have a student show their work on an algebra problem > show a worked problem > show solution only",
+    "exampleGame": "SET",
+    "exampleGameUrl": "https://www.setgame.com/set",
+    "exampleGameDesc": "SET is a cognitive, logical reasoning game. A SET is three cards which share a common feature, such as color or shape. The player who finds the most SETs within the timeframe wins the game. Since every player has his/her own understanding of how to make up the SET, each will prompt to explain their thoughts and definition.",
+    "cited": "Astleitner, Pashler"
   },
   {
     "id": 28,
     "principle": "Questioning",
     "subtitle": "Time for reflection & questioning > instruction alone",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "questions": "Does the game provide opportunities to reflect?\nHas the player acquired sufficient subject knowledge to ask deep questions?\nIn what ways could a player check their understanding through the game?\nWhat are some ways of motivating the players to question things?\nWhat type of questions will be effective for stimulating critical thinking?",
+    "description": "Empower your player to embrace and explore uncertainties they encounter. Encourage the player to take time to reflect and ask deep questions; questions that stimulate deep explanations, and may challenge their prior beliefs and assumptions.",
+    "examples": "What is the correct data type to use for a single character? < What is data? What isn’t data?\nWhat year did the American Revolutionary War end? < What might the world look like today if the war had ended differently?",
+    "cited": "Astleitner, Pashler"
   },
   {
     "id": 29,
     "principle": "Cognitive dissonance",
     "subtitle": "Present incorrect or alternative perspective > only correct",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "comparison",
+    "questions": "How objective or subjective is the material being taught?\nHow many ways are there to approach the challenges in your game? How many are players likely to encounter themselves?\nHow can  the player recognize mistakes or misuse of the material?",
+    "description": "Present incorrect or alternative perspectives of the subject matter to afford the player the opportunity to form arguments around key concepts.",
+    "examples": "Show an example of a common misconception and explain why it is false > correct examples only"
   },
   {
     "id": 30,
     "principle": "Interest",
     "subtitle": "Instruction relevant to student interests > not relevant",
     "categoryId": 3,
-    "categoryName": "Sense-making/Understanding"
+    "categoryName": "Sense-making/Understanding",
+    "related": "activate preconceptions",
+    "questions": "Who is your target player? What motivates them?\nDoes your player have a personal stake in their transformation?\nWhat is the ecosystem in which your game must create change?",
+    "description": "Engage your player by structuring content around their interests and goals.",
+    "examples": "Allow guitar students to choose their own songs to learn < forced set of songs",
+    "cited": "Culyba"
   }
 ]
