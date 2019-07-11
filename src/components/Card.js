@@ -35,34 +35,35 @@ class Card extends React.Component {
     renderCard() {
         return (
             (this.props.flipped) ?
-                <div className={'card__face card__face--front animated'}>
-                    <div className={'card__face--front__header'} onClick={this.props.onOpen}>
-                        <button className={'btn btn-link card__face--front__header__open-link'}>
-                            <i className="fas fa-external-link-alt"></i>
-                        </button>
-                        <div className={'principle-number'}>
-                            {this.props.id}
+                <div className={'card__face card__face--front animated flipInY'}>
+                    <div onClick={this.props.onOpen}>
+                        <div className={'card__face--front__header'}>
+                            <div className={'principle-number'}>
+                                {this.props.id}
+                            </div>
+                            <div className={'principle-title'}>
+                                {this.props.principle}
+                            </div>
                         </div>
-                        <div className={'principle-title'}>
-                            {this.props.principle}
+                        <div className={'card__face--front__category'}>
+                            <div className={'card__face--front__category__text'}>{this.props.categoryName}</div>
+                        </div>
+                        <div className={'card__face--front__body'}>
+                            <div className={'card__face--front__body__comparison'}>
+                                {this.renderComparison(this.props.subtitle)}
+                            </div>
+                            <Img id={this.props.id} classes={'card__face--front__body__image'}/>
+                            <div className={'card__face--front__body__example'}>
+                                {this.renderComparison(this.props.examples)}
+                            </div>
                         </div>
                     </div>
-                    <div className={'card__face--front__category'}>
-                        <div className={'card__face--front__category__text'}>{this.props.categoryName}</div>
-                    </div>
-                    <div className={'card__face--front__body'}>
-                        <div className={'card__face--front__body__comparison'}>
-                            {this.renderComparison(this.props.subtitle)}
-                        </div>
-                        <Img id={this.props.id} classes={'card__face--front__body__image'}/>
-                        <div className={'card__face--front__body__example'}>
-                            {this.renderComparison(this.props.examples)}
-                        </div>
-
+                    <div className={'card__face--front__flipicon'} onClick={this.props.onFlipToBack}>
+                        <i className='fas fa-reply'></i>
                     </div>
                 </div>
                 :
-                <div className={'card__face card__face--back animated'}>
+                <div className={'card__face card__face--back animated'} onClick={this.props.onFlipToFront}>
                     <div className={'card__face--back__content'}>
                         <div className={'principle-number'}>
                             {this.props.id}
@@ -104,7 +105,8 @@ Card.propTypes = {
     gameExDesc: PropTypes.any,
     related: PropTypes.any,
     onOpen: PropTypes.any,
-    onFlip: PropTypes.any
+    onFlipToFront: PropTypes.any,
+    onFlipToBack: PropTypes.any
 };
 
 export default Card;

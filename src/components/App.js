@@ -35,7 +35,6 @@ export default class App extends Component {
 
     handleClose() {
         this.setState({ showModal: false });
-        this.flipCard(this.state.cardInModal);
     }
 
     handleShow() {
@@ -109,10 +108,39 @@ export default class App extends Component {
     }
 
     flipCard(flipcard) {
+        if(!flipcard.id) {
+            flipcard = this.state.cardInModal;
+        }
         let items = this.state.cards;
         for (let card of items) {
             if (card.id === flipcard.id) {
                 card.flipped = !card.flipped;
+            }
+        }
+        this.setState({cards: items});
+    }
+
+    flipToBack(flipcard) {
+        if(!flipcard.id) {
+            flipcard = this.state.cardInModal;
+        }
+        let items = this.state.cards;
+        for (let card of items) {
+            if (card.id === flipcard.id) {
+                card.flipped = false;
+            }
+        }
+        this.setState({cards: items});
+    }
+
+    flipToFront(flipcard) {
+        if(!flipcard.id) {
+            flipcard = this.state.cardInModal;
+        }
+        let items = this.state.cards;
+        for (let card of items) {
+            if (card.id === flipcard.id) {
+                card.flipped = true;
             }
         }
         this.setState({cards: items});
@@ -123,7 +151,8 @@ export default class App extends Component {
         this.setState({cards: shuffled});
     }
 
-    renderModal() {
+    renderModal(card) {
+        this.setState({cardInModal: card});
         this.setState({showModal: true});
     }
 
@@ -164,7 +193,7 @@ export default class App extends Component {
                 <div className={'row'}>
 
                     {this.state.cards.map( card => (
-                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'} onClick={() => this.handleClick(card)}>
+                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'}>
                             <Card
                                 flipped={card.flipped}
                                 id={card.id}
@@ -180,7 +209,9 @@ export default class App extends Component {
                                 gameExURL={card.exampleGameUrl}
                                 gameExDesc={card.exampleGameDesc}
                                 related={card.related}
-                                onOpen={this.renderModal}
+                                onOpen={() => this.renderModal(card)}
+                                onFlipToFront={() => this.flipToFront(card)}
+                                onFlipToBack={() => this.flipToBack(card)}
                             />
                         </div>
                     ))}
@@ -205,6 +236,7 @@ export default class App extends Component {
                     exampleGameDesc={this.state.cardInModal.exampleGameDesc}
                     related={this.state.cardInModal.related}
                     cited={this.state.cardInModal.cited}
+
                 />
 
             </div>
