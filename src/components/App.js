@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
@@ -38,6 +37,7 @@ export default class App extends Component {
         this.flipCard = this.flipCard.bind(this);
         this.modalNavToNext = this.modalNavToNext.bind(this);
         this.modalNavToPrev = this.modalNavToPrev.bind(this);
+        this.openRandomCard = this.openRandomCard.bind(this);
     }
 
     handleClose() {
@@ -102,7 +102,7 @@ export default class App extends Component {
         }
     }
 
-    //card actions
+    //toolbar actions
     flipAll() {
         let items = this.state.cards;
         for (let card of items) {
@@ -128,6 +128,7 @@ export default class App extends Component {
         this.setState({cards: items});
     }
 
+    //card flip actions, etc
     resetCards() {
         let items = principles;
         items.sort(function(a, b){return (a.id - b.id);});
@@ -188,6 +189,8 @@ export default class App extends Component {
         this.setState({cards: shuffled});
     }
 
+
+    //modal actions
     renderModal(card) {
         this.setState({cardInModal: card});
         this.setState({showModal: true});
@@ -209,6 +212,14 @@ export default class App extends Component {
         let prevCard = this.state.cards[prevCardIndex];
 
         this.setState({cardInModal: (prevCard)});
+    }
+
+    openRandomCard() {
+        let min =1;
+        let max = this.state.cards.length;
+        let random = Math.floor(Math.random() * (+max - +min)) + +min;
+        let card = this.state.cards[random];
+        this.renderModal(card);
     }
 
     render() {
@@ -233,6 +244,7 @@ export default class App extends Component {
                             <Button onClick={this.sortAZ} text={'Sort A-Z'} icon={'sort-alpha-down'}></Button>
                             <Button onClick={this.sortNumerical} text={'Sort Numeric'} icon={'sort-numeric-down'}></Button>
                             <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
+                            <Button onClick={this.openRandomCard} text={'Random Card'} icon={'question'}></Button>
                         </div>
                     </div>
                 </div>
