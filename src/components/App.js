@@ -4,34 +4,11 @@ import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
 import CardModal from './CardModal';
+import CategoryFilterButton from './CategoryFilterButton';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
 }
-
-function CategoryFilter(props) {
-    let title;
-
-    if (props.cat === 1) {
-        title = 'Memory/Fluency';
-    } else if (props.cat === 2) {
-        title = 'Induction/Refinement';
-    } else {
-        title = 'Sense-making/Understanding';
-    }
-
-    return(
-        <h2 onClick={props.onPress} className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (props.active ? 'category-filters__button--active' : '')}>
-            {title}
-        </h2>
-    );
-}
-
-CategoryFilter.propTypes= {
-    cat: PropTypes.any,
-    onPress: PropTypes.any,
-    active: PropTypes.any
-};
 
 export default class App extends Component {
 
@@ -241,9 +218,9 @@ export default class App extends Component {
                 <div className={'row'}>
                     <div className={'col-12'}>
                         <div className={'category-filters'}>
-                            <CategoryFilter cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
-                            <CategoryFilter cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
-                            <CategoryFilter cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
+                            <CategoryFilterButton cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
+                            <CategoryFilterButton cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
+                            <CategoryFilterButton cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
                         </div>
                     </div>
                 </div>
