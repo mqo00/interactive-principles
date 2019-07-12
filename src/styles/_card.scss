@@ -21,6 +21,7 @@ $example-section-height: $body-height * .3;
   color: $text--white;
   font-size: 18px;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 .principle-image {
@@ -96,12 +97,13 @@ $example-section-height: $body-height * .3;
         max-height: $header-height;
         white-space: nowrap;
         cursor: pointer;
+        overflow: hidden;
 
         @include bg-dark();
 
         .principle-title {
           display: inline-block;
-          width: calc(100% - #{$number-width} - #{$space-between-num-and-title} - 23);
+          width: calc(100% - #{$number-width} - #{$space-between-num-and-title});
           @extend %text-overflow-ellipsis;
           text-align: left;
           max-height: 30px;

@@ -26,7 +26,6 @@ export default class App extends Component {
 
         this.toggleCategory = this.toggleCategory.bind(this);
         this.flipAll = this.flipAll.bind(this);
-        this.handleClick = this.handleClick.bind(this);
         this.sortAZ = this.sortAZ.bind(this);
         this.sortNumerical = this.sortNumerical.bind(this);
         this.resetCards = this.resetCards.bind(this);
@@ -34,7 +33,6 @@ export default class App extends Component {
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.renderModal = this.renderModal.bind(this);
-        this.flipCard = this.flipCard.bind(this);
         this.modalNavToNext = this.modalNavToNext.bind(this);
         this.modalNavToPrev = this.modalNavToPrev.bind(this);
         this.openRandomCard = this.openRandomCard.bind(this);
@@ -134,26 +132,6 @@ export default class App extends Component {
         items.sort(function(a, b){return (a.id - b.id);});
         for (let card of items) {
             card.flipped = false;
-        }
-        this.setState({cards: items});
-    }
-
-    handleClick(clickedCard) {
-        this.setState({cardInModal: clickedCard});
-        if(!this.state.showModal) {
-            this.flipCard(clickedCard);
-        }
-    }
-
-    flipCard(flipcard) {
-        if(!flipcard.id) {
-            flipcard = this.state.cardInModal;
-        }
-        let items = this.state.cards;
-        for (let card of items) {
-            if (card.id === flipcard.id) {
-                card.flipped = !card.flipped;
-            }
         }
         this.setState({cards: items});
     }
