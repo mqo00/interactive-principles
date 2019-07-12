@@ -10,7 +10,6 @@ function compareStrings(a, b) {
 }
 
 function CategoryFilter(props) {
-    let active = true;
     let title;
 
     if (props.cat === 1) {
@@ -22,7 +21,7 @@ function CategoryFilter(props) {
     }
 
     return(
-        <h2 className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (active ? 'category-filters__button--active' : '')}>
+        <h2 onClick={props.onPress} className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (props.active ? 'category-filters__button--active' : '')}>
             {title}
         </h2>
     );
@@ -30,7 +29,8 @@ function CategoryFilter(props) {
 
 CategoryFilter.propTypes= {
     cat: PropTypes.any,
-    onPress: PropTypes.any
+    onPress: PropTypes.any,
+    active: PropTypes.any
 };
 
 export default class App extends Component {
@@ -41,9 +41,14 @@ export default class App extends Component {
             cards: [],
             allFlipped: false,
             showModal: false,
-            cardInModal: principles[0]
+            cardInModal: principles[0],
+            showCat1: true,
+            showCat2: true,
+            showCat3: true,
+
         };
 
+        this.toggleCategory = this.toggleCategory.bind(this);
         this.flipAll = this.flipAll.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sortAZ = this.sortAZ.bind(this);
@@ -90,11 +95,37 @@ export default class App extends Component {
         return array;
     }
 
-    //card actions
-    toggleCategory() {
+    //category actions
+    toggleCategory(cat) {
 
+        //
+        if (cat === 1) {
+            this.setState({showCat1: !this.state.showCat1});
+        } else if (cat === 2) {
+            this.setState({showCat2: !this.state.showCat2});
+        } else if (cat === 3) {
+            this.setState({showCat3: !this.state.showCat3});
+        }
     }
 
+    isCategoryHidden(cat) {
+
+        //if all three are hidden, show all (as opposed to nothing)
+        if (!this.state.showCat1 && !this.state.showCat2 && !this.state.showCat3) {
+            return false;
+        }
+
+        //hide based on state
+        if (cat === 1) {
+            return !this.state.showCat1;
+        } else if (cat === 2) {
+            return !this.state.showCat2;
+        } else {
+            return !this.state.showCat3;
+        }
+    }
+
+    //card actions
     flipAll() {
         let items = this.state.cards;
         for (let card of items) {
@@ -210,9 +241,9 @@ export default class App extends Component {
                 <div className={'row'}>
                     <div className={'col-12'}>
                         <div className={'category-filters'}>
-                            <CategoryFilter cat={1}/>
-                            <CategoryFilter cat={2}/>
-                            <CategoryFilter cat={3}/>
+                            <CategoryFilter cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
+                            <CategoryFilter cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
+                            <CategoryFilter cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
                         </div>
                     </div>
                 </div>
@@ -232,7 +263,7 @@ export default class App extends Component {
                 <div className={'row'}>
 
                     {this.state.cards.map( card => (
-                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container'}>
+                        <div key={card.id} className={'col-xs-12 col-sm-12 card-container ' + (this.isCategoryHidden(card.categoryId) ? 'hide' : '')}>
                             <Card
                                 flipped={card.flipped}
                                 id={card.id}

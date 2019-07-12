@@ -55,7 +55,15 @@ $example-section-height: $body-height * .3;
 
 .card-container {
   max-width: ($space-between-cards + $card-width);
-  margin: 0 auto;
+
+  @media (max-width: $screen-sm-max) {
+    margin: 0 auto;
+  }
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
 
 .card {
