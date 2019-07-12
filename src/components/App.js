@@ -18,9 +18,9 @@ export default class App extends Component {
             allFlipped: false,
             showModal: false,
             cardInModal: principles[0],
-            showCat1: true,
-            showCat2: true,
-            showCat3: true,
+            showCat1: false,
+            showCat2: false,
+            showCat3: false,
 
         };
 
@@ -135,6 +135,9 @@ export default class App extends Component {
             card.flipped = false;
         }
         this.setState({cards: items});
+        this.setState({showCat1: false});
+        this.setState({showCat2: false});
+        this.setState({showCat3: false});
     }
 
     flipToBack(flipcard) {
@@ -169,9 +172,9 @@ export default class App extends Component {
     }
 
     draw5Cards() {
-        this.setState({showCat1: true});
-        this.setState({showCat2: true});
-        this.setState({showCat3: true});
+        this.setState({showCat1: false});
+        this.setState({showCat2: false});
+        this.setState({showCat3: false});
 
         let cards = this.shuffle(principles);
         let hand = cards.slice(0, 5);
