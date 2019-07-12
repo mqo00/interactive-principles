@@ -30,6 +30,7 @@ export default class App extends Component {
         this.sortNumerical = this.sortNumerical.bind(this);
         this.resetCards = this.resetCards.bind(this);
         this.shuffleCards = this.shuffleCards.bind(this);
+        this.draw5Cards = this.draw5Cards.bind(this);
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.renderModal = this.renderModal.bind(this);
@@ -113,13 +114,13 @@ export default class App extends Component {
     }
 
     sortNumerical() {
-        let items = principles;
+        let items = this.state.cards;
         items.sort(function(a, b){return (a.id - b.id);});
         this.setState({cards: items});
     }
 
     sortAZ() {
-        let items = principles;
+        let items = this.state.cards;
         items.sort(function(a, b) {
             return compareStrings(a.principle, b.principle);
         });
@@ -163,10 +164,19 @@ export default class App extends Component {
     }
 
     shuffleCards() {
-        let shuffled = this.shuffle(principles);
+        let shuffled = this.shuffle(this.state.cards);
         this.setState({cards: shuffled});
     }
 
+    draw5Cards() {
+        this.setState({showCat1: true});
+        this.setState({showCat2: true});
+        this.setState({showCat3: true});
+
+        let cards = this.shuffle(principles);
+        let hand = cards.slice(0, 5);
+        this.setState({cards: hand});
+    }
 
     //modal actions
     renderModal(card) {
@@ -223,6 +233,7 @@ export default class App extends Component {
                             <Button onClick={this.sortNumerical} text={'Sort Numeric'} icon={'sort-numeric-down'}></Button>
                             <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
                             <Button onClick={this.openRandomCard} text={'Random Card'} icon={'question'}></Button>
+                            <Button onClick={this.draw5Cards} text={'Draw 5'} icon={'hand-paper'}></Button>
                         </div>
                     </div>
                 </div>
