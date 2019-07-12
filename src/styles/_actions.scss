@@ -31,7 +31,7 @@ $space-between-buttons: 10px;
     }
 
     &:hover, &:focus {
-      background-color: darken($bg, 7%);
+      background-color: darken($well-bg, 4%);
     }
   }
 }
@@ -67,7 +67,7 @@ $space-between-buttons: 10px;
 
   &:hover, &:focus {
     text-decoration: none;
-    background-color: darken($bg, 7%);
+    background-color: darken($well-bg, 4%);
     color: lighten($text, 10%);
   }
 }
