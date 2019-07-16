@@ -6,13 +6,14 @@
 
 %section-title {
   @include text-dark;
-  font-size: 16px;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
 .card-modal {
   max-width: 1200px;
   font-family: $font-stack;
+  color: $text--default;
 
   .modal-content {
     border-radius: $slightlyrounded-corner + 2;
@@ -32,7 +33,7 @@
     &__id {
       position: absolute;
       left: 15px;
-      font-size: 28px;
+      font-size: 1.5em;
       width: $num-width;
       height: $num-width;
     }
@@ -45,10 +46,10 @@
     &__cat {
       @include bg-mid;
       @include text-dark;
-      font-size: 22px;
+      font-size: 1.25em;
       font-weight: $font-weight--cat;
       border-radius: 25px;
-      padding: 2px 15px;
+      padding: 0 15px;
       margin-left: 18px;
     }
   }

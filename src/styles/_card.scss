@@ -1,15 +1,19 @@
 @import "vars";
 
-$card-height: 336px;
-$card-width: 240px;
+$scale: 1.15;
+$cards-in-row: 4;
+$font-size--cat: 1.2em;
+
+$card-height: 336px * $scale;
+$card-width: 240px * $scale;
 $card-corner: $slightlyrounded-corner;
-$number-width: 28px;
-$header-height: 45px;
+$number-width: 32px;
+$header-height: 50px;
 $cat-width: $header-height;
 $body-height: $card-height - $header-height;
 $compare-section-height: $body-height * .25;
 $img-section-height: $body-height * .35;
-$example-section-height: $body-height * .3;
+$example-section-height: $body-height * .32;
 
 %img-styles {
   background-size: contain;
@@ -19,7 +23,8 @@ $example-section-height: $body-height * .3;
 
 .principle-title {
   color: $text--white;
-  font-size: 18px;
+  font-size: $font-size--cat;
+  line-height: $font-size--cat + .3;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -37,7 +42,7 @@ $example-section-height: $body-height * .3;
   background-color: $text--white;
   height: $number-width;
   width: $number-width;
-  font-size: 18px;
+  font-size: $font-size--cat;
   font-weight: bold;
   border-radius: 50%;
   text-align: center;
@@ -50,7 +55,7 @@ $example-section-height: $body-height * .3;
 
 .cards {
   padding: $space-between-cards;
-  max-width: ($card-width * 5) + ($space-between-cards * 6);
+  max-width: ($card-width * $cards-in-row) + ($space-between-cards * ($cards-in-row + 1));
   margin: 0 auto;
 }
 
@@ -102,11 +107,10 @@ $example-section-height: $body-height * .3;
         @include bg-dark();
 
         .principle-title {
+          @extend %text-overflow-ellipsis;
           display: inline-block;
           width: calc(100% - #{$number-width} - #{$space-between-num-and-title});
-          @extend %text-overflow-ellipsis;
           text-align: left;
-          max-height: 30px;
           margin-left: ($number-width + $space-between-num-and-title);
           white-space: nowrap!important;
         }
@@ -129,7 +133,7 @@ $example-section-height: $body-height * .3;
         &__text {
           position: absolute;
           width: ($card-height - $header-height);
-          left: (-1 * ($card-height - $header-height - 35px));
+          left: (-1 * ($card-height - $header-height - 43px));
           top: 30px;
           text-align: right;
           font-weight: $font-weight--cat;
@@ -162,7 +166,7 @@ $example-section-height: $body-height * .3;
           width: 100%;
           min-width: 100%;
           margin: 0;
-          font-size: 14px;
+          font-size: 1em;
           color: $text--card;
           padding: 10px;
           line-height: 1.4;
@@ -177,7 +181,7 @@ $example-section-height: $body-height * .3;
 
         &__image {
           height: $img-section-height;
-          margin: -10px 0!important;
+          margin: 0 0 -10px 0!important;
           @extend %display-props;
           @extend %img-styles;
           @include bg-light();
@@ -224,12 +228,12 @@ $example-section-height: $body-height * .3;
       @include bg-dark();
 
       &__content {
+        $size: #{$card-width * .65};
         margin-top: 50px;
 
         .principle-image {
           position: relative;
           z-index: 0;
-          $size: #{$card-width * .65};
           height: $size;
           width: $size;
           margin: -15px auto 0;
@@ -243,7 +247,8 @@ $example-section-height: $body-height * .3;
         }
 
         .principle-title {
-          margin-top: 3px;
+          max-width: $card-width - 15px;
+          margin: 10px auto 0;
           text-align: center;
         }
       }
@@ -253,7 +258,7 @@ $example-section-height: $body-height * .3;
         position: absolute;
         bottom: 6px;
         width: 100%;
-        font-size: 14px;
+        font-size: 1em;
 
         @include themed() {
           color: t('mid');
