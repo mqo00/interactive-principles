@@ -334,6 +334,9 @@
     "questions": "How should players be different after playing your game?\nHow will your player measure your game’s impact?\nWhat are your player’s strengths and weaknesses?  How can they see them?\nWhat parts of the game are particularly effective or relevant to your player personally?",
     "description": "Engage the player in their own learning experience. Empower them to self-reflect and self-correct.",
     "examples": "An elearning course gives the same test at the beginning and end to show the student their progress\nA time-management app encourages the user to set custom goals and reflect upon their progress on a weekly basis\nA programming tutorial gives near-immediate feedback on errors in the beginning, and gradually transitions into more delayed feedback to allow the student to recognize and troubleshoot their own mistakes\nMath problem - good to have students write down each step of the solution and reasoning behind it; bad to have students just write down the final answer.",
+    "exampleGame": "Survival of the Best Fit",
+    "exampleGameUrl": "https://www.survivalofthebestfit.com/game/",
+    "exampleGameDesc": "Survival of the Best Fit is a short game designed to teach people to understand algorithmic bias, and prompt them to ask tough questions about their own biases. The game features a series of short segments with periodic breaks to reflect on what just happened and why they made the decisions they made.",
     "cited": "Culyba"
   },
   {
