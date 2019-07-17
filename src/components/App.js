@@ -207,9 +207,9 @@ export default class App extends Component {
 
     openRandomCard() {
         let min =1;
-        let max = this.state.cards.length;
+        let max = principles.length;
         let random = Math.floor(Math.random() * (+max - +min)) + +min;
-        let card = this.state.cards[random];
+        let card = principles[random];
         this.renderModal(card);
     }
 
