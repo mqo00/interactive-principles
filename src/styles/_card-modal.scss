@@ -40,6 +40,7 @@
     &__title {
       color: $text--white;
       margin-left: $num-width + 10px;
+      text-transform: capitalize;
     }
 
     &__cat {
@@ -97,6 +98,7 @@
 
       &__related {
         padding: $section-padding;
+        text-transform: capitalize;
       }
     }
 
