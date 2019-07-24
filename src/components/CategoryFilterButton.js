@@ -14,6 +14,7 @@ function CategoryFilterButton(props) {
 
     return(
         <h2 onClick={props.onPress} className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (props.active ? 'category-filters__button--active' : '')}>
+            <i className={props.active ? 'fas fa-check-square' : 'far fa-square'}/>
             {title}
         </h2>
     );

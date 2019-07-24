@@ -25,6 +25,10 @@ $space-between-buttons: 10px;
       color: $cat3--text;
     }
 
+    i {
+      margin-right: 6px;
+    }
+
     &--active {
       background: $well-bg;
       font-weight: $font-weight--cat;

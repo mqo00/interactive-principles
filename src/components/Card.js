@@ -59,7 +59,7 @@ class Card extends React.Component {
                         </div>
                     </div>
                     <div className={'card__face--front__flipicon'} onClick={this.props.onFlipToBack}>
-                        <i className='fas fa-reply'></i>
+                        <i className='fas fa-exchange-alt'></i>
                     </div>
                 </div>
                 :
