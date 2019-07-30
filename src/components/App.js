@@ -222,28 +222,30 @@ export default class App extends Component {
                     <h2 className={'main-subtitle'}>for Designing Educational Games</h2>
                 </div>
 
-                <div className={'row'}>
-                    <div className={'col-12'}>
-                        <h3 className={'main-label'}>Filter by Category:</h3>
-                        <div className={'category-filters'}>
-                            <CategoryFilterButton cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
-                            <CategoryFilterButton cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
-                            <CategoryFilterButton cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
+                <div className={'main-tools'}>
+                    <div className={'row'}>
+                        <div className={'col-12'}>
+                            <h3 className={'main-label'}>Filter by Category:</h3>
+                            <div className={'category-filters'}>
+                                <CategoryFilterButton cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
+                                <CategoryFilterButton cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
+                                <CategoryFilterButton cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className={'row'}>
-                    <div className={'col-12'}>
-                        <div className={'toolbar'}>
-                            <h3 className={'main-label'}>Actions:</h3>
-                            <Button onClick={this.resetCards} text={'Reset'} icon={'undo-alt'}></Button>
-                            <Button onClick={this.flipAll} text={'Flip All'} icon={'exchange-alt'}></Button>
-                            <Button onClick={this.sortAZ} text={'Sort A-Z'} icon={'sort-alpha-down'}></Button>
-                            <Button onClick={this.sortNumerical} text={'Sort Numeric'} icon={'sort-numeric-down'}></Button>
-                            <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
-                            <Button onClick={this.openRandomCard} text={'Random Card'} icon={'question'}></Button>
-                            <Button onClick={this.draw5Cards} text={'Draw 5'} icon={'hand-paper'}></Button>
+                    <div className={'row'}>
+                        <div className={'col-12'}>
+                            <div className={'toolbar'}>
+                                <h3 className={'main-label'}>Actions:</h3>
+                                <Button onClick={this.resetCards} text={'Reset'} icon={'undo-alt'}></Button>
+                                <Button onClick={this.flipAll} text={'Flip All'} icon={'exchange-alt'}></Button>
+                                <Button onClick={this.sortAZ} text={'Sort A-Z'} icon={'sort-alpha-down'}></Button>
+                                <Button onClick={this.sortNumerical} text={'Sort Numeric'} icon={'sort-numeric-down'}></Button>
+                                <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
+                                <Button onClick={this.openRandomCard} text={'Random Card'} icon={'question'}></Button>
+                                <Button onClick={this.draw5Cards} text={'Draw 5'} icon={'hand-paper'}></Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,14 +261,9 @@ export default class App extends Component {
                                 categoryId={card.categoryId}
                                 categoryName={card.categoryName}
                                 principle={card.principle}
-                                questions={card.questions}
                                 description={card.description}
                                 subtitle={card.subtitle}
                                 examples={card.examples}
-                                gameEx={card.exampleGame}
-                                gameExURL={card.exampleGameUrl}
-                                gameExDesc={card.exampleGameDesc}
-                                related={card.related}
                                 onOpen={() => this.renderModal(card)}
                                 onFlipToFront={() => this.flipToFront(card)}
                                 onFlipToBack={() => this.flipToBack(card)}

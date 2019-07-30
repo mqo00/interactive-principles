@@ -7,9 +7,10 @@ $number-width: 28px;
 $header-height: 45px;
 $cat-width: $header-height;
 $body-height: $card-height - $header-height;
-$compare-section-height: $body-height * .25;
+$compare-section-height: $body-height * .3;
 $img-section-height: $body-height * .35;
 $example-section-height: $body-height * .3;
+$card-text-size: .8em;
 
 %img-styles {
   background-size: contain;
@@ -160,17 +161,17 @@ $example-section-height: $body-height * .3;
           width: 100%;
           min-width: 100%;
           margin: 0;
-          font-size: 14px;
+          font-size: $card-text-size;
           color: $text--card;
-          padding: 10px;
+          padding: 8px 10px;
           line-height: 1.4;
           font-weight: 400;
-          @extend %text-overflow-ellipsis;
         }
 
-        &__comparison {
+        &__desc {
           height: $compare-section-height;
           @extend %display-props;
+          @include multiLineEllipsis(1.5em, 3);
         }
 
         &__image {
@@ -188,6 +189,7 @@ $example-section-height: $body-height * .3;
           max-height: $example-section-height;
           border-radius: 0 0 $card-corner 0;
           @extend %display-props;
+          //@include multiLineEllipsis(1.5em, 3);
         }
 
       }

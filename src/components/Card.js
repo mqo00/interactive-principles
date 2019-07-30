@@ -32,6 +32,11 @@ class Card extends React.Component {
 
     }
 
+    renderDefenition(text) {
+        let items = text.split('.');
+        return (items[0] + '.');
+    }
+
     renderCard() {
         return (
             (this.props.flipped) ?
@@ -49,12 +54,12 @@ class Card extends React.Component {
                             <div className={'card__face--front__category__text'}>{this.props.categoryName}</div>
                         </div>
                         <div className={'card__face--front__body'}>
-                            <div className={'card__face--front__body__comparison'}>
-                                {this.renderComparison(this.props.subtitle)}
+                            <div className={'card__face--front__body__desc'}>
+                                {this.renderDefenition(this.props.description)}
                             </div>
                             <Img id={this.props.id} classes={'card__face--front__body__image'}/>
                             <div className={'card__face--front__body__example'}>
-                                {this.renderComparison(this.props.examples)}
+                                {this.renderComparison(this.props.subtitle)}
                             </div>
                         </div>
                     </div>

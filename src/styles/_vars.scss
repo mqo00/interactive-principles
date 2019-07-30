@@ -37,6 +37,32 @@ $default-shadow: 1px 1px 0px 2px rgba(70, 74, 80, 0.15);
 //spacing
 $space-between-cards: 30px;
 
+/* mixin for multiline */
+@mixin multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: left;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    width: 2em;
+    height: 2em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
 %text-overflow-ellipsis {
   white-space: pre-line;
   overflow: hidden;
