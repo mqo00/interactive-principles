@@ -14,9 +14,35 @@ $beige: #e5e8ef;
 $bg: $beige;
 $well-bg: darken($bg, 6%);
 
+//original
 $cat1: #DF6D4D;
 $cat2: #5EA67D;
 $cat3: #379A99;
+
+//hide images to test
+.principle-image {
+  background-image: none!important;
+}
+
+//color blind friendly ish
+//$cat1: #9562df;
+//$cat2: #e59957;
+//$cat3: #379A99;
+
+//crazy contrast (keep images)
+//$cat1: #379A99;
+//$cat2: #383b7a;
+//$cat3: #5d2d67;
+
+//muted
+//$cat1: #9a4257;
+//$cat2: #379A99;
+//$cat3: #4453A6;
+
+//bright pastel
+//$cat1: #F26363;
+//$cat2: #4ACAD9;
+//$cat3: #5774d9;
 
 $cat1--text: darken($cat1, 10%);
 $cat1--mid: lighten($cat1, 20%);
