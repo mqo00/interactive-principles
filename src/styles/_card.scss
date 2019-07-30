@@ -249,9 +249,9 @@ $example-section-height: $body-height * .3;
       &__category {
         text-align: center;
         position: absolute;
-        bottom: 6px;
+        bottom: 8px;
         width: 100%;
-        font-size: 14px;
+        font-size: .9em;
 
         @include themed() {
           color: t('mid');
