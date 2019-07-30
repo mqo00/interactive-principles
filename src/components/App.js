@@ -217,8 +217,11 @@ export default class App extends Component {
         return (
             <div className='cards'>
 
+                <h1>Learning Science Principles</h1>
+
                 <div className={'row'}>
                     <div className={'col-12'}>
+                        <h3>Filter by Category:</h3>
                         <div className={'category-filters'}>
                             <CategoryFilterButton cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
                             <CategoryFilterButton cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
@@ -230,6 +233,7 @@ export default class App extends Component {
                 <div className={'row'}>
                     <div className={'col-12'}>
                         <div className={'toolbar'}>
+                            <h3>Actions:</h3>
                             <Button onClick={this.resetCards} text={'Reset'} icon={'undo-alt'}></Button>
                             <Button onClick={this.flipAll} text={'Flip All'} icon={'exchange-alt'}></Button>
                             <Button onClick={this.sortAZ} text={'Sort A-Z'} icon={'sort-alpha-down'}></Button>
