@@ -25,9 +25,7 @@ $example-section-height: $body-height * .3;
 }
 
 .principle-image {
-  @include themed() {
-    background-color: t('mid');
-  }
+  @include bg-light;
   @extend %img-styles;
 }
 
