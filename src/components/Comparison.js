@@ -35,9 +35,9 @@ function Comparison(props) {
 
     if (reverse) {
         return(
-            <div className={'comparison'}>
+            <div className={'comparison row'}>
                 <span className={'comparison__less'}>{item2} </span>
-                <span className={'comparison__icon fas fa-less-than'}></span>
+                <span className={'comparison__icon comparison__icon--less'}></span>
                 <span className={'comparison__greater'}> {item1}</span>
             </div>
         );
@@ -49,19 +49,18 @@ function Comparison(props) {
         );
     } else if (item3) {
         return(
-            <div className={'comparison'}>
+            <div className={'comparison row'}>
                 <span className={'comparison__greater'}>{item1} </span>
-                <span className={'comparison__icon fas fa-greater-than'}></span>
+                <span className={'comparison__icon comparison__icon--greater'}></span>
                 <span className={'comparison__less'}> {item2}</span>
-                <span className={'comparison__icon fas fa-greater-than'}></span>
                 <span className={'comparison__less'}> {item3}</span>
             </div>
         );
     } else {
         return(
-            <div className={'comparison'}>
+            <div className={'comparison row'}>
                 <span className={'comparison__greater'}>{item1} </span>
-                <span className={'comparison__icon fas fa-greater-than'}></span>
+                <span className={'comparison__icon comparison__icon--greater'}></span>
                 <span className={'comparison__less'}> {item2}</span>
             </div>
         );

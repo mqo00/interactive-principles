@@ -11,6 +11,7 @@ $compare-section-height: $body-height * .3;
 $img-section-height: $body-height * .35;
 $example-section-height: $body-height * .3;
 $card-text-size: .8em;
+$comparison-text-size: .75em;
 
 %img-styles {
   background-size: contain;
@@ -160,8 +161,6 @@ $card-text-size: .8em;
           display: inline-block;
           width: 100%;
           min-width: 100%;
-          margin: 0;
-          font-size: $card-text-size;
           color: $text--card;
           padding: 8px 10px;
           line-height: 1.4;
@@ -169,12 +168,16 @@ $card-text-size: .8em;
         }
 
         &__desc {
+          font-size: $card-text-size;
           height: $compare-section-height;
+          margin-top: 5px;
+          margin-bottom: 10px;
           @extend %display-props;
           @include multiLineEllipsis(1.5em, 3);
         }
 
         &__image {
+          z-index: 10;
           height: $img-section-height;
           margin: -10px 0!important;
           @extend %display-props;
@@ -185,26 +188,31 @@ $card-text-size: .8em;
         }
 
         &__example {
+          font-size: $comparison-text-size;
           height: $example-section-height;
           max-height: $example-section-height;
           border-radius: 0 0 $card-corner 0;
           @extend %display-props;
           //@include multiLineEllipsis(1.5em, 3);
+
+          .comparison__less:nth-of-type(2) {
+            display: none;
+          }
         }
 
       }
 
       &__flipicon {
+        z-index: 11;
         $size: 35px;
         position: absolute;
         height: $size;
         width: $size;
         transform: scaleX(-1);
         color: $text--default;
-        background: #ffffff9e;
+        background: $button-bg;
         right: -15px;
-        //bottom: calc(50% - 22px);
-        top: 5px;
+        bottom: calc(50% - 22px);
         border-radius: 35px;
         text-align: center;
         font-size: 1.1em;

@@ -1,22 +1,102 @@
+.comparison {
+  position: relative;
+
+  &__greater, &__less {
+    display: inline-block;
+    z-index: 10;
+
+    &:first-letter{
+      text-transform: capitalize
+    }
+
+    &:before {
+      font-family: FontAwesome;
+      display: block;
+      margin-top: -4px;
+    }
+  }
+
+  &__greater {
+    width: 50%;
+    padding: 0 5px 0 15px;
+
+    &:before {
+      content: '\f00c';
+      color: $greaterthan;
+    }
+  }
+
+  &__less {
+    width: 50%;
+    padding: 0 15px;
+
+    &:before {
+      content: '\f00d';
+      color: $lessthan;
+    }
+  }
+
+  &__icon {
+    display: none; //TODO: Put this back
+    $bg: $card-bg;
+    $border: $button-bg;
+    $totalwidth: 20px;
+    $width: 2px;
+
+    z-index: 0;
+    transform: scaleY(2.2);
+    left: calc(50% - 15px);
+    margin-left: -15px;
+    margin-right: 15px;
+    margin-top: 41px;
+
+    &:after, &:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: transparent;
+      border-left-color: $bg;
+      border-width: $totalwidth;
+      margin-top: -1 * $totalwidth;
+    }
+    &:before {
+      border-color: transparent;
+      border-left-color: $border;
+      border-width: $totalwidth + $width;
+      margin-top: -1 * ($totalwidth + $width);
+    }
+  }
+}
+
+//card
+.card {
+  .comparison__icon {
+
+  }
+}
+
+//modal
 .multiple-comparisons {
   .comparison {
     padding: 6px 10px;
     border-radius: 8px;
-    margin-bottom: 8px;
-    @include bg-light;
-  }
-}
+    margin: 0 0 10px 0;
+    border: 1px solid $border-default;
 
-.comparison {
-  &__greater {
-    font-weight: 500;
-  }
-  &__less {
-    font-weight: 300;
-  }
-  &__icon {
-    @include text-dark;
-    margin-right: 3px;
-    margin-left: 3px;
+    //@include themed() {
+    //  border: 1px solid t('mid');
+    //}
+
+    &__greater, &__less {
+      line-height: 1.6;
+    }
   }
 }

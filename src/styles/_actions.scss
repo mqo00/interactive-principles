@@ -30,12 +30,12 @@ $space-between-buttons: 10px;
     }
 
     &--active {
-      background: $well-bg;
+      background: $button-bg;
       font-weight: $font-weight--cat;
     }
 
     &:hover, &:focus {
-      background-color: darken($well-bg, 4%);
+      background-color: darken($button-bg, 4%);
     }
   }
 }
@@ -71,7 +71,7 @@ $space-between-buttons: 10px;
 
   &:hover, &:focus {
     text-decoration: none;
-    background-color: darken($well-bg, 4%);
+    background-color: darken($button-bg, 4%);
     color: lighten($text, 10%);
   }
 }
