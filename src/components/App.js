@@ -217,10 +217,11 @@ export default class App extends Component {
         return (
             <div className='cards'>
 
-                <div className={'title-box'}>
-                    <h1 className={'main-title'}>Learning Science Principles</h1>
-                    <h2 className={'main-subtitle'}>for Designing Educational Games</h2>
-                </div>
+                {/*TODO: Add logo and brand*/}
+                {/*<div className={'title-box'}>*/}
+                {/*<h1 className={'main-title'}>Learning Science Principles</h1>*/}
+                {/*<h2 className={'main-subtitle'}>for Designing Educational Games</h2>*/}
+                {/*</div>*/}
 
                 <div className={'main-tools'}>
                     <div className={'row'}>

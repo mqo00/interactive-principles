@@ -94,7 +94,7 @@ class CardModal extends React.Component {
         if (this.props.related) {
             return(
                 <div>
-                    <div className={'card-modal__body__details__section'}>
+                    <div className={'card-modal__body__side-panel__related'}>
                         <h3>Related Principles</h3>
                         <p>{this.props.related}</p>
                     </div>
@@ -127,12 +127,13 @@ class CardModal extends React.Component {
                         <div className={'card-modal__body__side-panel__comparison'}>
                             <Comparison comparison={this.props.subtitle}/>
                         </div>
+                        {this.renderRelated()}
                     </div>
                     <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-8'}>
                         {this.renderQuestions()}
                         {this.renderExamples()}
                         {this.renderGameExample()}
-                        {this.renderRelated()}
+                        {/*{this.renderRelated()}*/}
                     </div>
                 </Modal.Body>
 

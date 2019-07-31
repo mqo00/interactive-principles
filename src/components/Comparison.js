@@ -7,8 +7,6 @@ function Comparison(props) {
     var item1;
     var item2;
     var item3;
-    var reverse = false;
-    var nocomparison = false;
 
     example1 = (props.comparison.match(/\n/)) ? (props.comparison.split(/\n/)[0]) : props.comparison;
 
@@ -22,48 +20,26 @@ function Comparison(props) {
         if(parts[2]) {
             item3 = parts[2];
         }
-    } else if (example1.includes('<')) {
-        //standard less than comparison
-        parts = example1.split('<');
-        item1 = parts[1];
-        item2 = parts[0];
-        reverse = true;
-    } else {
-        //not a comparison, just an example
-        nocomparison = true;
     }
 
-    if (reverse) {
+    if (item3) {
         return(
             <div className={'comparison row'}>
-                <span className={'comparison__less'}>{item2} </span>
-                <span className={'comparison__icon comparison__icon--less'}></span>
-                <span className={'comparison__greater'}> {item1}</span>
+                <span className={'comparison__greater'}>{item1} </span>
+                <span className={'comparison__icon comparison__icon--greater'}></span>
+                <span className={'comparison__less'}> {item2} (or {item3})</span>
             </div>
         );
-    } else if (nocomparison) {
-        return (
-            <div className={'comparison'}>
-                <span className={'comparison__greater'}>{example1} </span>
-            </div>
-        );
-    } else if (item3) {
+    } else if (item1 && item2) {
         return(
             <div className={'comparison row'}>
                 <span className={'comparison__greater'}>{item1} </span>
                 <span className={'comparison__icon comparison__icon--greater'}></span>
                 <span className={'comparison__less'}> {item2}</span>
-                <span className={'comparison__less'}> {item3}</span>
             </div>
         );
     } else {
-        return(
-            <div className={'comparison row'}>
-                <span className={'comparison__greater'}>{item1} </span>
-                <span className={'comparison__icon comparison__icon--greater'}></span>
-                <span className={'comparison__less'}> {item2}</span>
-            </div>
-        );
+        return null;
     }
 }
 

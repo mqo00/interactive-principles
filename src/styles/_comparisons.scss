@@ -1,5 +1,6 @@
 .comparison {
   position: relative;
+  height: 100%;
 
   &__greater, &__less {
     display: inline-block;
@@ -37,18 +38,19 @@
   }
 
   &__icon {
-    display: none; //TODO: Put this back
+    //display: none; //TODO: Put this back
     $bg: $card-bg;
-    $border: $button-bg;
+    $border: $page-bg;
     $totalwidth: 20px;
     $width: 2px;
 
     z-index: 0;
-    transform: scaleY(2.2);
-    left: calc(50% - 15px);
+    transform: scaleY(3);
+    left: 50%;
     margin-left: -15px;
     margin-right: 15px;
-    margin-top: 41px;
+    position: absolute;
+    bottom: 30px;
 
     &:after, &:before {
       left: 100%;
@@ -84,20 +86,28 @@
 }
 
 //modal
-.multiple-comparisons {
+.card-modal {
   .comparison {
+    overflow: hidden;
     padding: 6px 10px;
     border-radius: 8px;
     margin: 0 0 10px 0;
     border: 1px solid $border-default;
 
-    //@include themed() {
-    //  border: 1px solid t('mid');
-    //}
+    &__icon {
+      bottom: 50%;
+    }
 
     &__greater, &__less {
       line-height: 1.6;
+    }
+
+    &__greater {
       padding: 10px;
+    }
+
+    &__less {
+      padding: 10px 10px 10px 25px;
     }
   }
 }

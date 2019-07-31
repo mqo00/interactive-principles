@@ -13,8 +13,8 @@ $text--tertiary: lighten($text--secondary, 8%);
 $text--card: $text--default;
 $text--button: $navy;
 $beige: #e5e8ef;
-$bg: $beige;
-$well-bg: darken($bg, 6%);
+$page-bg: $beige;
+$well-bg: darken($page-bg, 6%);
 $button-bg: $well-bg;
 $border-default: $well-bg;
 

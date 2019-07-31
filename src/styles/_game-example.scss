@@ -16,11 +16,12 @@
 
   &__image {
     background-size: cover;
-    background-position: top;
+    background-position: top left;
     height: 100%;
     width: 100%;
     min-height: 150px;
     box-shadow: $default-shadow;
     border-radius: $barelyrounded-corner;
+    max-height: 240px;
   }
 }

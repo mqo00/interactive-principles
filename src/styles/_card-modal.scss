@@ -5,9 +5,12 @@
 }
 
 %section-title {
-  @include text-dark;
   font-size: .9em;
   text-transform: uppercase;
+
+  @include themed() {
+    color: t('dark');
+  }
 }
 
 .card-modal {
@@ -97,6 +100,27 @@
 
       &__comparison {
         padding: $padding-top ($padding-sides * 2);
+
+        .comparison {
+          border-color: $button-bg;
+        }
+
+        .comparison__icon {
+
+          &:after {
+            @include themed() {
+              border-left-color: t('light');
+            }
+          }
+
+          &:before {
+            border-left-color: $button-bg;
+          }
+        }
+      }
+
+      &__related {
+        padding: $padding-top ($padding-sides * 2);
       }
     }
 
@@ -117,6 +141,7 @@
 
           p {
             font-style: italic;
+            line-height: 2;
           }
         }
 

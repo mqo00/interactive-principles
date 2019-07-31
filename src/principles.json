@@ -48,7 +48,7 @@
     "categoryName": "Memory/Fluency",
     "related": "Exam expectations",
     "questions": "Where do players exercise the skills they are learning in your game?\nDo they have to exercise those skills repeatedly?\nWhat are the core skills that must be tested before proceeding?",
-    "description": "Re-expose players to core concepts by forcing them to recall material. \nOr pre-expose them to material they haven’t learned yet by asking them to make hypotheses about it.",
+    "description": "Re-expose players to core concepts by forcing them to recall material. \nOr pre-expose them to material they haven't learned yet by asking them to make hypotheses about it.",
     "examples": "Give a test summarizing the material > Spend additional time studying the same material\nGive a “pre-quiz” to expose students to upcoming math concepts and gauge progress > Jump straight in",
     "exampleGame": "Battleship Numberline",
     "exampleGameUrl": "https://www.brainpop.com/games/battleshipnumberline/",
@@ -106,6 +106,7 @@
     "description": "Combine problem-solving practice with reviewing examples of solved problems that illustrate the steps taken to reach a solution.\nHaving students alternate between reviewing worked examples and solving similar problems on their own has been shown to be effective when teaching math, science, and technology.",
     "examples": "A computer science student reviews code from a few similar projects while determining what approach she will take to do her homework assignment > She looks at the assignment and thinks about it really hard\nAn algebra textbook provides a worked example for each type of practice problem, using different variables and values > Descriptive text and practice problems only",
     "exampleGame": "Anti-Phishing Phil",
+    "exampleGameUrl": "https://www.wombatsecurity.com/anti-phishing-training-suite",
     "exampleGameDesc": "Anti-Phishing Phil is a game that teaches users how to identify phishing URLs, where to look for cues in web browsers, and how to use search engines to find legitimate sites. Each module of the game begins with a non-interactive tutorial in which the player is presented with several worked examples of the types of problems they will need to solve.\n\nAnti-Phishing Phil was developed by members of the Carnegie Mellon University Usable Privacy and Security Laboratory with funding from the US National Science Foundation (Cyber Trust initiative) and ARO/CyLab.",
     "cited": "Pashler"
   },
@@ -133,7 +134,7 @@
     "examples": "A game with a tutorial and instructions > No text",
     "exampleGame": "Creature Capture",
     "exampleGameUrl": "http://play.centerforgamescience.org/creaturecapture/",
-    "exampleGameDesc": "Creature Capture is a strategy game published by the University of Washington Center for Game Science. It teaches young children to compare their game fraction values with those of the computer-controlled virals. \nTo win the game, the player needs to pick a number that meets the requirement of the presented game cue. "
+    "exampleGameDesc": "Creature Capture is a strategy game published by the University of Washington Center for Game Science. It teaches young children to compare their game fraction values with those of the computer-controlled virals. \nTo win the game, the player needs to pick a number that meets the requirement of the presented game cue. The game's interactive tutorial walks the player through each step of a round."
   },
   {
     "id": 11,
@@ -141,9 +142,13 @@
     "subtitle": "Integrate instructional components > No integration",
     "categoryId": 2,
     "categoryName": "Induction/Refinement",
-    "related": "Scaffolding, Segmenting",
+    "related": "Scaffolding, Segmenting, Activate preconceptions",
+    "questions": "How would a player describe what they learned from this game?\nWhat are some links between concepts your game teaches?\nHow important is it to explicitly draw connections?",
     "description": "Highlight connections between instructional units. \nExplicitly call out connections, similarities, and differences between previously learned and new material.",
-    "examples": "In a philosophy course, make connections between philosophers and how their beliefs about key topics compare and contrast > Give an overview of each major philosopher"
+    "examples": "In a philosophy course, make connections between philosophers and how their beliefs about key topics compare and contrast > Give an overview of each major philosopher",
+    "exampleGame": "Human Resource Machine",
+    "exampleGameUrl": "https://tomorrowcorporation.com/humanresourcemachine",
+    "exampleGameDesc": "Human Resource Machine is a puzzle game that teaches programming. The player controls tiny office workers with simple programming to perform tasks dictated by a cruel manager. Each level builds upon the one before it and incorporates previously learned commands, explaining how the commands relate to each other and work together.\n"
   },
   {
     "id": 12,
@@ -154,6 +159,9 @@
     "questions": "Who is your target player? \nHow much prior exposure do they have to this material?\nHow could you make the material harder? Easier?\nWhat is the goal of the game?",
     "description": "Account for the player’s prior knowledge and skill level when considering how challenging to make your game.",
     "examples": "Grade-level appropriate curriculum > Students find a chemistry game completely unapproachable because it involves math far above their grade level",
+    "exampleGame": "Mario Kart",
+    "exampleGameUrl": "https://www.nintendo.com/",
+    "exampleGameDesc": "The classic multiplayer Nintendo game Mario Kart uses a unique approach to balancing the different skill levels of players. Players who are performing the worse will receive more powerful items, which are used to sabotage other players.",
     "cited": "Graesser"
   },
   {
@@ -206,7 +214,7 @@
     "related": "Exam expectations",
     "questions": "How much practice will it take for your player to understand the material?\nWhat are the components that are most important to remember?\nDoes your game offer enough practice of key skills?\n",
     "description": "Challenge the player to put their newly acquired knowledge to use solving problems.",
-    "examples": "Practice playing newly learned chords on guitar > study additional new chord shapes\nProvide a tutorial round that forces the player to work through how to control their character",
+    "examples": "Practice playing newly learned chords on guitar > Study additional new chord shapes",
     "exampleGame": "Crayon Physics Deluxe",
     "exampleGameUrl": "http://www.crayonphysics.com/",
     "exampleGameDesc": "Players learn by doing in Crayon Physics Deluxe,  a 2D physics puzzle / sandbox game. Players draw their own solution to manipulate a ball to make contact with a star, and watch as their drawings come alive and obey the laws of physics.",
@@ -222,6 +230,9 @@
     "questions": "Are you encouraging thinking about this concept from different perspectives?\nWill your player be able to transfer the knowledge they acquire to other domains?",
     "description": "Use multiple and varied examples to teach and practice the use of abstract concepts.\nNo two situations are ever exactly the same, so you should prepare your players to apply their knowledge in all the varied situations of life. ",
     "examples": "Point out the same music theory concept in classical, pop, and jazz music examples > Use only examples of classical music\nA parent explains a complex concept to a child using several varied metaphors > Use one example, and the child interprets it literally",
+    "exampleGame": "Battleship Numberline",
+    "exampleGameUrl": "https://www.brainpop.com/games/battleshipnumberline/",
+    "exampleGameDesc": "Battleship Numberline is a game that prompts children to practice eyeballing ratios by marking a spot on a numberline. The game has modes for fractions, decimals, percentages, and \"mixed bag,\" prompting the player to apply the same skills to varied problems.",
     "cited": "Graesser"
   },
   {
@@ -256,7 +267,7 @@
     "related": "multimedia, redundancy, spatial contiguity, temporal contiguity",
     "questions": "What descriptions can or cannot be fully presented in audio?\nHow quickly should the descriptions presented in audio?",
     "description": "Present verbal descriptions in audio rather than text when possible.\nPlayers may find their attention divided when presented with written text and competing visuals simultaneously.",
-    "examples": "A safety training course with spoken narration > written instructions\nWatching a documentary on mute with subtitles < sound",
+    "examples": "A safety training course with spoken narration > Written instructions\nWatching a documentary with sound > On mute with subtitles",
     "exampleGame": "Civilization (Franchise)",
     "exampleGameUrl": "https://civilization.com/",
     "exampleGameDesc": "Civilization is a turn-based strategy game (and/or resource management game) in which the player builds a civilization from scratch, starting in the Ancient Era.\nCiv frequents the modality principle; for key events, a character will read the text aloud while a graphic is shown. The voice that reads the information is typically anchored in reality by being linked to a character and scenario, either the advisor (a character who guides the player through the rules of Civ) or an explorer.",
@@ -271,7 +282,7 @@
     "related": "multimedia, modality, spatial contiguity, temporal contiguity",
     "questions": "What descriptions can or cannot be fully presented in audio?\nShould the verbal descriptions be completely or partially removed?",
     "description": "If you are able to provide verbal descriptions in audio, refrain from also including those same instructions in written form.",
-    "examples": "Watching a documentary with sound and subtitles < sound\nApple Keynotes slides are famously simple, with a single image or a logo, and without any written descriptions. Meanwhile, the presenter delivers everything verbally. "
+    "examples": "Watching a documentary with sound > Sound and subtitles\nA presentation that is delivered verbally with accompanying visuals, but no text > Redundant text"
   },
   {
     "id": 22,
@@ -282,7 +293,7 @@
     "related": "guided attention",
     "questions": "What are some presented images that require verbal descriptions?\nHow can we format/place the description relative the image?\nWhat is the purpose of the description for the image? Is it purely informational or does it have other purposes?",
     "description": "Position descriptive text as closely as possible to the part of the visualization it describes.",
-    "examples": "A reader has to flip forward several pages to find diagram 1.7 < diagram is located inline with the text it supports\nTooltips are used to provide more information on elements of a data visualization",
+    "examples": "A diagram is located inline with the text it supports > Reader has to flip forward several pages to find diagram 1.7\nTooltips are used to provide more information on elements of a data visualization > Visit a \"help\" section for more info",
     "cited": "Pashler"
   },
   {
@@ -293,7 +304,7 @@
     "categoryName": "Sense-making/Understanding",
     "questions": "What are the audio & image elements required for this practice?\nWhich audio elements are related to which image elements?",
     "description": "Present complementary audio and visual elements at the same time to encourage the player to form a connection between the two stimuli.",
-    "examples": "Show photographs from the great depression while lecturing > photographs reviewed later\nTed Talks - speaker speaks as related graphics are displayed on the big screen behind them.",
+    "examples": "Show photographs from the great depression while lecturing > Photographs reviewed later",
     "cited": "Mayer"
   },
   {
@@ -334,9 +345,9 @@
     "questions": "How should players be different after playing your game?\nHow will your player measure your game’s impact?\nWhat are your player’s strengths and weaknesses?  How can they see them?\nWhat parts of the game are particularly effective or relevant to your player personally?",
     "description": "Empower the player to self-reflect and self-correct.\nEngage the player in their own learning experience.",
     "examples": "An elearning course gives the same test at the beginning and end to show the student their progress > No measure of progress\nA time-management app encourages the user to set custom goals and reflect upon their progress on a weekly basis > No opportunity for reflection\nA programming tutorial gives near-immediate feedback on errors in the beginning, and gradually transitions into more delayed feedback to allow the student to recognize and troubleshoot their own mistakes > No opportunity to self-correct",
-    "exampleGame": "Survival of the Best Fit",
-    "exampleGameUrl": "https://www.survivalofthebestfit.com/game/",
-    "exampleGameDesc": "Survival of the Best Fit is a short game designed to teach people to understand algorithmic bias, and prompt them to ask tough questions about their own biases. The game features a series of short segments with periodic breaks to reflect on what just happened and why they made the decisions they made.",
+    "exampleGame": "Windfall",
+    "exampleGameUrl": "http://persuasivegames.com/game/windfall",
+    "exampleGameDesc": "Windfall is a strategy game about building wind turbines to create energy profitably. Players strategically choose locations to build turbines to maximize profit without losing public support. At the end of each year player’s are presented with a summary of their progress towards their energy offset goal, and the game pauses encouraging the player to reflect and plan for the next round.",
     "cited": "Culyba"
   },
   {
@@ -363,6 +374,9 @@
     "questions": "Does the game provide opportunities to reflect?\nHas the player acquired sufficient subject knowledge to ask deep questions?\nIn what ways could a player check their understanding through the game?\nWhat are some ways of motivating the players to question things?\nWhat type of questions will be effective for stimulating critical thinking?",
     "description": "Empower your player to embrace and explore uncertainties they encounter.\nEncourage the player to take time to reflect and ask deep questions; questions that stimulate deep explanations, and may challenge their prior beliefs and assumptions.",
     "examples": "Ask students: What is data? What isn’t data? > Ask students: What is the correct data type to use for a single character?\nAsk students: What might the world look like today if the war had ended differently? > Ask students: What year did the American Revolutionary War end?",
+    "exampleGame": "Survival of the Best Fit",
+    "exampleGameUrl": "https://www.survivalofthebestfit.com/game/",
+    "exampleGameDesc": "Survival of the Best Fit is a short game designed to teach people to understand algorithmic bias, and prompt them to ask tough questions about their own biases. The game features a series of short segments with periodic breaks to reflect on what just happened and why they made the decisions they made.",
     "cited": "Astleitner, Pashler"
   },
   {
@@ -386,6 +400,9 @@
     "questions": "Who is your target player? What motivates them?\nDoes your player have a personal stake in their transformation?\nWhat is the ecosystem in which your game must create change?",
     "description": "Engage your player by structuring content around their interests and goals.",
     "examples": "Allow guitar students to choose their own songs to learn > Forced set of songs",
+    "exampleGame": "Alphabear",
+    "exampleGameUrl": "https://play.google.com/store/apps/details?id=com.spryfox.alphabear2&hl=en_US",
+    "exampleGameDesc": "Alphabear is a word puzzle game that teaches spelling, and captures the player’s attention with an engaging storyline. As the player spells a word, that word is animated in a funny cartoon. Players are able to customize their characters and switch out props and outfits.",
     "cited": "Culyba"
   }
 ]
