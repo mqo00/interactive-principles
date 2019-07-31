@@ -16,7 +16,7 @@ $beige: #e5e8ef;
 $bg: $beige;
 $well-bg: darken($bg, 6%);
 $button-bg: $well-bg;
-$border-default: $bg;
+$border-default: $well-bg;
 
 $lessthan: #ab4f23;
 $greaterthan: #438b5e;
@@ -61,7 +61,7 @@ $space-between-cards: 30px;
     content: '';
     position: absolute;
     right: 6px;
-    width: 2em;
+    width: 1em;
     height: 2em;
     margin-top: 0.2em;
     background: $bgColor;

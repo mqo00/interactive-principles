@@ -35,10 +35,10 @@ class CardModal extends React.Component {
                 <div className={'card-modal__body__details__section game-example'}>
                     <h3>What does it look like in a game?</h3>
                     <div className={'row'}>
-                        <div className={'col-xs-12 col-sm-3'}>
+                        <div className={'col-xs-12 col-sm-4'}>
                             <GameExImg id={this.props.id} classes={'game-example__image'}/>
                         </div>
-                        <div className={'col-xs-12 col-sm-9'}>
+                        <div className={'col-xs-12 col-sm-8'}>
                             <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'}>
                                 {this.props.exampleGame}
                                 <i className={'fas fa-external-link-square-alt'}/>
@@ -94,10 +94,8 @@ class CardModal extends React.Component {
         if (this.props.related) {
             return(
                 <div>
-                    <div className={'card-modal__body__side-panel__title'}>
+                    <div className={'card-modal__body__details__section'}>
                         <h3>Related Principles</h3>
-                    </div>
-                    <div className={'card-modal__body__side-panel__related'}>
                         <p>{this.props.related}</p>
                     </div>
                 </div>
@@ -121,32 +119,25 @@ class CardModal extends React.Component {
                     </div>
                 </Modal.Header>
                 <Modal.Body className={'card-modal__body row'}>
-                    <div className={'card-modal__body__side-panel col-xs-12 col-sm-4 col-md-3'}>
-                        <div className={'card-modal__body__side-panel__title'}>
-                            <h3>Definition</h3>
+                    <div className={'card-modal__body__side-panel col-xs-12 col-sm-4 col-md-4'}>
+                        <Img id={this.props.id} classes={'card-modal__body__side-panel__img'}/>
+                        <div className={'card-modal__body__side-panel__definition'}>
+                            <p>{this.props.description}</p>
                         </div>
                         <div className={'card-modal__body__side-panel__comparison'}>
                             <Comparison comparison={this.props.subtitle}/>
                         </div>
-                        <Img id={this.props.id} classes={'card-modal__body__side-panel__img'}/>
-                        {this.renderRelated()}
-                        {this.renderCitation()}
-
                     </div>
-                    <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-9'}>
-                        <div className={'card-modal__body__details__section'}>
-                            <h3>How can you use it?</h3>
-                            <p>{this.props.description}</p>
-                        </div>
+                    <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-8'}>
+                        {this.renderQuestions()}
                         {this.renderExamples()}
                         {this.renderGameExample()}
-                        {this.renderQuestions()}
+                        {this.renderRelated()}
                     </div>
-
-                    <button onClick={this.props.onNext} className='previous-next-button previous-next-button--next fas fa-arrow-circle-right'></button>
-                    <button onClick={this.props.onPrev} className='previous-next-button previous-next-button--prev fas fa-arrow-circle-left'></button>
-
                 </Modal.Body>
+
+                <button onClick={this.props.onNext} className='previous-next-button previous-next-button--next fas fa-arrow-circle-right'></button>
+                <button onClick={this.props.onPrev} className='previous-next-button previous-next-button--prev fas fa-arrow-circle-left'></button>
             </Modal>
         );
     }

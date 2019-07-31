@@ -6,11 +6,12 @@
 
 %section-title {
   @include text-dark;
-  font-size: 16px;
+  font-size: .9em;
   text-transform: uppercase;
 }
 
 .card-modal {
+  $height: calc(100% - 3.5rem);
   max-width: 1200px;
   font-family: $font-stack;
 
@@ -59,9 +60,12 @@
   }
 
   &__body {
-    $section-padding: 10px 15px;
+    $padding-top: 10px;
+    $padding-sides: 15px;
+    $section-padding: $padding-top $padding-sides;
     padding-top: 0;
     padding-bottom: 0;
+    overflow: scroll;
 
     h3 {
       @extend %section-title;
@@ -72,58 +76,52 @@
       border-radius: 0 0 0 $slightlyrounded-corner;
       padding: 0;
 
-      &__img {
+      &:after {
+        content: '';
         @include bg-light;
-        background-size: 80%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        height: 200px;
+        width: 100%;
+        height: $height;
       }
 
-      &__title {
-        @include bg-mid;
-        @include text-dark;
-        padding: $section-padding;
-        margin-top: -1px;
+      &__img {
+        @include bg-light;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 240px;
+        background-size: 75%;
+      }
 
-        h3 {
-          margin-bottom: 0;
-        }
+      &__definition {
+        padding: $padding-top ($padding-sides * 2);
       }
 
       &__comparison {
-        padding: $section-padding;
-      }
-
-      &__related {
-        padding: $section-padding;
-        text-transform: capitalize;
+        padding: $padding-top ($padding-sides * 2);
       }
     }
 
     &__details {
       max-height: 600px;
-      overflow-y: scroll;
       padding: $section-padding;
 
       &__section {
         padding: $section-padding;
-        margin-bottom: 8px;
+        margin-bottom: 1em;
 
         p {
           margin-bottom: 0;
         }
 
         &__questions {
-          h3 {
-            @include text-light;
-            text-align: center;
-          }
-          @include bg-dark;
-          padding: $section-padding;
-          border-radius: $slightlyrounded-corner;
-          color: $text--white;
           white-space: pre-line;
+
+          p {
+            font-style: italic;
+          }
+        }
+
+        &__related {
+          padding: $section-padding;
         }
       }
     }
