@@ -25,17 +25,31 @@ function Comparison(props) {
     if (item3) {
         return(
             <div className={'comparison row'}>
-                <span className={'comparison__greater'}>{item1} </span>
+                <span className={'comparison__greater'}>
+                    <i className={'fas fa-check'}/>
+                    {item1}
+                </span>
                 <span className={'comparison__icon comparison__icon--greater'}></span>
-                <span className={'comparison__less'}> {item2} (or {item3})</span>
+                <span className={'comparison__less'}>
+                    <i className={'fas fa-times'}/>
+                    {item2}
+                    <i className={'fas fa-times'}/>
+                    {item3}
+                </span>
             </div>
         );
     } else if (item1 && item2) {
         return(
             <div className={'comparison row'}>
-                <span className={'comparison__greater'}>{item1} </span>
+                <span className={'comparison__greater'}>
+                    <i className={'fas fa-check'}/>
+                    {item1}
+                </span>
                 <span className={'comparison__icon comparison__icon--greater'}></span>
-                <span className={'comparison__less'}> {item2}</span>
+                <span className={'comparison__less'}>
+                    <i className={'fas fa-times'}/>
+                    {item2}
+                </span>
             </div>
         );
     } else {
