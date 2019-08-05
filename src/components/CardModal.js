@@ -5,6 +5,7 @@ import Img from './Img';
 import Comparison from './Comparison';
 import MultipleComparisons from './MultipleComparisons';
 import GameExImg from './GameExImage';
+import RelatedLink from './RelatedLink';
 
 class CardModal extends React.Component {
     constructor(props) {
@@ -92,11 +93,26 @@ class CardModal extends React.Component {
 
     renderRelated() {
         if (this.props.related) {
+            let related = [];
+
+            if (this.props.related.toString().includes(',')) {
+                let items = this.props.related.split(',');
+                for (let item of items) {
+                    related.push(item);
+                }
+            } else {
+                related.push(this.props.related);
+            }
             return(
                 <div>
                     <div className={'card-modal__body__side-panel__related'}>
                         <h3>Related Principles</h3>
-                        <p>{this.props.related}</p>
+                        {related.map((item, index) => (
+                            ((index + 1) < related.length) ?
+                                <span><RelatedLink key={item} id={item} onOpen={() => this.props.onOpenRelated(item)}></RelatedLink>, </span>
+                                :
+                                <RelatedLink key={item} id={item} onOpen={() => this.props.onOpenRelated(item)}></RelatedLink>
+                        ))}
                     </div>
                 </div>
             );
@@ -149,6 +165,7 @@ CardModal.propTypes = {
     onClose: PropTypes.any,
     onNext: PropTypes.any,
     onPrev: PropTypes.any,
+    onOpenRelated: PropTypes.any,
     id: PropTypes.any,
     categoryId: PropTypes.any,
     categoryName: PropTypes.any,

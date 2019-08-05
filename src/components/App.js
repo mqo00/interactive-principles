@@ -36,6 +36,7 @@ export default class App extends Component {
         this.renderModal = this.renderModal.bind(this);
         this.modalNavToNext = this.modalNavToNext.bind(this);
         this.modalNavToPrev = this.modalNavToPrev.bind(this);
+        this.modalOpenRelated = this.modalOpenRelated.bind(this);
         this.openRandomCard = this.openRandomCard.bind(this);
     }
 
@@ -205,6 +206,11 @@ export default class App extends Component {
         this.setState({cardInModal: (prevCard)});
     }
 
+    modalOpenRelated(id) {
+        let card = principles.filter(function(item) { return item.id == id; })[0];
+        this.setState({cardInModal: card});
+    }
+
     openRandomCard() {
         let min =1;
         let max = principles.length;
@@ -279,6 +285,7 @@ export default class App extends Component {
                     onClose={this.handleClose}
                     onNext={this.modalNavToNext}
                     onPrev={this.modalNavToPrev}
+                    onOpenRelated={this.modalOpenRelated}
                     id={this.state.cardInModal.id}
                     categoryId={this.state.cardInModal.categoryId}
                     categoryName={this.state.cardInModal.categoryName}
