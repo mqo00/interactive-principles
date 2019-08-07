@@ -8,20 +8,24 @@ body {
     color: $text--default;
 
     .title-box {
-        margin-bottom: 20px;
         text-align: center;
+        margin: 3em 0 1em;
     }
 
     .main-title {
         color: $navy;
         margin-bottom: 5px;
         font-size: 2.5em;
+        margin-top: 0;
+        cursor: pointer;
     }
 
     .main-subtitle {
         color: $text--secondary;
         font-weight: 400;
-        font-size: 1.5em;
+        font-size: 1em;
+        max-width: 300px;
+        margin: 20px auto 0;
     }
 
     .main-label {

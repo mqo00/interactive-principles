@@ -13,6 +13,12 @@ $example-section-height: $body-height * .3;
 $card-text-size: .8em;
 $comparison-text-size: .75em;
 
+.cards {
+  padding: 0 $space-between-cards $space-between-cards;
+  max-width: ($card-width * 5) + ($space-between-cards * 6);
+  margin: 0 auto;
+}
+
 %img-styles {
   background-size: contain;
   background-position: center center;
@@ -46,12 +52,6 @@ $comparison-text-size: .75em;
   @include themed() {
     color: t('dark');
   }
-}
-
-.cards {
-  padding: $space-between-cards;
-  max-width: ($card-width * 5) + ($space-between-cards * 6);
-  margin: 0 auto;
 }
 
 .card-container {

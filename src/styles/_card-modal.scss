@@ -122,6 +122,7 @@
       &__related {
         padding: $padding-top ($padding-sides * 2);
         text-transform: capitalize;
+        cursor: pointer;
 
         a {
           text-decoration: underline!important;
