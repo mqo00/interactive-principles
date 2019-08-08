@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Principles from './Principles';
 import logo from '../images/ixp_logo.svg';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import About from './About';
 
 export default class App extends Component {
 
@@ -24,7 +26,11 @@ export default class App extends Component {
                     </h2>
                 </div>
 
-                <Principles/>
+                <Router>
+                    <Route exact path={'/'} component={Principles}/>
+                    <Route exact path={'/about'} component={About}/>
+                </Router>
+                {/*<Principles/>*/}
             </div>
         );
     }

@@ -67,6 +67,7 @@
     "react-dom": "^16.8.6",
     "react-dragula": "^1.1.17",
     "react-image-lightbox": "^5.1.0",
+    "react-router-dom": "^5.0.1",
     "uncontrollable": "^6.1.0"
   }
 }
