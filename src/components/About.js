@@ -1,6 +1,21 @@
 import React from 'react';
 import Link from './Link';
 
+function Credit(name, role, link) {
+    return (
+        link ?
+            <li className={'about__section__paragraph__credit'}>
+                <Link classes={'about__section__paragraph__credit__name'} url={link} target={'_blank'} text={name}/>
+                <span className={'about__section__paragraph__credit__role'}>{role}</span>
+            </li>
+            :
+            <li className={'about__section__paragraph__credit'}>
+                <span className={'about__section__paragraph__credit__name'}>{name}</span>
+                <span className={'about__section__paragraph__credit__role'}>{role}</span>
+            </li>
+    );
+}
+
 function About() {
     return (
         <div className={'about'}>
@@ -36,22 +51,10 @@ function About() {
             <div className={'about__section'}>
                 <div className={'about__section__paragraph about__section__paragraph--list'}>
                     <ul>
-                        <li>
-                            <Link url={'http://www.erikharpstead.net/'} target={'_blank'} text={'Erik Harpstead'}/>
-                            Project Lead
-                        </li>
-                        <li>
-                            <Link url={'http://katiemctigue.com'} target={'_blank'} text={'Katie McTigue'}/>
-                            Design, Content, Development
-                        </li>
-                        <li>
-                            Minji Kim
-                            Design, Content
-                        </li>
-                        <li>
-                            Nicole Wang
-                            Design
-                        </li>
+                        {Credit('Erik Harpstead', 'Project Lead', 'http://www.erikharpstead.net/')}
+                        {Credit('Katie McTigue', 'Design, Content, Development', 'http://katiemctigue.com')}
+                        {Credit('Minji Kim', 'Design, Content')}
+                        {Credit('Nicole Wang', 'Design')}
                     </ul>
                 </div>
             </div>

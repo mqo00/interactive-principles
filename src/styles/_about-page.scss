@@ -1,17 +1,26 @@
+$title-size: 1.5em;
+
 .about {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 2em;
 
   &__title {
-    font-size: 2.5em;
+    font-size: $title-size;
   }
 
   &__subtitle {
-    font-size: 1.5em;
+    font-size: $title-size;
   }
 
   &__section {
     margin-bottom: 2em;
+
+    &__paragraph__credit {
+      &__name {
+        font-weight: bold;
+        margin-right: .5em;
+      }
+    }
   }
 }
