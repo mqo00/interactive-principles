@@ -35,7 +35,7 @@ $space-between-buttons: 10px;
     }
 
     &:hover, &:focus {
-      background-color: darken($button-bg, 4%);
+      background-color: $button-bg--hover;
     }
   }
 }
@@ -127,6 +127,10 @@ $space-between-buttons: 10px;
 }
 
 .link {
-  text-decoration: underline!important;
-  color: $navy;
+  text-decoration: underline;
+  color: $text--button;
+
+  &:hover {
+    color: lighten($text--button, 10%);
+  }
 }

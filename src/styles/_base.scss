@@ -7,6 +7,12 @@ body {
     line-height: 1.8;
     color: $text--default;
 
+    #app {
+        @media (max-width: $screen-xs-max) {
+            padding-top: 3em;
+        }
+    }
+
     .title-box {
         text-align: center;
         margin: 3em 0 1em;

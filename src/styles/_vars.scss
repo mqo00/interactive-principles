@@ -16,6 +16,7 @@ $beige: #e5e8ef;
 $page-bg: $beige;
 $well-bg: darken($page-bg, 6%);
 $button-bg: $well-bg;
+$button-bg--hover: darken($button-bg, 4%);
 $border-default: $well-bg;
 
 $lessthan: #ab4f23;
@@ -41,6 +42,7 @@ $default-shadow: 1px 1px 0px 2px rgba(70, 74, 80, 0.15);
 
 //spacing
 $space-between-cards: 30px;
+$page-padding-mobile: 2em;
 
 /* mixin for multiline */
 @mixin multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white){
