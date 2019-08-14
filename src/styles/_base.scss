@@ -14,8 +14,12 @@ body {
     }
 
     .title-box {
-        text-align: center;
-        margin: 3em 0 1em;
+        margin: 3em auto 0;
+        display: flex;
+    }
+
+    .main-logo {
+        display: inline-block;
     }
 
     .main-title {
@@ -31,12 +35,13 @@ body {
     }
 
     .main-subtitle {
+        display: inline-block;
         color: $navy;
         font-weight: 400;
         font-size: 1em;
         line-height: 1.4em;
-        max-width: 300px;
-        margin: 20px auto 0;
+        max-width: 290px;
+        margin: 10px 0 0 20px;
     }
 
     .main-label {

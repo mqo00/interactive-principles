@@ -25,7 +25,7 @@ export default class App extends Component {
             <div>
                 <Router>
                     <div className={'title-box'}>
-                        <Link to={'/'}>
+                        <Link className={'main-logo'} to={'/'}>
                             <h1 className={'main-title'}>
                                 <img src={logo} className={'img img-responsive'}/>
                             </h1>
