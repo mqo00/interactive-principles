@@ -20,6 +20,7 @@ body {
 
         @media (max-width: $screen-stack-title) {
             display: inline-block;
+            text-align: center;
         }
     }
 
@@ -40,6 +41,7 @@ body {
 
         @media (max-width: $screen-stack-title) {
             width: 100%;
+            text-align: center;
         }
     }
 

@@ -272,3 +272,14 @@ $comparison-text-size: .75em;
   }
 
 }
+
+@media (max-width: $screen-phone-max) {
+  .card-container {
+    max-width: none;
+
+    .card {
+      transform: scale(1.2);
+      margin: 50px auto;
+    }
+  }
+}
