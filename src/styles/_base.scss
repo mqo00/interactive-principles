@@ -1,4 +1,5 @@
 @import "vars";
+$screen-stack-title: $screen-tablet-max;
 
 body {
     background: $page-bg;
@@ -8,7 +9,7 @@ body {
     color: $text--default;
 
     #app {
-        @media (max-width: $screen-xs-max) {
+        @media (max-width: $screen-phone-max) {
             padding-top: 3em;
         }
     }
@@ -16,6 +17,10 @@ body {
     .title-box {
         margin: 3em auto 0;
         display: flex;
+
+        @media (max-width: $screen-stack-title) {
+            display: inline-block;
+        }
     }
 
     .main-logo {
@@ -31,6 +36,10 @@ body {
 
         img {
           height: 1.6em;
+        }
+
+        @media (max-width: $screen-stack-title) {
+            width: 100%;
         }
     }
 

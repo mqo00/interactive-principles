@@ -55,6 +55,10 @@
       border-radius: 25px;
       padding: 2px 15px;
       margin-left: 18px;
+
+      @media (max-width: $screen-phone-max) {
+        display: none;
+      }
     }
   }
 

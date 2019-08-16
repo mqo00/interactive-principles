@@ -15,6 +15,10 @@ $space-between-buttons: 10px;
     font-weight: 400;
     cursor: pointer;
 
+    @media (max-width: $screen-phone-max) {
+      font-size: 1em;
+    }
+
     &--cat1 {
       color: $cat1--text;
     }
@@ -49,6 +53,12 @@ $space-between-buttons: 10px;
 
   .btn {
     margin-right: $space-between-buttons;
+
+    @media (max-width: $screen-phone-max) {
+      font-size: 1em;
+      width: 100%;
+      text-align: left;
+    }
   }
 }
 
