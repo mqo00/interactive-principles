@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaitlinmctigue/interactive-principles.git"
+    "url": "git+https://github.com/eharpste/interactive-principles.git"
   },
   "license": "MIT",
   "babel": {
