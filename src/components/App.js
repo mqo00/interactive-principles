@@ -47,13 +47,6 @@ export default class App extends Component {
                                     The OHLab at Carnegie Mellon
                                     <i className='fas fa-external-link-alt'/>
                                 </a>
-                                <a href={'https://learnlab.org/'}
-                                    className={'link sidebar__link'}
-                                    target={'_blank'}
-                                    onClick={() => this.onSetSidebarOpen(false)}>
-                                    The LearnLab at Carnegie Mellon
-                                    <i className='fas fa-external-link-alt'/>
-                                </a>
                             </div>
                         }
                         rootClassName={'navigation'}
