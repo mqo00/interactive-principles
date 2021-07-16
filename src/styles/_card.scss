@@ -187,6 +187,7 @@ $example-section-height: $body-height * .3;
         }
 
         &__image {
+          filter: grayscale(100%); //invert(51%) sepia(56%) saturate(600%) hue-rotate(326deg) brightness(92%) contrast(90%);
           height: $img-section-height;
           margin: -10px 0!important;
           @extend %display-props;

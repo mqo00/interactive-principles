@@ -1,6 +1,6 @@
 .card-modal {
-  $summary-width: 37%;
-  max-width: 1000px;
+  $summary-width: 1%;
+  max-width: 500px; // 1000px;
 
   .modal-content {
     border-radius: $rounded-corner;
@@ -57,19 +57,29 @@
   &__details {
     width: 100%-$summary-width;
     height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
     overflow: scroll;
+
+    &__lines {
+      white-space: pre-line;
+
+      p {
+        // font-style: italic;
+        line-height: 2;
+      }
+    }
+
   }
 
   h3 {
     @include text-dark;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
   }
 
   h4 {
-    font-size: 14px;
+    font-size: 18px;
   }
 
 }

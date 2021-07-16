@@ -12,8 +12,8 @@ $beige: #E7E6E6;
 $bg: darken($beige, 7%);
 $well-bg: darken($bg, 7%);
 
-$cat1: #DF6D4D;
-$cat2: #5EA67D;
+$cat1: #5EA67D; // gray;
+$cat2: #DF6D4D;
 $cat3: #379A99;
 
 $cat1--mid: lighten($cat1, 20%);

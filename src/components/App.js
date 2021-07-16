@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
 import Button from './Button.js';
+import ReactGA from 'react-ga';
 
+        
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
 }
-
 export default class App extends Component {
 
     constructor() {
         super();
         this.state = {
             cards: [],
-            allFlipped: false
+            allFlipped: true,
+            userRole: ''
         };
 
         this.flipAll = this.flipAll.bind(this);
@@ -22,6 +24,7 @@ export default class App extends Component {
         this.sortNumerical = this.sortNumerical.bind(this);
         this.resetCards = this.resetCards.bind(this);
         this.shuffleCards = this.shuffleCards.bind(this);
+        this.isTeacher = this.isTeacher.bind(this);
     }
 
     componentDidMount() {
@@ -84,7 +87,7 @@ export default class App extends Component {
     }
 
     flipCard(cardid) {
-        console.log('flip');
+        // console.log('flip');
         let items = this.state.cards;
         for (let card of items) {
             if (card.id === cardid) {
@@ -92,8 +95,7 @@ export default class App extends Component {
             }
         }
         this.setState({cards: items});
-
-        console.log(this.state);
+        // console.log(this.state);
     }
 
     shuffleCards() {
@@ -101,27 +103,37 @@ export default class App extends Component {
         this.setState({cards: shuffled});
     }
 
+    initReactGA() {
+        ReactGA.initialize('UA-186459299-1'), { //G-YJEZFDTWH3; new: G-PKCB14SVPQ
+            debug: true,
+            titleCase: false,
+            gaOptions: {
+                siteSpeedSampleRate: 100
+            }
+        };
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
+    isTeacher() {
+        if (window.confirm('Click OK if you are a teacher, or click Cancel if you are a designer')) {
+            this.setState({userRole: 'teacher'}); //, () => {console.log('ok:', this.state.userRole);});
+        } else {
+            this.setState({userRole: 'designer'}); //, () => {console.log('cancel:', this.state.userRole);});
+        }
+    }
+
     render() {
+        this.initReactGA();
         return (
             <div className='cards'>
-
-                <div className={'row'}>
-                    <div className={'col-12'}>
-                        <div className={'toolbar'}>
-                            <Button onClick={this.resetCards} text={'Reset'} icon={'undo-alt'}></Button>
-                            <Button onClick={this.flipAll} text={'Flip All'} icon={'exchange-alt'}></Button>
-                            <Button onClick={this.sortAZ} text={'Sort A-Z'} icon={'sort-alpha-down'}></Button>
-                            <Button onClick={this.sortNumerical} text={'Sort Numeric'} icon={'sort-numeric-down'}></Button>
-                            <Button onClick={this.shuffleCards} text={'Shuffle'} icon={'random'}></Button>
-                        </div>
-                    </div>
-                </div>
+                <Button onClick={this.isTeacher} text={'Login'}></Button>
 
                 <div className={'row'}>
 
                     {this.state.cards.map( card => (
                         <div key={card.id} className={'col-xs-12 col-sm-12 card-container'} onClick={() => this.flipCard(card.id)}>
                             <Card
+                                userRole={this.state.userRole}
                                 flipped={card.flipped}
                                 id={card.id}
                                 image={card.id}
