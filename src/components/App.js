@@ -38,7 +38,7 @@ export default class App extends Component {
                 siteSpeedSampleRate: 100
             }
         };
-        ReactGA.pageview(window.location.pathname + window.location.search);
+        // ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
     logUserID() {

@@ -29,6 +29,30 @@ class Card extends React.Component {
             showModal: false,
             seconds: 0
         };
+
+        this.timer = 0;
+        this.startTimer = this.startTimer.bind(this);
+        this.incrTime = this.incrTime.bind(this);
+        this.resetTimer = this.resetTimer.bind(this);
+    }
+
+    incrTime() {
+        const seconds = this.state.seconds + 1;
+        this.setState({ seconds: seconds });
+    }
+    //componentDidMount() {};
+
+    startTimer() {
+        if (this.timer == 0 && this.state.seconds == 0) {
+            this.timer = setInterval(this.incrTime, 1000);
+        }
+        //console.log(this.state.seconds, 'seconds passed for timer', this.timer);
+    }
+
+    resetTimer() {
+        console.log(this.state.seconds, 'seconds passed for timer', this.timer);
+        clearInterval(this.timer);
+        this.setState({ seconds: 0 });
     }
 
     incrTime() {
