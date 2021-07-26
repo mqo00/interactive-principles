@@ -5,8 +5,8 @@ import ReactGA from 'react-ga';
 
 function sendData(data) {
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://localhost:8000');
-    request.setRequestHeader('Access-Control-Allow-Origin', '*');
+    request.open('POST', 'http://eharpste.pythonanywhere.com/principle_logs/log');
+    // request.withCredentials = false;
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.send(JSON.stringify(data));
     console.log(data);
