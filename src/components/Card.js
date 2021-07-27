@@ -6,10 +6,10 @@ import ReactGA from 'react-ga';
 function sendData(data) {
     var request = new XMLHttpRequest();
     request.open('POST', 'http://eharpste.pythonanywhere.com/principle_logs/log');
-    // request.withCredentials = false;
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.send(JSON.stringify(data));
     console.log(data);
+    // console.log(request);
 }
 class Card extends React.Component {
     constructor(props) {
@@ -53,7 +53,7 @@ class Card extends React.Component {
         var data = {category: this.props.title,
             action: 'Close',
             value: this.state.seconds,
-            time: new Date().toUTCString(),
+            time: new Date().toISOString(),
             label: this.props.userRole
         };
         ReactGA.event(data);
@@ -68,7 +68,8 @@ class Card extends React.Component {
         var data = {category: this.props.title,
             action: 'Open',
             value: 0,
-            time:  new Date().toUTCString(),
+            // format: 2021-07-26 11:54:22.ms; e.g., 2021-07-27T18:03:13.435Z
+            time:  new Date().toISOString(), 
             label: this.props.userRole
         };
         ReactGA.event(data);
