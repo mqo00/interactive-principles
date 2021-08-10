@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card.js';
+import Card from './card.js';
 import principles from '../principles.json';
-import Button from './Button.js';
+import Button from './button.js';
 import ReactGA from 'react-ga';
 export default class App extends Component {
 
@@ -31,7 +31,7 @@ export default class App extends Component {
     }
 
     initReactGA() {
-        ReactGA.initialize('UA-186459299-1'), { //G-YJEZFDTWH3; new: G-PKCB14SVPQ
+        ReactGA.initialize('UA-186459299-1'), { 
             debug: true,
             titleCase: false,
             gaOptions: {
