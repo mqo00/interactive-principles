@@ -115,7 +115,7 @@ class Card extends React.Component {
 
     renderDescription() {
         return (
-            <div>
+            <div className={'card-modal__details__lines'}>
                 <h3>Description</h3>
                 <p>{this.props.shortdescr}</p>
                 <p>{this.props.longdescr}</p>

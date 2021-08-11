@@ -4,7 +4,7 @@ $card-height: 336px;
 $card-width: 240px;
 $card-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 $card-corner: $rounded-corner;
-$number-width: 28px;
+$number-width: 26px;
 $header-height: 45px;
 $cat-width: $header-height;
 $body-height: $card-height - $header-height;
@@ -20,7 +20,7 @@ $example-section-height: $body-height * .3;
 
 .principle-title {
   color: $text--white;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -36,7 +36,7 @@ $example-section-height: $body-height * .3;
   background-color: $text--white;
   height: $number-width;
   width: $number-width;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   border-radius: 50%;
   text-align: center;
@@ -76,7 +76,7 @@ $example-section-height: $body-height * .3;
       &__header {
         $space-between-num-and-title: 8px;
         border-radius: $card-corner $card-corner 0 0;
-        padding: 7px 0 7px 10px;
+        padding: 10px 0 7px 10px;
         height: $header-height;
         max-height: $header-height;
         white-space: nowrap;
@@ -187,7 +187,7 @@ $example-section-height: $body-height * .3;
         }
 
         &__image {
-          filter: grayscale(100%); //invert(51%) sepia(56%) saturate(600%) hue-rotate(326deg) brightness(92%) contrast(90%);
+          filter: grayscale(100%);
           height: $img-section-height;
           margin: -10px 0!important;
           @extend %display-props;
