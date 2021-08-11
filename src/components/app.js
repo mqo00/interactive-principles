@@ -63,10 +63,11 @@ export default class App extends Component {
                                 category={card.categoryId}
                                 categoryName={card.category}
                                 title={card.principle}
+                                shortdescr={card.subtitle}
+                                longdescr={card.description}
+                                prescr={card.summary}
                                 questions={card.questions}
-                                descr={card.description}
-                                comparison={card.subtitle}
-                                example={card.examples}
+                                examples={card.examples}
                             />
                         </div>
                     ))}

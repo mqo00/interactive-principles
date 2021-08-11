@@ -9,7 +9,6 @@ function sendData(data) {
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.send(JSON.stringify(data));
     console.log(data);
-    // console.log(request);
 }
 class Card extends React.Component {
     constructor(props) {
@@ -68,7 +67,6 @@ class Card extends React.Component {
         var data = {category: this.props.title,
             action: 'Open',
             value: 0,
-            // format: 2021-07-26 11:54:22.ms; e.g., 2021-07-27T18:03:13.435Z
             time:  new Date().toISOString(), 
             label: this.props.userRole
         };
@@ -95,7 +93,7 @@ class Card extends React.Component {
                 </div>
                 <div className={'card__face--front__body'} onClick={this.handleShow}>
                     <div className={'card__face--front__body__comparison'}>
-                        {this.props.comparison}
+                        {this.props.shortdescr}
                     </div>
                     <div style={{backgroundImage: 'url(' + this.image + ')'}} className={'card__face--front__body__image'}></div>
 
@@ -104,15 +102,25 @@ class Card extends React.Component {
         );
     }
 
-    renderDescription() {
-        if (this.props.descr) {
+    renderPrinciple() {
+        if (this.props.prescr) {
             return (
                 <div>
-                    <h3>Description</h3>
-                    <p>{this.props.descr}</p>
-                </div>            
+                    <h3>Principle</h3>
+                    <p>{this.props.prescr}</p>
+                </div>
             );
         }
+    }
+
+    renderDescription() {
+        return (
+            <div>
+                <h3>Description</h3>
+                <p>{this.props.shortdescr}</p>
+                <p>{this.props.longdescr}</p>
+            </div>            
+        );
     }
 
     renderQuestions() {
@@ -127,11 +135,11 @@ class Card extends React.Component {
     }
     
     renderExamples() {
-        if (this.props.example) {
+        if (this.props.examples) {
             return (
                 <div className={'card-modal__details__lines'}>
                     <h3>Examples</h3>
-                    <p>{this.props.example}</p>
+                    <p>{this.props.examples}</p>
                 </div>        
             );
         }
@@ -150,10 +158,7 @@ class Card extends React.Component {
                     <Modal.Body className='card-modal__body-container'>
                         <div className="row">
                             <div className={'card-modal__details'}>
-                                <div>
-                                    <h3>Principle</h3>
-                                    <p>{this.props.comparison}</p>
-                                </div>
+                                {this.renderPrinciple()}
                                 {this.renderDescription()}
                                 {this.renderQuestions()}
                                 {this.renderExamples()}
@@ -173,10 +178,11 @@ Card.propTypes = {
     category: PropTypes.any,
     categoryName: PropTypes.any,
     title: PropTypes.any,
+    shortdescr: PropTypes.any,
+    longdescr: PropTypes.any,
+    prescr: PropTypes.any,
     questions: PropTypes.any,
-    descr: PropTypes.any,
-    comparison: PropTypes.any,
-    example: PropTypes.any,
+    examples: PropTypes.any,
 };
 
 export default Card;
