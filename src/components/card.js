@@ -93,7 +93,7 @@ class Card extends React.Component {
                 <div className={'card__face--front__category'}>
                     <div className={'card__face--front__category__text'}> </div>
                 </div>
-                <div className={'card__face--front__body'}>
+                <div className={'card__face--front__body'} onClick={this.handleShow}>
                     <div className={'card__face--front__body__comparison'}>
                         {this.props.comparison}
                     </div>
