@@ -160,8 +160,8 @@ class Card extends React.Component {
                             <div className={'card-modal__details'}>
                                 {/* {this.renderPrinciple()} */}
                                 {this.renderDescription()}
-                                {/* {this.renderQuestions()} */}
-                                {this.renderExamples()}
+                                {this.renderQuestions()}
+                                {/* {this.renderExamples()} */}
                             </div>
                         </div>
                     </Modal.Body>
