@@ -56,7 +56,7 @@ class Card extends React.Component {
             label: this.props.userRole
         };
         ReactGA.event(data);
-        sendData(data);
+        // sendData(data);
 
         this.resetTimer();
     }
@@ -71,7 +71,7 @@ class Card extends React.Component {
             label: this.props.userRole
         };
         ReactGA.event(data);
-        sendData(data);
+        // sendData(data);
     }
 
     renderCard() {
