@@ -3,13 +3,6 @@ import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 import ReactGA from 'react-ga';
 
-function sendData(data) {
-    var request = new XMLHttpRequest();
-    request.open('POST', 'https://eharpste.pythonanywhere.com/principle_logs/log');
-    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    request.send(JSON.stringify(data));
-    console.log(data);
-}
 class Card extends React.Component {
     constructor(props) {
         super(props);
@@ -56,8 +49,6 @@ class Card extends React.Component {
             label: this.props.userRole
         };
         ReactGA.event(data);
-        // sendData(data);
-
         this.resetTimer();
     }
 
@@ -71,7 +62,6 @@ class Card extends React.Component {
             label: this.props.userRole
         };
         ReactGA.event(data);
-        // sendData(data);
     }
 
     renderCard() {
