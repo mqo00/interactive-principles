@@ -4,6 +4,6 @@
 <rect x="180" y="125.714" width="30" height="100.571" rx="5" fill="#DF6D4D" fill-opacity="0.9"/>
 <rect x="218" y="125.714" width="30" height="100.571" rx="5" fill="#DF6D4D" fill-opacity="0.9"/>
 <rect x="284" y="125.714" width="30" height="100.571" rx="5" fill="#DF6D4D" fill-opacity="0.9"/>
-<line x1="115" y1="174.5" x2="169" y2="174.5" stroke="white" stroke-opacity="0.9" stroke-width="3" stroke-dasharray="5 2"/>
-<line x1="256" y1="174.5" x2="276" y2="174.5" stroke="white" stroke-opacity="0.9" stroke-width="3" stroke-dasharray="5 2"/>
+<line x1="116" y1="173" x2="170" y2="173" stroke="#DF6D4D" stroke-width="6" stroke-dasharray="4 5"/>
+<line x1="257" y1="173" x2="277" y2="173" stroke="#DF6D4D" stroke-width="6" stroke-dasharray="4 5"/>
 </svg>
